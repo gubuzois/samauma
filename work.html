@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">nome</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="work.html" class="active">Work</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+
+        <img src="arvore_fundo.svg" id="arvore_fundo">
+        <img src="meio.svg" id="meio">
+        <h2 id="texto">Floresta Amazônica</h2>
+        <a href="#sec" id="btn">Explorar</a>
+        <img src="frente_direita.svg" id="frente_direita">
+        <img src="frente_esquerda.svg" id="frente_esquerda">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Floresta Amazônica</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ad eius aliquam ipsam harum ratione
+            cupiditate dolorem pariatur, nam natus et architecto atque vitae optio maxime magni deleniti quia nulla!
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br><br> Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Magnam ad eius aliquam ipsam harum ratione cupiditate dolorem pariatur, nam natus et
+            architecto atque vitae optio maxime magni deleniti quia nulla! Lorem ipsum dolor sit amet consectetur,
+            adipisicing elit. <br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ad eius aliquam
+            ipsam harum ratione cupiditate dolorem pariatur, nam natus et architecto atque vitae optio maxime magni
+            deleniti quia nulla! Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br><br> Lorem ipsum dolor
+            sit amet consectetur adipisicing elit. Magnam ad eius aliquam ipsam harum ratione cupiditate dolorem
+            pariatur, nam natus et architecto atque vitae optio maxime magni deleniti quia nulla! Lorem ipsum dolor sit
+            amet consectetur, adipisicing elit. </p>
+    </div>
+
+    <script>
+        let arvore_fundo = document.getElementById('arvore_fundo');
+        let meio = document.getElementById('meio');
+        let frente_direita = document.getElementById('frente_direita');
+        let frente_esquerda = document.getElementById('frente_esquerda');
+        let texto = document.getElementById('texto');
+        let btn = document.getElementById('btn');
+
+        window.addEventListener('scroll', function () {
+            let value = window.scrollY;
+            arvore_fundo.style.top = value * 0.2 + 'px';
+            meio.style.top = value * 0.3 + 'px';
+            frente_direita.style.left = value * 0.3 + 'px';
+            frente_esquerda.style.left = value * -0.3 + 'px';
+            texto.style.marginTop = value * 1 + 'px';
+            btn.style.marginTop = value * 1 + 'px';
+
+        })
+    </script>
+
+</body>
+
+</html>
