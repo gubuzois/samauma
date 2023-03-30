@@ -12,7 +12,7 @@ body
 {
     min-height: 100vh;
     overflow-x: hidden;
-    background: linear-gradient(#030D18, #49AEAC);
+    background: #030D18;
 }
 header
 {
