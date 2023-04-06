@@ -10,10 +10,10 @@
 
 body
 {
-    min-height: 100vh;
     overflow-x: hidden;
     background: #030D18;
 }
+
 header
 {
     position: absolute;
@@ -34,6 +34,7 @@ header .logo
     font-size: 2em;
     text-transform: uppercase;
     letter-spacing: 2px;
+    opacity: 1;
 }
 header ul 
 {
@@ -60,6 +61,14 @@ header ul li a.active
 background: #fff;
 color: #030D18;
 }
+.menu
+{
+    float: right;
+    line-height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
 section
 {
     position: relative;
@@ -70,6 +79,8 @@ section
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    z-index: 2;
+    
 }
 section::before 
 {
@@ -99,8 +110,35 @@ section img#frente_direita
 section img#frente_esquerda
 {
     z-index: 10;
+    margin-left: -3px;
 }
-
+.flex-container
+{
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+}
+.container 
+{
+    flex: 2;
+    background: linear-gradient(120deg,#064057, #065749);
+    border-radius: 6px;
+    border-bottom: 4px solid #2d75c7;
+    justify-content: center;
+    padding: 16px;
+    margin-top: 40px;
+    width: 300px;
+    height: 400px;
+    text-align: center;
+    
+    
+}
+.container .text-container
+{
+    font-size: 16px;
+    justify-content: center;
+    
+}
 #texto
 {
     position: absolute;
@@ -130,9 +168,20 @@ section img#frente_esquerda
 }
 .sec h2
 {
-    font-size: 3.5em;
+    font-size: 3.3em;
     margin-bottom: 10px;
     color: #fff;
+    text-align: center;
+}
+.sec h3
+{
+    color: #fff;
+    font-size: 2em;
+    margin-top: 18px;
+}
+.sec i
+{
+    color: #0ada61;
 }
 .sec p 
 {
@@ -140,123 +189,52 @@ section img#frente_esquerda
     color: #fff;
 }
 
-.imagens {
-    width: 90%;
-    height: 90%;
-    margin-inline: auto;
-    padding: 100px 15px;
-    margin-top: 60px;
-}
-
-.imagens img {
-    display: block;
-    max-width: 100%;
-}
-
-.titulo {
-    margin-bottom: 50px;
-}
-
-.titulo span {
-    display: block;
-}
-
-.titulo .primario {
-    font-size: 50px;
-    text-transform: uppercase;
-    color: #fff;
-}
-
-.titulo .secundario {
-    font-size: 35px;
-    font-weight: 400;
-    color: #d6d6e0;
-    text-transform: uppercase;
-}
-
-.galeria-wrapper {
-    display: flex;
-    gap: 8px;
-}
-
-.galeria-item {
-    position: relative;
-    isolation: isolate;
-    display: flex;
-    flex: 1;
-    height: 400px;
-    padding: 25px;
-    opacity: 1;
-    overflow: hidden;
-    transition: flex 0.5s, opacity 0.25s;
-}
-
-.galeria-item:hover {
-    opacity: 1;
-    flex: 5;
-}
-
-.galeria-item:not(:hover) {
-    opacity: 0.75;
-}
-
-.item-imagem {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.item-descricao {
-    align-self: flex-end;
-    text-transform: uppercase;
-    color: #fff;
-}
-
-.nome {
-    font-size: 37px;
-    background: linear-gradient(90deg, #f32d5b, #ff009b);
-    padding-inline: 10px;
-    transform: translateY(-10px);
-}
-
-.papel {
-    background: linear-gradient(90deg, #4136d9, #0086c7);
-    padding: 10px;
-    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
-    transform: translateY(10px);
-}
-
-.nome,
-.papel {
-    opacity: 0;
-    transition: opacity 0.25s, transform 0.3s;
-    transition-delay: 0.35s;
-}
-
-.galeria-item:hover .nome,
-.galeria-item:hover .papel {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.galeria-item:not(:hover) .nome,
-.galeria-item:not(:hover) .papel {
-    transition-delay: 0s;
-}
-
-@media screen and (max-width: 768px) {
-    .galeria-wrapper {
-        flex-direction: column;
-        height: 100vh;
+@media screen and (max-width: 600px)
+{
+    *{
+        box-sizing: border-box;
     }
 
-    .galeria-item:hover {
-        flex-basis: 100%;
+    header {
+        padding: 0 20px;
+        background: #030D18;
     }
+
+    .menu {
+        display: block;
+    }
+
+    header ul {
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 50px);
+        background: #030D18;
+        top: 50px;
+        left: 0;
+        transition: 0.5s;
+        display: block;
+        text-align: center;
+        
+    }
+
+    header ul li a{
+        text-decoration: none;
+        padding: 3px 5px;
+        color: #fff;
+        border-radius: 20px;
+    }
+    header ul li a:hover,
+    header ul li a.active 
+    {
+        background: transparent;
+        color: #fff;
+    }
+    header .logo {
+        font-size: 20px;
+    }
+
+
+
 }
 
 

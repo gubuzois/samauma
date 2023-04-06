@@ -1,46 +1,65 @@
 <!DOCTYPE html>
+
 <html lang="pt-br">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ccda18f14f.js" crossorigin="anonymous"></script>
     <title>Document</title>
+
 </head>
 
 <body>
+
     <header>
+
         <a href="index.html" class="logo">samaúma</a>
+
         <ul>
+
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="work.html">Work</a></li>
             <li><a href="contact.html">Contact</a></li>
+
         </ul>
+    
+        <div class="menu"><i class="fa-solid fa-bars" style="color: #ffffff;"></i></div>
+
     </header>
+
     <section>
 
         <img src="arvore_fundo.svg" id="arvore_fundo">
         <img src="meio.svg" id="meio">
         <h2 id="texto">Floresta Amazônica</h2>
-        <a href="#sec" id="btn">Conheça</a>
+        <a href="#sec" id="btn">Explorar</a>
         <img src="frente_direita.svg" id="frente_direita">
         <img src="frente_esquerda.svg" id="frente_esquerda">
+
     </section>
+
     <div class="sec" id="sec">
+
         <h2>Floresta Amazônica</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ad eius aliquam ipsam harum ratione
-            cupiditate dolorem pariatur, nam natus et architecto atque vitae optio maxime magni deleniti quia nulla!
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br><br> Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Magnam ad eius aliquam ipsam harum ratione cupiditate dolorem pariatur, nam natus et
-            architecto atque vitae optio maxime magni deleniti quia nulla! Lorem ipsum dolor sit amet consectetur,
-            adipisicing elit. <br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ad eius aliquam
-            ipsam harum ratione cupiditate dolorem pariatur, nam natus et architecto atque vitae optio maxime magni
-            deleniti quia nulla! Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br><br> Lorem ipsum dolor
-            sit amet consectetur adipisicing elit. Magnam ad eius aliquam ipsam harum ratione cupiditate dolorem
-            pariatur, nam natus et architecto atque vitae optio maxime magni deleniti quia nulla! Lorem ipsum dolor sit
-            amet consectetur, adipisicing elit. </p>
+        <div class="flex-container">
+
+            <div class="container">
+                <h3>Biodiversidade</h3>
+                <p class="text-container">Na floresta amazônica encontramos aproximadamente <i>40 mil</i>  especies vegetais, <i>3 mil</i> espécies de peixes, <i>450</i> de mamíferos, <i>400</i> de anfíbios, <i>400</i>  de répteis e <i>130 mil</i> de invertebrados, sem citar as que ainda não são conhecidas por nossos cientistas.</p>
+            </div>
+
+            <div class="container">
+
+            </div>
+            <div class="container">
+                
+            </div>
+
+        </div>
     </div>
 
     <script>
@@ -51,18 +70,17 @@
         let texto = document.getElementById('texto');
         let btn = document.getElementById('btn');
 
-        window.addEventListener('scroll', function () {
+        window.addEventListener('scroll', function(){
             let value = window.scrollY;
-            arvore_fundo.style.top = value * 0.2 + 'px';
-            meio.style.top = value * 0.3 + 'px';
+            arvore_fundo.style.top = value * 0.06 + 'px';
+            meio.style.top = value * 0.1 + 'px';
             frente_direita.style.left = value * 0.3 + 'px';
             frente_esquerda.style.left = value * -0.3 + 'px';
-            texto.style.marginTop = value * 1 + 'px';
-            btn.style.marginTop = value * 1 + 'px';
+            texto.style.marginTop = value * 2 + 'px';
+            btn.style.marginTop = value * 2 + 'px';
 
         })
     </script>
-
+         
 </body>
-
 </html>
