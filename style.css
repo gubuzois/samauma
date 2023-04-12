@@ -14,6 +14,7 @@ body
     background: #030D18;
 }
 
+/* Header Start */
 header
 {
     position: absolute;
@@ -69,6 +70,9 @@ color: #030D18;
     cursor: pointer;
     display: none;
 }
+/* Header End */
+
+/* Section Start */
 section
 {
     position: relative;
@@ -112,6 +116,30 @@ section img#frente_esquerda
     z-index: 10;
     margin-left: -3px;
 }
+#texto
+{
+    position: absolute;
+    color: #fff;
+    white-space: nowrap;
+    font-size:60px;
+    z-index: 8;
+    cursor:default;
+}
+#btn
+{
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: #fff;
+    color: #030D18;
+    font-size: 1.5em;
+    z-index: 8;
+    transform: translateY(100px);
+}
+/* Section End */
+
+/* Container Start */
 .flex-container
 {
     display: flex;
@@ -119,7 +147,7 @@ section img#frente_esquerda
 }
 .container 
 {
-    flex: 2;
+    flex: 1;
     background: linear-gradient(120deg,#064057, #065749);
     border-radius: 6px;
     box-shadow: 8px 12px 10px #0a1f35;
@@ -134,32 +162,20 @@ section img#frente_esquerda
     font-size: 18px;
     color: #fff;
 }
-#texto
-{
-    position: absolute;
-    color: #fff;
-    white-space: nowrap;
-    font-size:60px;
-    z-index: 8;
+
+#wrap {
+    height: 80%;
+    background: none;
+    box-shadow: none;
 }
-#btn
-{
-    text-decoration: none;
-    display: inline-block;
-    padding: 8px 30px;
-    border-radius: 40px;
-    background: #fff;
-    color: #030D18;
-    font-size: 1.5em;
-    z-index: 8;
-    transform: translateY(100px);
-}
+/* Container End */
+
+/* Sec Start */
 .sec
 {
     position: relative;
     padding: 100px;
     background: #030D18;
-
 }
 .sec h2
 {
@@ -183,6 +199,33 @@ section img#frente_esquerda
     font-size: 22px;
     color: #fff;
     margin-top: 30px;
+}
+
+#sec1 {
+    display: flex;
+}
+
+#gif-container{
+    position: relative;
+    background: #ccc;
+    width: 500px;
+    height: 350px;
+    box-shadow: none;
+    border: solid #065749 2px;
+    left: 28%;
+    background-image: url('https://media1.giphy.com/media/3oriNXgmyShWPjuaFa/giphy.gif?cid=ecf05e47gv4jkrgozh1pbou7g4dgu5wwjbl9v1f0biypsv9j&rid=giphy.gif&ct=g');
+    background-size: cover;
+    
+}
+/* Sec End */
+
+.profile {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: #ccc;
+    flex: 1;
+    position: absolute;
 }
 
 @media screen and (max-width: 600px)
