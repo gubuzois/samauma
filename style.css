@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
-*
-{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,15 +7,13 @@
     scroll-behavior: smooth;
 }
 
-body
-{
+body {
     overflow-x: hidden;
     background: #030D18;
 }
 
 /* Header Start */
-header
-{
+header {
     position: absolute;
     top: 0;
     left: 0;
@@ -27,8 +24,7 @@ header
     align-items: center;
     z-index: 1000;
 }
-header .logo 
-{
+header .logo  {
     color: #fff;
     font-weight: 700;
     text-decoration: none;
@@ -37,33 +33,28 @@ header .logo
     letter-spacing: 2px;
     opacity: 1;
 }
-header ul 
-{
+header ul  {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-header ul li 
-{
+header ul li  {
     list-style: none;
     margin-left: 20px;
 }
-header ul li a 
-{
-
+header ul li a  {
     text-decoration: none;
     padding: 6px 15px;
     color: #fff;
     border-radius: 20px;
 }
+
 header ul li a:hover,
-header ul li a.active 
-{
+header ul li a.active  {
 background: #fff;
 color: #030D18;
 }
-.menu
-{
+.menu {
     float: right;
     line-height: 50px;
     font-size: 24px;
@@ -73,8 +64,7 @@ color: #030D18;
 /* Header End */
 
 /* Section Start */
-section
-{
+section {
     position: relative;
     width: 100%;
     height: 100vh;
@@ -86,8 +76,7 @@ section
     z-index: 2;
     
 }
-section::before 
-{
+section::before  {
     content: '';
     position: absolute;
     bottom: 0;
@@ -96,8 +85,7 @@ section::before
     background: linear-gradient(to top, #030D18, transparent);
     z-index: 1000;
 }
-section img
-{
+section img {
     position: absolute;
     top: 0;
     left: 0;
@@ -107,17 +95,14 @@ section img
     pointer-events: none;
     
 }
-section img#frente_direita
-{
+section img#frente_direita {
     z-index: 10;
 }
-section img#frente_esquerda
-{
+section img#frente_esquerda {
     z-index: 10;
     margin-left: -3px;
 }
-#texto
-{
+#texto {
     position: absolute;
     color: #fff;
     white-space: nowrap;
@@ -125,8 +110,7 @@ section img#frente_esquerda
     z-index: 8;
     cursor:default;
 }
-#btn
-{
+#btn {
     text-decoration: none;
     display: inline-block;
     padding: 8px 30px;
@@ -140,25 +124,23 @@ section img#frente_esquerda
 /* Section End */
 
 /* Container Start */
-.flex-container
-{
+.flex-container {
     display: flex;
     gap: 30px;
+    justify-content: space-around;
 }
-.container 
-{
-    flex: 1;
-    background: linear-gradient(120deg,#064057, #065749);
+.container {
+    
     border-radius: 6px;
-    box-shadow: 8px 12px 10px #0a1f35;
-    padding: 16px;
+    border: solid#065749 1px;
+    padding: 30px;
     margin-top: 40px;
-    width: 300px;
+    width: 400px;
     height: 400px;
-    text-align: center;
+    text-align: justify;
+    line-height: 1.7;
 }
-.container .text
-{
+.container .text {
     font-size: 18px;
     color: #fff;
 }
@@ -171,48 +153,54 @@ section img#frente_esquerda
 /* Container End */
 
 /* Sec Start */
-.sec
-{
+.sec {
     position: relative;
     padding: 100px;
     background: #030D18;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
-.sec h2
-{
+
+.sec h2 {
     font-size: 3.3em;
     margin-bottom: 10px;
     color: #fff;
     text-align: center;
+    flex: 1;
 }
-.sec h3
-{
+.sec h3 {
     color: #fff;
     font-size: 2em;
     margin-top: 18px;
 }
-.sec i
-{
+.sec i {
     color: #0ada61;
 }
-.sec p 
-{
+.sec p  {
     font-size: 22px;
     color: #fff;
     margin-top: 30px;
 }
 
-#sec1 {
-    display: flex;
+#game {
+    width: 600px;
 }
 
-#gif-container{
-    position: relative;
-    background: #ccc;
-    width: 500px;
-    height: 350px;
-    box-shadow: none;
-    border: solid #065749 2px;
-    left: 28%;
+#mission {
+    width: 90%;
+    height: 650px;
+    margin-top: -100px;
+}
+
+#about {
+    width: 600px;
+    height: 600px;
+    margin-top: -100px;
+}
+
+
+#gif-container {
     background-image: url('https://media1.giphy.com/media/3oriNXgmyShWPjuaFa/giphy.gif?cid=ecf05e47gv4jkrgozh1pbou7g4dgu5wwjbl9v1f0biypsv9j&rid=giphy.gif&ct=g');
     background-size: cover;
     
