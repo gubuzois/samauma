@@ -25,7 +25,7 @@ header {
     z-index: 1000;
 }
 header .logo  {
-    color: #fff;
+    color: #BEF2D4;
     font-weight: 700;
     text-decoration: none;
     font-size: 2em;
@@ -45,13 +45,13 @@ header ul li  {
 header ul li a  {
     text-decoration: none;
     padding: 6px 15px;
-    color: #fff;
+    color: #BEF2D4;
     border-radius: 20px;
 }
 
 header ul li a:hover,
 header ul li a.active  {
-background: #fff;
+background: #BEF2D4;
 color: #030D18;
 }
 .menu {
@@ -104,7 +104,7 @@ section img#frente_esquerda {
 }
 #texto {
     position: absolute;
-    color: #fff;
+    color: #BEF2D4;
     white-space: nowrap;
     font-size:60px;
     z-index: 8;
@@ -115,7 +115,7 @@ section img#frente_esquerda {
     display: inline-block;
     padding: 8px 30px;
     border-radius: 40px;
-    background: #fff;
+    background: #BEF2D4;
     color: #030D18;
     font-size: 1.5em;
     z-index: 8;
@@ -124,32 +124,49 @@ section img#frente_esquerda {
 /* Section End */
 
 /* Container Start */
-.flex-container {
-    display: flex;
-    gap: 30px;
-    justify-content: space-around;
-}
 .container {
-    
+    background: #094856;
     border-radius: 6px;
-    border: solid#065749 1px;
     padding: 30px;
-    margin-top: 40px;
+    margin-top: 50px;
     width: 400px;
     height: 400px;
     text-align: justify;
     line-height: 1.7;
 }
-.container .text {
-    font-size: 18px;
-    color: #fff;
+
+#game {
+    width: 50%;
+    color: #0ada61;
 }
 
-#wrap {
-    height: 80%;
-    background: none;
-    box-shadow: none;
+#gif-container {
+    background-image: url('https://media1.giphy.com/media/3oriNXgmyShWPjuaFa/giphy.gif?cid=ecf05e47gv4jkrgozh1pbou7g4dgu5wwjbl9v1f0biypsv9j&rid=giphy.gif&ct=g');
+    background-size: cover;
+    width: 40%;
+    
 }
+
+#mission {
+    width: 100%;
+    height: 600px;
+    margin-top: -100px;
+}
+
+#about {
+    width: 50%;
+    height: 530px;
+    margin-top: -100px;
+}
+
+#image {
+    
+    width: 40%;
+    height: 530px;
+    margin-top: -100px;
+    
+}
+
 /* Container End */
 
 /* Sec Start */
@@ -159,21 +176,18 @@ section img#frente_esquerda {
     background: #030D18;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    gap: 10px;
 }
 
 .sec h2 {
     font-size: 3.3em;
     margin-bottom: 10px;
-    color: #fff;
+    color: #BEF2D4;
     text-align: center;
     flex: 1;
 }
-.sec h3 {
-    color: #fff;
-    font-size: 2em;
-    margin-top: 18px;
-}
+
 .sec i {
     color: #0ada61;
 }
@@ -183,28 +197,14 @@ section img#frente_esquerda {
     margin-top: 30px;
 }
 
-#game {
-    width: 600px;
-}
 
-#mission {
-    width: 90%;
-    height: 650px;
-    margin-top: -100px;
-}
 
-#about {
-    width: 600px;
-    height: 600px;
-    margin-top: -100px;
+.container p {
+    margin-top: -20px;
 }
 
 
-#gif-container {
-    background-image: url('https://media1.giphy.com/media/3oriNXgmyShWPjuaFa/giphy.gif?cid=ecf05e47gv4jkrgozh1pbou7g4dgu5wwjbl9v1f0biypsv9j&rid=giphy.gif&ct=g');
-    background-size: cover;
-    
-}
+
 /* Sec End */
 
 .profile {
