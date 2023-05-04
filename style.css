@@ -1,4 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+
+:root {
+    --dark-color: #030D18;
+    --dark-green: #0d6f5c;
+    --light-text: #d4f7e8;
+
+    --small-text: 1.6vw;
+    --medium-text: 2vw;
+    --large-text: 4.3vw;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +20,7 @@
 
 body {
     overflow-x: hidden;
-    background: #030D18;
+    background: var(--dark-color);
 }
 
 /* Header Start */
@@ -25,10 +36,10 @@ header {
     z-index: 1000;
 }
 header .logo  {
-    color: #BEF2D4;
+    color: var(--light-text);;
     font-weight: 700;
     text-decoration: none;
-    font-size: 2em;
+    font-size: var(--medium-text);
     text-transform: uppercase;
     letter-spacing: 2px;
     opacity: 1;
@@ -45,19 +56,19 @@ header ul li  {
 header ul li a  {
     text-decoration: none;
     padding: 6px 15px;
-    color: #BEF2D4;
+    color: var(--light-text);;
     border-radius: 20px;
 }
 
 header ul li a:hover,
 header ul li a.active  {
-background: #BEF2D4;
-color: #030D18;
+background: var(--light-text);;
+color: var(--dark-color);;
 }
 .menu {
     float: right;
     line-height: 50px;
-    font-size: 24px;
+    font-size: var(--large-text);
     cursor: pointer;
     display: none;
 }
@@ -82,7 +93,7 @@ section::before  {
     bottom: 0;
     width: 100%;
     height: 30%;
-    background: linear-gradient(to top, #030D18, transparent);
+    background: linear-gradient(to top, var(--dark-color), transparent);
     z-index: 1000;
 }
 section img {
@@ -104,9 +115,9 @@ section img#frente_esquerda {
 }
 #texto {
     position: absolute;
-    color: #BEF2D4;
+    color: var(--light-text);;
     white-space: nowrap;
-    font-size:60px;
+    font-size: var(--large-text);
     z-index: 8;
     cursor:default;
 }
@@ -115,9 +126,9 @@ section img#frente_esquerda {
     display: inline-block;
     padding: 8px 30px;
     border-radius: 40px;
-    background: #BEF2D4;
-    color: #030D18;
-    font-size: 1.5em;
+    background: var(--light-text);
+    color: var(--dark-color);
+    font-size: var(--medium-text);
     z-index: 8;
     transform: translateY(100px);
 }
@@ -125,11 +136,12 @@ section img#frente_esquerda {
 
 /* Container Start */
 .container {
-    background: #094856;
+    background: var(--dark-green);
     border-radius: 6px;
     padding: 30px;
     margin-top: 50px;
     width: 400px;
+    min-width: 300px;
     height: 400px;
     text-align: justify;
     line-height: 1.7;
@@ -164,8 +176,55 @@ section img#frente_esquerda {
     width: 40%;
     height: 530px;
     margin-top: -100px;
+    padding: 16px;
+    
+    object-fit: cover;
+    
+    background-size: cover;
+
     
 }
+
+.name {
+    background: #0ada61;
+    width: 50%;
+    height: 40px;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: #fff;
+    font-size: var(--medium-text);
+    font-weight: 600;
+    transform: translateX(50%) translateY(-50px);
+    
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background: transparent;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    
+    
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+}
+
+.prev, .next {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: var(--medium-text);
+    color: #fff;
+}
+
 
 /* Container End */
 
@@ -173,7 +232,7 @@ section img#frente_esquerda {
 .sec {
     position: relative;
     padding: 100px;
-    background: #030D18;
+    background: var(--dark-color);;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -181,9 +240,9 @@ section img#frente_esquerda {
 }
 
 .sec h2 {
-    font-size: 3.3em;
+    font-size: var(--large-text);
     margin-bottom: 10px;
-    color: #BEF2D4;
+    color: var(--light-text);;
     text-align: center;
     flex: 1;
 }
@@ -192,9 +251,9 @@ section img#frente_esquerda {
     color: #0ada61;
 }
 .sec p  {
-    font-size: 22px;
+    font-size: var(--small-text);
     color: #fff;
-    margin-top: 30px;
+    
 }
 
 
@@ -224,7 +283,7 @@ section img#frente_esquerda {
 
     header {
         padding: 0 20px;
-        background: #030D18;
+        background: var(--dark-color);;
     }
 
     .menu {
@@ -235,7 +294,7 @@ section img#frente_esquerda {
         position: absolute;
         width: 100%;
         height: calc(100vh - 50px);
-        background: #030D18;
+        background: var(--dark-color);;
         top: 50px;
         left: 0;
         transition: 0.5s;

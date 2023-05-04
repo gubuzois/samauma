@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script type=”text/javascript” src="script.js"></script>
     <script src="https://kit.fontawesome.com/ccda18f14f.js" crossorigin="anonymous"></script>
     <title>Home</title>
 
@@ -51,7 +52,7 @@
                 Nosso jogo
             </h2>
             <p>
-                (Nome do jogo) é um jogo de aventura em que o jogador controla um personagem que desbrava a densa floresta amazônica para libertar animais do tráfico ilegal de animais e ajudar a preservar as diversas espécies da floresta.
+                Samaúma é um jogo de aventura em que o jogador controla um personagem que desbrava a densa floresta amazônica para libertar animais do tráfico ilegal de animais e ajudar a preservar as diversas espécies da floresta.
             </p>
         </div>
 
@@ -84,7 +85,18 @@
                 Olá! Nós somos a [nome da equipe], uma equipe composta por seis integrantes que se uniram para proporcionar a você uma experiência divertida e cheia de aprendizagens. Esperamos que nosso projeto possa contribuir para a conscientização ambiental e inspire outras pessoas a se engajarem na preservação da natureza, afinal a preservação do meio ambiente é uma responsabilidade de todos nós.
             </p>
         </div>
-        <div class="container" id="image"></div>
+        <div class="container" id="image">
+            <div class="card">
+                <a class="prev" id="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" 
+               id="next" onclick="plusSlides(1)">&#10095;</a>
+                
+            </div>
+            
+            <div class="name" id="name">oia</div>
+            
+            
+        </div>
     </div>
     <script>
         let arvore_fundo = document.getElementById('arvore_fundo');
@@ -104,8 +116,50 @@
             btn.style.marginTop = value * 1.5 + 'px';
 
             })
+            var card = document.getElementById("image");
+            var next = document.getElementById("next");
+            var prev = document.getElementById("prev");
+            var p = document.getElementById("name");
+
+            card.style.backgroundColor = "blue";
+            p.innerHTML = "Gustavo";
+
+            var count = 0;
+
+            function mudarBackground(num) {
+                count += num;
+
+                if (count < -1) {
+                    count = 1;
+                } else if (count > 1) {
+                    count = -1;
+                }
+
+                if (count == 0) {
+                    card.style.backgroundColor = "blue";
+                    p.innerText = "Gustavo";
+                } else if (count == 1) {
+                    card.style.backgroundColor = "green";
+                    p.innerText = "Thais";
+                } else if (count == -1) {
+                    card.style.backgroundColor = "red";
+                    p.innerText = "Marcela";
+                }
+            }
+
+            prev.addEventListener("click", function() {
+                mudarBackground(-1);
+            });
+
+            next.addEventListener("click", function() {
+                mudarBackground(1);
+            });
+
 
             
+
+            
+     
     </script>
 </body>
 </html>
