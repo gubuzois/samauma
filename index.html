@@ -22,9 +22,9 @@
         <ul>
 
             <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="work.html">Work</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">Sobre nós</a></li>
+            <li><a href="work.html">Download</a></li>
+            
 
         </ul>
     
@@ -36,7 +36,7 @@
 
         <img src="arvore_fundo.svg" id="arvore_fundo">
         <img src="meio.svg" id="meio">
-        <h2 id="texto">Amazonia Odyssey</h2>
+        <h2 id="texto">Samaúma</h2>
         <a href="#sec1" id="btn">Começar</a>
         <img src="frente_direita.svg" id="frente_direita">
         <img src="frente_esquerda.svg" id="frente_esquerda">
@@ -57,6 +57,8 @@
         </div>
 
         <div class="container" id="gif-container"></div>
+
+        <div class="container">a</div>
         
         
     </div>
@@ -86,6 +88,7 @@
             </p>
         </div>
         <div class="container" id="image">
+            <div class="num" id="num">1/6</div>
             <div class="card">
                 <a class="prev" id="prev" onclick="plusSlides(-1)">&#10094;</a>
                 <a class="next" 
@@ -93,14 +96,12 @@
                 
             </div>
             
-            <div class="name" id="name">oia</div>
-            
+            <div class="name" id="name"></div>
+            <div class="name" id="func"></div>
             
         </div>
     </div>
     <script>
-        let arvore_fundo = document.getElementById('arvore_fundo');
-        let meio = document.getElementById('meio');
         let frente_direita = document.getElementById('frente_direita');
         let frente_esquerda = document.getElementById('frente_esquerda');
         let texto = document.getElementById('texto');
@@ -108,8 +109,6 @@
 
         window.addEventListener('scroll', function(){
             let value = window.scrollY;
-            arvore_fundo.style.top = value * 0.06 + 'px';
-            meio.style.top = value * 0.1 + 'px';
             frente_direita.style.left = value * 0.3 + 'px';
             frente_esquerda.style.left = value * -0.3 + 'px';
             texto.style.marginTop = value * 1.5 + 'px';
@@ -120,31 +119,63 @@
             var next = document.getElementById("next");
             var prev = document.getElementById("prev");
             var p = document.getElementById("name");
+            var numero = document.getElementById("num");
+            var func = document.getElementById("func");
 
-            card.style.backgroundColor = "blue";
-            p.innerHTML = "Gustavo";
+            p.innerHTML = "danilo";
+            func.innerHTML = "parte escrita";
+            p.style.background = "linear-gradient(135deg, #f49d0c, #fbd24e)";
+            func.style.background = "linear-gradient(135deg, #f49d0c, #fbd24e)";
 
             var count = 0;
 
             function mudarBackground(num) {
                 count += num;
 
-                if (count < -1) {
-                    count = 1;
-                } else if (count > 1) {
-                    count = -1;
+                if (count < 0) {
+                    count = 5;
+                } else if (count > 5) {
+                    count = 0;
                 }
 
                 if (count == 0) {
-                    card.style.backgroundColor = "blue";
-                    p.innerText = "Gustavo";
+                    p.innerText = "danilo";
+                    numero.innerHTML = "1/6";
+                    func.innerHTML = "parte escrita";
+                    p.style.background = "linear-gradient(135deg, #f49d0c, #fbd24e)";
+                    func.style.background = "linear-gradient(135deg, #f49d0c, #fbd24e)";
+
                 } else if (count == 1) {
-                    card.style.backgroundColor = "green";
-                    p.innerText = "Thais";
-                } else if (count == -1) {
-                    card.style.backgroundColor = "red";
-                    p.innerText = "Marcela";
-                }
+                    p.innerText = "guilherme";
+                    numero.innerHTML = "2/6";
+                    func.innerHTML = "design";
+                    p.style.background = "linear-gradient(135deg, #663ee9, #9a8df8)";
+                    func.style.background = "linear-gradient(135deg, #663ee9, #9a8df8)";
+                } else if (count == 2) {
+                    p.innerText = "gustavo";
+                    numero.innerHTML = "3/6";
+                    func.innerHTML = "prog. web";
+                    p.style.background = "linear-gradient(135deg, #32a30d, #67e635)";
+                    func.style.background = "linear-gradient(135deg, #32a30d, #67e635)";
+                } else if (count == 3) {
+                    p.innerText = "marcela";
+                    numero.innerHTML = "4/6";
+                    func.innerHTML = "design";
+                    p.style.background = "linear-gradient(135deg, #b2507b, #d78fb4)";
+                    func.style.background = "linear-gradient(135deg, #b2507b, #d78fb4)";
+                } else if (count == 4) {
+                    p.innerText = "murillo";
+                    numero.innerHTML = "5/6";
+                    func.innerHTML = "prog. jogo";
+                    p.style.background = "linear-gradient(135deg, #08998c, #26dbc3)";
+                    func.style.background = "linear-gradient(135deg, #08998c, #26dbc3)";
+                } else if (count == 5) {
+                    p.innerText = "thais";
+                    numero.innerHTML = "6/6";
+                    func.innerHTML = "parte escrita";
+                    p.style.background = "linear-gradient(135deg, #ec1636, #ff657c)";
+                    func.style.background = "linear-gradient(135deg, #ec1636, #ff657c)";
+                } 
             }
 
             prev.addEventListener("click", function() {
@@ -155,11 +186,6 @@
                 mudarBackground(1);
             });
 
-
-            
-
-            
-     
     </script>
 </body>
 </html>
