@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
 
 :root {
-    --dark-color: #030D18;
+    --dark-blue: #030D18;
     --dark-green: #0d6f5c;
     --light-text: #d4f7e8;
 
     --small-text: 1.6vw;
     --medium-text: 2vw;
-    --large-text: 4.3vw;
+    --large-text: 6.7vw;
 }
 
 * {
@@ -20,7 +20,7 @@
 
 body {
     overflow-x: hidden;
-    background: var(--dark-color);
+    background: var(--dark-blue);
 }
 
 /* Header Start */
@@ -63,12 +63,12 @@ header ul li a  {
 header ul li a:hover,
 header ul li a.active  {
 background: var(--light-text);;
-color: var(--dark-color);;
+color: var(--dark-blue);;
 }
 .menu {
     float: right;
     line-height: 50px;
-    font-size: var(--large-text);
+    font-size: var(--medium-text);
     cursor: pointer;
     display: none;
 }
@@ -93,7 +93,7 @@ section::before  {
     bottom: 0;
     width: 100%;
     height: 30%;
-    background: linear-gradient(to top, var(--dark-color), transparent);
+    background: linear-gradient(to top, var(--dark-blue), transparent);
     z-index: 1000;
 }
 section img {
@@ -127,7 +127,7 @@ section img#frente_esquerda {
     padding: 8px 30px;
     border-radius: 40px;
     background: var(--light-text);
-    color: var(--dark-color);
+    color: var(--dark-blue);
     font-size: var(--medium-text);
     z-index: 8;
     transform: translateY(100px);
@@ -136,53 +136,109 @@ section img#frente_esquerda {
 
 /* Container Start */
 .container {
-    background: var(--dark-green);
     border-radius: 6px;
-    padding: 30px;
-    margin-top: 50px;
     width: 400px;
-    min-width: 300px;
     height: 400px;
+    min-width: 300px; 
+    display: flex;
+    justify-content: center;
     text-align: justify;
-    line-height: 1.7;
 }
 
-#game {
+#titulo {
     width: 100%;
-    color: #0ada61;
+    height: auto
+}
+
+#descricao {
+    width: 40%;
+    height: 50vh;
+    padding: 0;
+    transform: translateY(50px);
 }
 
 #gif-container {
-    background-image: url('https://media1.giphy.com/media/3oriNXgmyShWPjuaFa/giphy.gif?cid=ecf05e47gv4jkrgozh1pbou7g4dgu5wwjbl9v1f0biypsv9j&rid=giphy.gif&ct=g');
+    background-image: url(spring-summer-night-forest-horizontal-260nw-1561631752.webp);
     background-size: cover;
-    width: 40%;
-    
+    width: 57%;
+    height: 50vh;
+}
+
+#video {
+    width: 100%;
+    background-image: url('https://i.pinimg.com/originals/b8/2f/28/b82f28a7e9c8fcb3868d3d94652c107c.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.text-background {
+    background: url(spring-summer-night-forest-horizontal-260nw-1561631752.webp);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 #mission {
     width: 100%;
     height: 600px;
-    margin-top: -100px;
-}
-
-#about {
-    width: 50%;
-    height: 530px;
-    margin-top: -100px;
-}
-
-#image {
     
-    width: 40%;
-    height: 530px;
-    margin-top: -100px;
-    padding: 16px;
-    transition: 0.2s;
-    object-fit: cover;
+}
+
+#equipe {
+    width: 100%;
+    background-image: url(spring-summer-night-forest-horizontal-260nw-1561631752.webp);
     background-size: cover;
 }
 
-.name {
+#integrantes {
+    width: 100%;
+    padding: 18px;
+    display: flex;
+    justify-content: space-evenly;
+    background: linear-gradient(135deg, #118ae6, #094983);
+}
+
+.perfil {
+    width: 30vw;
+    height: 20vw;
+    border-radius: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.foto {
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+}
+
+.buttons {
+    width: 50%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info {
+    width: 30vw;
+    height: 25vw;
+    min-width: 330px;
+    border-radius: 16px;
+    padding: 16px;
+    font-size: var(--medium-text);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.nome-container {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.nome {
     background: #0ada61;
     width: 50%;
     height: 40px;
@@ -193,55 +249,56 @@ section img#frente_esquerda {
     color: #fff;
     font-size: var(--medium-text);
     font-weight: 600;
-    transform: translateX(50%) translateY(-130px);
+}
+
+.funcoes {
+    width: 100%;
+    height: 80%;
+    padding: 12px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: var(--small-text);
 }
 
 #func {
     margin-top: 10px;
 }
 
-.num {
-    color: #fff;
-    font-size: var(--small-text);
-    font-weight: 600;
-}
-
-.card {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
-    background: transparent;
-    position: relative;
-    height: 100%;
-    width: 100%;
-}
-
-.card img {
-    width: 100%;
-    height: 100%;
-}
-
-.prev, .next {
+#prev, 
+#next {
     cursor: pointer;
     font-weight: 600;
     font-size: var(--medium-text);
     color: #fff;
+    transition: 0.3s;
 }
 
+#prev:hover, 
+#next:hover {
+    font-size: calc(var(--medium-text) + 15%);
+}
+
+#animal { 
+    font-size: var(--small-text);
+    margin-left: 6px;
+}
 
 /* Container End */
 
 /* Sec Start */
 .sec {
     position: relative;
-    padding: 100px;
-    background: var(--dark-color);;
+    padding: 100px 200px 0 200px;
+    background: var(--dark-blue);;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 10px;
+    gap: 20px;
+}
+
+#sec-about {
+    justify-content: center;
 }
 
 .sec h2 {
@@ -252,17 +309,9 @@ section img#frente_esquerda {
     flex: 1;
 }
 
-.sec i {
-    color: #0ada61;
-}
 .sec p  {
     font-size: var(--small-text);
     color: #fff;
-    
-}
-
-.container p {
-    margin-top: -20px;
 }
 
 /* Sec End */
@@ -284,7 +333,7 @@ section img#frente_esquerda {
 
     header {
         padding: 0 20px;
-        background: var(--dark-color);;
+        background: var(--dark-blue);;
     }
 
     .menu {
@@ -295,7 +344,7 @@ section img#frente_esquerda {
         position: absolute;
         width: 100%;
         height: calc(100vh - 50px);
-        background: var(--dark-color);;
+        background: var(--dark-blue);;
         top: 50px;
         left: 0;
         transition: 0.5s;

@@ -43,64 +43,49 @@
 
     </section>
 
-    <div class="sec" id="sec1">
+    <div class="sec">
 
         
 
-        <div class="container" id="game">
-            <h2>
+        <div class="container" id="titulo">
+            <h2 class="text-background">
                 Nosso jogo
             </h2>
+            
+        </div>
+
+        <div class="container" id="gif-container">
+            
+        </div>
+
+        <div class="container" id="descricao">
             <p>
-                Samaúma é um jogo de aventura em que o jogador controla um personagem que desbrava a densa floresta amazônica para libertar animais do tráfico ilegal de animais e ajudar a preservar as diversas espécies da floresta.
+                Samaúma é um jogo de aventura, em que o jogador deve superar diversos obstáculos na floresta amazônica para libertar animais ameaçados de extinção do tráfico ilegal, ajudando a preservar as diversas espécies da floresta.
             </p>
         </div>
 
-        <div class="container" id="gif-container"></div>
-
-        <div class="container">a</div>
+        <div class="container" id="video">
+            
+        </div>
         
         
     </div>
 
     <div class="sec">
-        <div class="container" id="mission">
-            <h2>
+        <div class="container" id="titulo">
+            <h2 class="text-background">
                 Nossa missão
             </h2>
+        </div>
+        <div class="container" id="mission">
             <p>
                 A Floresta Amazônica é uma das regiões mais importantes do planeta em termos de biodiversidade e equilíbrio ambiental, contendo uma variedade incrível de espécies de plantas e animais. No entanto, essa região está sob ameaça devido à exploração desenfreada de recursos naturais, desmatamento e mudanças climáticas, o que pode levar a consequências devastadoras para o planeta.
                 <br><br>
-                Para abordar esse problema, a nossa missão é oferecer a você uma maneira interativa e lúdica de conscientização ambiental por meio do nosso jogo. Nós acreditamos que, ao tornar a conscientização ambiental divertida e interessante, podemos despertar o interesse das pessoas sobre a importância da proteção da flora e fauna da Floresta Amazônica e incentivar uma mudança de comportamento em relação à conservação ambiental.
-                
-                
+                Para abordar esse problema, a nossa missão é oferecer a você uma maneira interativa e lúdica de conscientização ambiental por meio do nosso jogo. Nós acreditamos que, ao tornar a conscientização ambiental divertida e interessante, podemos despertar o interesse das pessoas sobre a importância da proteção da flora e fauna da Floresta Amazônica e incentivar uma mudança de comportamento em relação à conservação ambiental. 
             </p>
         </div>
     </div>
-
-    <div class="sec">
-        <div class="container" id="about">
-            <h2>
-                Sobre nós
-            </h2>
-            <p>
-                Olá! Nós somos a [nome da equipe], uma equipe composta por seis integrantes que se uniram para proporcionar a você uma experiência divertida e cheia de aprendizagens. Esperamos que nosso projeto possa contribuir para a conscientização ambiental e inspire outras pessoas a se engajarem na preservação da natureza, afinal a preservação do meio ambiente é uma responsabilidade de todos nós.
-            </p>
-        </div>
-        <div class="container" id="image">
-            <div class="num" id="num">1/6</div>
-            <div class="card">
-                <a class="prev" id="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" 
-               id="next" onclick="plusSlides(1)">&#10095;</a>
-                
-            </div>
-            
-            <div class="name" id="name"></div>
-            <div class="name" id="func"></div>
-            
-        </div>
-    </div>
+    
     <script>
         let frente_direita = document.getElementById('frente_direita');
         let frente_esquerda = document.getElementById('frente_esquerda');
@@ -115,76 +100,9 @@
             btn.style.marginTop = value * 1.5 + 'px';
 
             })
-            var card = document.getElementById("image");
-            var next = document.getElementById("next");
-            var prev = document.getElementById("prev");
-            var p = document.getElementById("name");
-            var numero = document.getElementById("num");
-            var func = document.getElementById("func");
+            
 
-            p.innerHTML = "danilo";
-            func.innerHTML = "parte escrita";
-            p.style.background = "linear-gradient(135deg, #f49d0c, #fbd24e)";
-            func.style.background = "linear-gradient(135deg, #f49d0c, #fbd24e)";
-
-            var count = 0;
-
-            function mudarBackground(num) {
-                count += num;
-
-                if (count < 0) {
-                    count = 5;
-                } else if (count > 5) {
-                    count = 0;
-                }
-
-                if (count == 0) {
-                    p.innerText = "danilo";
-                    numero.innerHTML = "1/6";
-                    func.innerHTML = "parte escrita";
-                    p.style.background = "linear-gradient(135deg, #f49d0c, #fbd24e)";
-                    func.style.background = "linear-gradient(135deg, #f49d0c, #fbd24e)";
-
-                } else if (count == 1) {
-                    p.innerText = "guilherme";
-                    numero.innerHTML = "2/6";
-                    func.innerHTML = "design";
-                    p.style.background = "linear-gradient(135deg, #663ee9, #9a8df8)";
-                    func.style.background = "linear-gradient(135deg, #663ee9, #9a8df8)";
-                } else if (count == 2) {
-                    p.innerText = "gustavo";
-                    numero.innerHTML = "3/6";
-                    func.innerHTML = "prog. web";
-                    p.style.background = "linear-gradient(135deg, #32a30d, #67e635)";
-                    func.style.background = "linear-gradient(135deg, #32a30d, #67e635)";
-                } else if (count == 3) {
-                    p.innerText = "marcela";
-                    numero.innerHTML = "4/6";
-                    func.innerHTML = "design";
-                    p.style.background = "linear-gradient(135deg, #b2507b, #d78fb4)";
-                    func.style.background = "linear-gradient(135deg, #b2507b, #d78fb4)";
-                } else if (count == 4) {
-                    p.innerText = "murillo";
-                    numero.innerHTML = "5/6";
-                    func.innerHTML = "prog. jogo";
-                    p.style.background = "linear-gradient(135deg, #08998c, #26dbc3)";
-                    func.style.background = "linear-gradient(135deg, #08998c, #26dbc3)";
-                } else if (count == 5) {
-                    p.innerText = "thais";
-                    numero.innerHTML = "6/6";
-                    func.innerHTML = "parte escrita";
-                    p.style.background = "linear-gradient(135deg, #ec1636, #ff657c)";
-                    func.style.background = "linear-gradient(135deg, #ec1636, #ff657c)";
-                } 
-            }
-
-            prev.addEventListener("click", function() {
-                mudarBackground(-1);
-            });
-
-            next.addEventListener("click", function() {
-                mudarBackground(1);
-            });
+            
 
     </script>
 </body>

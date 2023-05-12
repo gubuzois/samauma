@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/ccda18f14f.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
     <title>Document</title>
 </head>
 
@@ -13,16 +14,121 @@
 
 <body>
     <header>
-        <a href="index.html" class="logo">samaúma</a>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html" class="active">About</a></li>
-            <li><a href="work.html">Work</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="menu"><i class="fa-solid fa-bars" style="color: #ffffff;"></i></div>
-    </header>
 
+        <a href="index.html" class="logo">samaúma</a>
+
+        <ul>
+
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">Sobre nós</a></li>
+            <li><a href="work.html">Download</a></li>
+            
+
+        </ul>
+    
+        <div class="menu"><i class="fa-solid fa-bars" style="color: #ffffff;"></i></div>
+
+    </header>
+    <div class="sec">
+
+        <div class="container" id="titulo">
+            <h2 class="text-background">
+                Sobre nós
+            </h2>
+        </div>
+        <div class="container" id="equipe"></div>
+
+        <div class="container" id="integrantes">
+            <div class="perfil">
+                <div class="foto" id="foto"></div>
+                <div class="buttons">
+                    <i class="fa-solid fa-arrow-left-long" id="prev"></i>
+                    <i class="fa-solid fa-arrow-right-long" id="next"></i>
+                </div>
+            </div>
+            <div class="info">
+                <div class="nome-container">
+                    <div class="nome" id="nome"></div>
+                </div> 
+                <div class="funcoes" id="func">
+                    funções
+                </div>
+                
+            </div>
+            
+        </div>
+
+    </div>
+
+    <script>
+        var foto = document.getElementById("foto");
+        var next = document.getElementById("next");
+        var prev = document.getElementById("prev");
+        var nome = document.getElementById("nome");
+        var func = document.getElementById("func");
+
+        foto.style.background = "blue";
+        nome.innerHTML = 'Danilo <i class="fa-solid fa-dragon" id="animal"></i>';
+        nome.style.background = "linear-gradient(135deg, #f49d0c, #fbd24e)";
+        func.innerHTML = "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo pariatur quibusdam, ut saepe tenetur alias iste ad quia nam id molestias maiores quasi atque totam incidunt dicta laudantium eum temporibus?";
+
+        var count = 0;
+
+        function mudarBackground(num) {
+            count += num;
+
+            if (count < 0) {
+                count = 5;
+            } else if (count > 5) {
+                count = 0;
+            }
+
+            if (count == 0) {
+                foto.style.background = "blue";
+                nome.innerHTML = 'Danilo   <i class="fa-solid fa-dragon" id="animal"></i>';
+                nome.style.background = "linear-gradient(135deg, #f49d0c, #fbd24e)";
+                func.innerHTML = "A";
+
+            } else if (count == 1) {
+                foto.style.background = "green";
+                nome.innerHTML = 'Guilherme  <i class="fa-solid fa-spider" id="animal"></i>';
+                nome.style.background = "linear-gradient(135deg, #663ee9, #9a8df8)";
+                func.innerHTML = "B";
+                
+            } else if (count == 2) {
+                foto.style.background = "yellow";
+                nome.innerHTML = 'Gustavo <i class="fa-solid fa-kiwi-bird" id="animal"></i>';
+                nome.style.background = "linear-gradient(135deg, #32a30d, #67e635)";
+                func.innerHTML = "C";
+                
+            } else if (count == 3) {
+                foto.style.background = "red";
+                nome.innerHTML = 'Marcela <i class="fa-solid fa-dove" id="animal"></i>';
+                nome.style.background = "linear-gradient(135deg, #b2507b, #d78fb4)";
+                func.innerHTML = "D";
+                
+            } else if (count == 4) {
+                foto.style.background = "pink";
+                nome.innerHTML = 'Murillo <i class="fa-solid fa-cat" id="animal"></i>';
+                nome.style.background = "linear-gradient(135deg, #08998c, #26dbc3)";
+                func.innerHTML = "E";
+                
+            } else if (count == 5) {
+                foto.style.background = "purple";
+                nome.innerHTML = 'Thais <i class="fa-solid fa-otter" id="animal"></i>';
+                nome.style.background = "linear-gradient(135deg, #ec1636, #ff657c)";
+                func.innerHTML = "F";
+                
+            } 
+        }
+        prev.addEventListener("click", function() {
+                mudarBackground(-1);
+        });
+
+        next.addEventListener("click", function() {
+            mudarBackground(1);
+            });
+    </script>
     
 </body>
 </html>
