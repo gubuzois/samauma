@@ -43,103 +43,182 @@
 
         <div class="container" id="integrantes">
             <div class="animais-side">
-                <p><i class="fa-solid fa-dragon" id="animal"></i></p>
-                <p><i class="fa-solid fa-spider" id="animal"></i></p>
-                <p><i class="fa-solid fa-kiwi-bird" id="animal"></i></p>
-                <p><i class="fa-solid fa-dove" id="animal"></i></p>
-                <p><i class="fa-solid fa-cat" id="animal"></i></p>
-                <p><i class="fa-solid fa-otter" id="animal"></i></p>
+                <p><i class="fa-solid fa-dragon" id="danilo"></i></p>
+                <p><i class="fa-solid fa-spider" id="guilherme"></i></p>
+                <p><i class="fa-solid fa-shrimp" id="gustavo"></i></p>
+                <p><i class="fa-solid fa-dove" id="marcela"></i></p>
+                <p><i class="fa-solid fa-cat" id="murillo"></i></p>
+                <p><i class="fa-solid fa-otter" id="thais"></i></p>
                 
             </div>
             <div class="perfil">
                 <div class="foto" id="foto"></div>
-                <div class="buttons">
-                    <i class="fa-solid fa-arrow-left-long" id="prev"></i>
-                    <i class="fa-solid fa-arrow-right-long" id="next"></i>
-                </div>
             </div>
             <div class="info">
                 <div class="nome-container">
                     <div class="nome" id="nome"></div>
                 </div> 
-                <div class="funcoes" id="func">
-                    funções
-                </div>
-                
+                <div class="funcoes" id="func"></div>
             </div>
             
+        </div>
+        <div class="container" id="contato">
+            <div class="contate">contato</div>
+            <div class="email"><i class="fa-solid fa-envelope"></i></div>
+            <div class="instagram"><i class="fa-brands fa-square-instagram"></i></div>
         </div>
 
     </div>
 
     <script>
         var foto = document.getElementById("foto");
-        var next = document.getElementById("next");
-        var prev = document.getElementById("prev");
         var nome = document.getElementById("nome");
         var func = document.getElementById("func");
 
+        var danilo = document.getElementById("danilo");
+        var guilherme = document.getElementById("guilherme");
+        var gustavo = document.getElementById("gustavo");
+        var marcela = document.getElementById("marcela");
+        var murillo = document.getElementById("murillo");
+        var thais = document.getElementById("thais");
+
         foto.style.background = "blue";
         nome.innerHTML = "Danilo";
-        nome.style.background = "linear-gradient(135deg, #f49d0c, #fbd24e)";
-        func.innerHTML = "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo pariatur quibusdam, ut saepe tenetur alias iste ad quia nam id molestias maiores quasi atque totam incidunt dicta laudantium eum temporibus?";
-
-        var count = 0;
+        danilo.style.color = "#00b31c";
+        danilo.style.scale = "1.3";
+        nome.style.background = "linear-gradient(135deg, #00b31c, #54ff64)";
+        func.innerHTML = "idade: ...  <br> Função: ... <br> Hobbies: ... <br> matéria favorita: ... ";
 
         function mudarBackground(num) {
-            count += num;
-
-            if (count < 0) {
-                count = 5;
-            } else if (count > 5) {
-                count = 0;
-            }
-
-            if (count == 0) {
+            if (num == 0) {
                 foto.style.background = "blue";
                 nome.innerHTML = "Danilo ";
-                nome.style.background = "linear-gradient(135deg, #f49d0c, #fbd24e)";
-                func.innerHTML = "A";
+                danilo.style.color = "#00b31c";
+                guilherme.style.color = "#fff";
+                gustavo.style.color = "#fff";
+                marcela.style.color = "#fff";
+                murillo.style.color = "#fff";
+                thais.style.color = "#fff";
+                danilo.style.scale = "1.3";
+                guilherme.style.scale = "1";
+                gustavo.style.scale = "1";
+                marcela.style.scale = "1";
+                murillo.style.scale = "1";
+                thais.style.scale = "1";
+                nome.style.background = "linear-gradient(135deg, #00b31c, #54ff64)";
+                func.innerHTML = "<p>idade: ... </p> <p>Função: ...</p> <p>Hobbies: ... </p> <p>matéria favorita: ... </p> ";
 
-            } else if (count == 1) {
+            } else if (num == 1) {
                 foto.style.background = "green";
                 nome.innerHTML = "Guilherme";
+                danilo.style.color = "#fff";
+                guilherme.style.color = "#663ee9";
+                gustavo.style.color = "#fff";
+                marcela.style.color = "#fff";
+                murillo.style.color = "#fff";
+                thais.style.color = "#fff";
+                danilo.style.scale = "1";
+                guilherme.style.scale = "1.3";
+                gustavo.style.scale = "1";
+                marcela.style.scale = "1";
+                murillo.style.scale = "1";
+                thais.style.scale = "1";
                 nome.style.background = "linear-gradient(135deg, #663ee9, #9a8df8)";
-                func.innerHTML = "B";
+                func.innerHTML = "<p>idade: ... </p> <p>Função: ...</p> <p>Hobbies: ... </p> <p>matéria favorita: ... </p> ";
                 
-            } else if (count == 2) {
+            } else if (num == 2) {
                 foto.style.background = "yellow";
                 nome.innerHTML = "Gustavo";
-                nome.style.background = "linear-gradient(135deg, #32a30d, #67e635)";
-                func.innerHTML = "C";
+                danilo.style.color = "#fff";
+                guilherme.style.color = "#fff";
+                gustavo.style.color = "#fb8014";
+                marcela.style.color = "#fff";
+                murillo.style.color = "#fff";
+                thais.style.color = "#fff";
+                danilo.style.scale = "1";
+                guilherme.style.scale = "1";
+                gustavo.style.scale = "1.3";
+                marcela.style.scale = "1";
+                murillo.style.scale = "1";
+                thais.style.scale = "1";
+                nome.style.background = "linear-gradient(135deg, #fb8014, #fec273)";
+                func.innerHTML = "<p>idade: ... </p> <p>Função: ...</p> <p>Hobbies: ... </p> <p>matéria favorita: ... </p> ";
                 
-            } else if (count == 3) {
+            } else if (num == 3) {
                 foto.style.background = "red";
                 nome.innerHTML = "Marcela";
-                nome.style.background = "linear-gradient(135deg, #b2507b, #d78fb4)";
-                func.innerHTML = "D";
+                danilo.style.color = "#fff";
+                guilherme.style.color = "#fff";
+                gustavo.style.color = "#fff";
+                marcela.style.color = "#c400ce";
+                murillo.style.color = "#fff";
+                thais.style.color = "#fff";
+                danilo.style.scale = "1";
+                guilherme.style.scale = "1";
+                gustavo.style.scale = "1";
+                marcela.style.scale = "1.3";
+                murillo.style.scale = "1";
+                thais.style.scale = "1";
+                nome.style.background = "linear-gradient(135deg, #c400ce, #ff61fe)";
+                func.innerHTML = "<p>idade: ... </p> <p>Função: ...</p> <p>Hobbies: ... </p> <p>matéria favorita: ... </p> ";
                 
-            } else if (count == 4) {
+            } else if (num == 4) {
                 foto.style.background = "pink";
                 nome.innerHTML = "Murillo";
-                nome.style.background = "linear-gradient(135deg, #08998c, #26dbc3)";
-                func.innerHTML = "E";
+                danilo.style.color = "#fff";
+                guilherme.style.color = "#fff";
+                gustavo.style.color = "#fff";
+                marcela.style.color = "#fff";
+                murillo.style.color = "#3586ff";
+                thais.style.color = "#fff";
+                danilo.style.scale = "1";
+                guilherme.style.scale = "1";
+                gustavo.style.scale = "1";
+                marcela.style.scale = "1";
+                murillo.style.scale = "1.3";
+                thais.style.scale = "1";
+                nome.style.background = "linear-gradient(135deg, #3586ff, #26dbc3)";
+                func.innerHTML = "<p>idade: ... </p> <p>Função: ...</p> <p>Hobbies: ... </p> <p>matéria favorita: ... </p> ";
                 
-            } else if (count == 5) {
+            } else if (num == 5) {
                 foto.style.background = "purple";
                 nome.innerHTML = "Thais";
+                danilo.style.color = "#fff";
+                guilherme.style.color = "#fff";
+                gustavo.style.color = "#fff";
+                marcela.style.color = "#fff";
+                murillo.style.color = "#fff";
+                thais.style.color = "#ec1636";
+                danilo.style.scale = "1";
+                guilherme.style.scale = "1";
+                gustavo.style.scale = "1";
+                marcela.style.scale = "1";
+                murillo.style.scale = "1";
+                thais.style.scale = "1.3";
                 nome.style.background = "linear-gradient(135deg, #ec1636, #ff657c)";
-                func.innerHTML = "F";
+                func.innerHTML = "<p>idade: ... </p> <p>Função: ...</p> <p>Hobbies: ... </p> <p>matéria favorita: ... </p> ";
                 
             } 
         }
-        prev.addEventListener("click", function() {
-                mudarBackground(-1);
+        danilo.addEventListener("click", function() {
+                mudarBackground(0);
         });
-
-        next.addEventListener("click", function() {
+        guilherme.addEventListener("click", function() {
             mudarBackground(1);
             });
+        gustavo.addEventListener("click", function() {
+            mudarBackground(2);
+            });
+        marcela.addEventListener("click", function() {
+            mudarBackground(3);
+            });
+        murillo.addEventListener("click", function() {
+            mudarBackground(4);
+            });
+        thais.addEventListener("click", function() {
+            mudarBackground(5);
+            });
+        
     </script>
     
 </body>

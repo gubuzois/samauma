@@ -187,6 +187,14 @@ section img#frente_esquerda {
     width: 100%;
     background-image: url(spring-summer-night-forest-horizontal-260nw-1561631752.webp);
     background-size: cover;
+    transition: .2;
+}
+
+#equipe:hover {
+    opacity: .2;
+}
+#equipe::after {
+    transition: 0.4;
 }
 
 #integrantes {
@@ -194,16 +202,18 @@ section img#frente_esquerda {
     padding: 18px;
     display: flex;
     justify-content: space-evenly;
-    background: linear-gradient(135deg, #118ae6, #094983);
+    background: linear-gradient(135deg, #0e3e6c, #030D18);
 }
 
 .animais-side {
-    width: 30px;
+    width: 38px;
     height: 25vw;
+    border-radius: 16px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    
 }
 
 .perfil {
@@ -213,19 +223,14 @@ section img#frente_esquerda {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 
 .foto {
     width: 20vw;
     height: 20vw;
+    border: solid 1px;
     border-radius: 50%;
-}
-
-.buttons {
-    width: 50%;
-    height: 40px;
-    display: flex;
-    justify-content: space-between;
 }
 
 .info {
@@ -238,6 +243,7 @@ section img#frente_esquerda {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    
 }
 
 .nome-container {
@@ -273,23 +279,40 @@ section img#frente_esquerda {
     margin-top: 10px;
 }
 
-#prev, 
-#next {
-    cursor: pointer;
-    font-weight: 600;
-    font-size: var(--medium-text);
-    color: #fff;
-    transition: 0.3s;
-}
-
-#prev:hover, 
-#next:hover {
-    font-size: calc(var(--medium-text) + 15%);
-}
-
-#animal { 
+#danilo, #guilherme, #gustavo, #marcela, #murillo, #thais { 
     font-size: var(--small-text);
-    margin-left: 6px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#contato {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background: linear-gradient(135deg, #0e3e6c, #030D18);
+    padding: 18px;
+
+}
+
+.contate {
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    color: #fff;
+    font-size: var(--medium-text);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.email, .instagram{
+    background: #d4f7e8;
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--medium-text);
     cursor: pointer;
 }
 
