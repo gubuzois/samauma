@@ -23,6 +23,11 @@ body {
     background: var(--dark-blue);
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 /* Header Start */
 header {
     position: absolute;
@@ -172,29 +177,94 @@ section img#frente_esquerda {
 }
 
 .text-background {
-    background: url(spring-summer-night-forest-horizontal-260nw-1561631752.webp);
+    background: -webkit-linear-gradient(135deg, #0e3e6c, #118ae6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-#mission {
+#text {
     width: 100%;
-    height: 600px;
-    
+    height: auto;
+    background: linear-gradient(135deg, #0e3e6c, #030D18);
+    padding: 18px;
+}
+
+#dados {
+    width: 100%;
+    height: auto;
+    background: linear-gradient(135deg, #0e3e6c, #030D18);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.topicos {
+    width: 100%;
+    height: auto;
+    padding: 12px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+}
+
+.topico {
+    text-align: center;
+    font-size: var(--medium-text);
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.topico:hover {
+    scale: 1.2;
+    color: #118ae6;
+}
+
+.card-info {
+    width: 80%;
+    height: auto;
+    font-size: var(--small-text);
+    border-radius: 16px;
+    padding: 12px;
+    text-align: center;
+    color: #fff;
+    transition: 0.3;
+}
+
+.subtitulo {
+    display: none;
+    width: 100%;
+    height: auto;
+    font-size: var(--medium-text);
+    text-align: center;
+    transition: 0.3;
+}
+
+.informacoes {
+    display: none;
+    height: auto;
+    font-size: var(--small-text);
 }
 
 #equipe {
     width: 100%;
+    height: 500px;
+    contain: content;
     background-image: url(spring-summer-night-forest-horizontal-260nw-1561631752.webp);
     background-size: cover;
-    transition: .2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--large-text);
+}
+
+#equipe .contate {
+    font-size: var(--large-text);
+    opacity: 0.5;
 }
 
 #equipe:hover {
-    opacity: .2;
-}
-#equipe::after {
-    transition: 0.4;
+    opacity: .5;
 }
 
 #integrantes {
@@ -287,8 +357,10 @@ section img#frente_esquerda {
 
 #contato {
     width: 100%;
+    height: 200px;
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
     background: linear-gradient(135deg, #0e3e6c, #030D18);
     padding: 18px;
 
@@ -296,7 +368,7 @@ section img#frente_esquerda {
 
 .contate {
     width: 100%;
-    height: 60px;
+    height: 40px;
     text-align: center;
     color: #fff;
     font-size: var(--medium-text);
@@ -304,8 +376,16 @@ section img#frente_esquerda {
     text-transform: uppercase;
 }
 
-.email, .instagram{
-    background: #d4f7e8;
+.container-contato {
+    width: 200px;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    justify-self: flex-start;
+}
+
+#email, #instagram{
+    background: #fff;
     width: 5vw;
     height: 5vw;
     border-radius: 50%;
@@ -313,7 +393,17 @@ section img#frente_esquerda {
     justify-content: center;
     align-items: center;
     font-size: var(--medium-text);
+    color: #030D18;
+}
+
+#email:hover, #instagram:hover{
+    scale: 1.1;
+    color: #0e3e6c;
     cursor: pointer;
+}
+
+.footer {
+    height: 60px;
 }
 
 /* Container End */
@@ -400,9 +490,6 @@ section img#frente_esquerda {
     header .logo {
         font-size: 20px;
     }
-
-
-
 }
 
 
