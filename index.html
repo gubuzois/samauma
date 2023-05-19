@@ -96,8 +96,25 @@
             <div class="card-info" id="card-info"></div>
         </div>
     </div>
+    <div class="sec">
+        <div class="container" id="titulo">
+            <h2 class="text-background">
+                Importância da preservação
+            </h2>
+        </div>
+        <div class="container" id="text">
+            <p>
+                A Floresta Amazônica é fundamental para a sobrevivência de diversas espécies animais e vegetais, muitas das quais são endêmicas, ou seja, são encontradas apenas nessa região. Além disso, ela desempenha um papel crucial na regulação do clima global, absorvendo grandes quantidades de dióxido de carbono e produzindo oxigênio.
+                <br>
+                <br>
+                A preservação da Floresta Amazônica é essencial para a manutenção do equilíbrio ecológico do planeta, já que a sua destruição pode ter graves consequências, como o aumento das emissões de gases de efeito estufa, o aquecimento global, a perda de biodiversidade e a redução das chuvas em outras regiões do país e do mundo.
+                <br>
+                <br>
+                Além disso, a Floresta Amazônica também tem uma grande importância socioeconômica para as populações locais, incluindo comunidades indígenas e ribeirinhas, que dependem dos recursos naturais da floresta para a sua subsistência e para a manutenção de suas culturas e tradições.
+            </p>
+        </div>
+    </div>
         
-    
     <script>
         let frente_direita = document.getElementById('frente_direita');
         let frente_esquerda = document.getElementById('frente_esquerda');
@@ -120,16 +137,37 @@
         var indice = 0;
 
         card.innerHTML = "Na floresta amazônica encontramos aproximadamente 40 mil especies vegetais, 3 mil espécies de peixes, 450 de mamíferos, 400 de anfíbios, 400 de répteis e 130 mil de invertebrados, sem citar as que ainda não são conhecidas por nossos cientistas.";
+        topico1.style.scale = '1.2';
+        topico1.style.color = '#118ae6';
+
 
         function mudarTexto(indice) {
             if (indice == 0) {
                 card.innerHTML = "Na floresta amazônica encontramos aproximadamente 40 mil especies vegetais, 3 mil espécies de peixes, 450 de mamíferos, 400 de anfíbios, 400 de répteis e 130 mil de invertebrados, sem citar as que ainda não são conhecidas por nossos cientistas.";
+                topico1.style.scale = '1.2';
+                topico2.style.scale = '1';
+                topico3.style.scale = '1';
+                topico1.style.color = '#118ae6';
+                topico2.style.color = '#fff';
+                topico3.style.color = '#fff';
             }
             else if (indice == 1) {
                 card.innerHTML = "Sendo a maior floresta equatorial do mundo, a floresta Amazônica se encontra na américa do sul, com o 60% do território sendo no Brasil. Os outros 40% ficam na Bolívia, Peru, Equador, Colômbia, Venezuela, Guiana, Suriname e Guiana Francesa.";
+                topico1.style.scale = '1';
+                topico2.style.scale = '1.2';
+                topico3.style.scale = '1';
+                topico1.style.color = '#fff';
+                topico2.style.color = '#118ae6';
+                topico3.style.color = '#fff';
             }
             else if (indice == 2) {
                 card.innerHTML = "Com 7 milhões de metros quadrados, a bacia hidrográfica da Amazônia é a maior do mundo, com uma das mais importantes capacidades hidrográficas do planeta. Desse território, cerca de 4 milhões de quilômetros quadrados se encontram no Brasil, sendo correspondente a 42% do território nacional";
+                topico1.style.scale = '1';
+                topico2.style.scale = '1';
+                topico3.style.scale = '1.2';
+                topico1.style.color = '#fff';
+                topico2.style.color = '#fff';
+                topico3.style.color = '#118ae6';
             }
         }
 
