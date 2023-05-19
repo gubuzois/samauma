@@ -156,24 +156,15 @@ section img#frente_esquerda {
 }
 
 #descricao {
-    width: 40%;
+    width: 100%;
     height: auto;
     background: linear-gradient(135deg, #0e3e6c, #030D18);
     padding: 18px;
 }
 
-#gif-container {
-    background-image: url(spring-summer-night-forest-horizontal-260nw-1561631752.webp);
-    background-size: cover;
-    width: 57%;
-    height: 50vh;
-}
-
 #video {
     width: 100%;
-    background-image: url('https://i.pinimg.com/originals/b8/2f/28/b82f28a7e9c8fcb3868d3d94652c107c.gif');
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: #0e3e6c;
 }
 
 .text-background {
