@@ -1,77 +1,55 @@
 <!DOCTYPE html>
-
 <html lang="pt-br">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script type=”text/javascript” src="script.js"></script>
     <script src="https://kit.fontawesome.com/ccda18f14f.js" crossorigin="anonymous"></script>
     <title>Home</title>
-
 </head>
-
 <body>
-
     <header>
-
         <a href="index.html" class="logo">greenthumb</a>
-
         <ul>
-
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="about.html">Sobre nós</a></li>
             <li><a href="work.html">Download</a></li>
-            
-
         </ul>
-    
         <div class="menu">
             <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
         </div>
-
     </header>
-
     <section>
-
         <img src="arvore_fundo.svg">
         <img src="meio.svg">
-        <h2 id="texto">Samaúma</h2>
+        <h2 id="samauma">Samaúma</h2>
         <a href="#titulo" id="btn">Começar</a>
         <img src="frente_direita.svg" id="frente_direita">
         <img src="frente_esquerda.svg" id="frente_esquerda">
-
     </section>
-
     <div class="sec">
-
         <div class="container" id="titulo">
-            <h2 class="text-background">
+            <h2 class="background-texto">
                 Nosso jogo
             </h2>
         </div>
-
         <div class="container" id="descricao">
-            <p>
-                <div class=""></div>
-            </p>
+            <div id="texto">
+                <p>
+                    Samaúma é um jogo de aventura e plataforma 2D desenvolvido na Unity, onde o jogador controla a pequena ThMattinhos e embarca em uma jornada pela Amazônia para proteger a vida selvagem e lutar contra ameaças ambientais. O jogo foi criado como parte da apresentação do nosso TCC e tem como objetivo abordar a importânciada da preservação da Floresta Amazônica de uma forma divertida.
+                </p>
+            </div>
         </div>
-
-        <div class="container" id="video">
-            
-        </div>
-        
+        <div class="container" id="imagens-jogo">Fotos do jogo</div>
     </div>
-
     <div class="sec">
         <div class="container" id="titulo">
-            <h2 class="text-background">
+            <h2 class="background-texto">
                 Nossa missão
             </h2>
         </div>
-        <div class="container" id="text">
+        <div class="container" id="texto">
             <p>
                 A Floresta Amazônica é uma das regiões mais importantes do planeta em termos de biodiversidade e equilíbrio ambiental, contendo uma variedade incrível de espécies de plantas e animais. No entanto, essa região está sob ameaça devido à exploração desenfreada de recursos naturais, desmatamento e mudanças climáticas, o que pode levar a consequências devastadoras para o planeta.
                 <br><br>
@@ -81,7 +59,7 @@
     </div>
     <div class="sec">
         <div class="container" id="titulo">
-            <h2 class="text-background">
+            <h2 class="background-texto">
                 Dados do bioma
             </h2>
         </div>
@@ -96,11 +74,11 @@
     </div>
     <div class="sec">
         <div class="container" id="titulo">
-            <h2 class="text-background">
+            <h2 class="background-texto">
                 Importância da preservação
             </h2>
         </div>
-        <div class="container" id="text">
+        <div class="container" id="texto">
             <p>
                 A Floresta Amazônica é fundamental para a sobrevivência de diversas espécies animais e vegetais, muitas das quais são endêmicas, ou seja, são encontradas apenas nessa região. Além disso, ela desempenha um papel crucial na regulação do clima global, absorvendo grandes quantidades de dióxido de carbono e produzindo oxigênio.
                 <br>
@@ -112,12 +90,30 @@
             </p>
         </div>
     </div>
+    <div class="sec">
+        <div class="container" id="titulo">
+            <h2 class="background-texto">
+                Como ajudar
+            </h2>
+        </div>
+        <div class="container" id="texto">
+            <p>
+                Infelizmente, a Floresta Amazônica tem sido alvo de atividades humanas que colocam em risco sua integridade ecológica e cultural. A exploração ilegal de madeira, a mineração ilegal, a expansão da agricultura e da pecuária são algumas das ameaças que enfrenta.
+                <br><br>
+                Por isso, é fundamental que cada um de nós faça a sua parte na preservação da Floresta Amazônica. Podemos começar adotando práticas mais sustentáveis em nosso cotidiano, como reduzir o consumo de produtos que contribuem para o desmatamento, como carne e soja, e evitar o desperdício de recursos naturais.
+                <br><br>
+                Além disso, podemos apoiar iniciativas de conservação da floresta, como projetos de reflorestamento e de manejo sustentável de recursos naturais. Também é importante pressionar nossos governantes a adotarem políticas públicas mais efetivas de proteção da Floresta Amazônica.
+                <br><br>
+                Cada ação, por menor que pareça, pode fazer a diferença na preservação desse importante ecossistema. Juntos, podemos contribuir para garantir que a Floresta Amazônica continue a cumprir seu papel vital para o planeta e para as gerações futuras.               
+            </p>
+        </div>
+    </div>
     <div class="footer"></div>
         
     <script>
         let frente_direita = document.getElementById('frente_direita');
         let frente_esquerda = document.getElementById('frente_esquerda');
-        let texto = document.getElementById('texto');
+        let texto = document.getElementById('samauma');
         let btn = document.getElementById('btn');
 
         window.addEventListener('scroll', function(){
@@ -135,14 +131,14 @@
         var card = document.getElementById("card-info");
         var indice = 0;
 
-        card.innerHTML = "Na floresta amazônica encontramos aproximadamente 40 mil especies vegetais, 3 mil espécies de peixes, 450 de mamíferos, 400 de anfíbios, 400 de répteis e 130 mil de invertebrados, sem citar as que ainda não são conhecidas por nossos cientistas.";
+        card.innerHTML = "A biodiversidade na Amazônia é incrivelmente rica, com uma variedade impressionante de espécies vegetais e animais. Estima-se que a região seja o lar de cerca de 40 mil espécies de plantas, sendo muitas delas exclusivas desse ecossistema. Algumas das plantas mais icônicas incluem a samaúma, vitória-régia, orquídeas e várias espécies de palmeiras. <br><br> Além disso, a Floresta Amazônica abriga uma vasta diversidade de animais. Estima-se que existam mais de 2,5 milhões de espécies de insetos na região, incluindo borboletas, besouros, formigas e abelhas. A Amazônia também é o lar de mamíferos emblemáticos, como a onça-pintada, o boto-cor-de-rosa, o tamanduá-bandeira e o mico-leão-dourado.";
         topico1.style.scale = '1.2';
         topico1.style.color = '#118ae6';
 
 
         function mudarTexto(indice) {
             if (indice == 0) {
-                card.innerHTML = "Na floresta amazônica encontramos aproximadamente 40 mil especies vegetais, 3 mil espécies de peixes, 450 de mamíferos, 400 de anfíbios, 400 de répteis e 130 mil de invertebrados, sem citar as que ainda não são conhecidas por nossos cientistas.";
+                card.innerHTML = "A biodiversidade na Amazônia é incrivelmente rica, com uma variedade impressionante de espécies vegetais e animais. Estima-se que a região seja o lar de cerca de 40 mil espécies de plantas, sendo muitas delas exclusivas desse ecossistema. Algumas das plantas mais icônicas incluem a samaúma, vitória-régia, orquídeas e várias espécies de palmeiras. <br><br> Além disso, a Floresta Amazônica abriga uma vasta diversidade de animais. Estima-se que existam mais de 2,5 milhões de espécies de insetos na região, incluindo borboletas, besouros, formigas e abelhas. A Amazônia também é o lar de mamíferos emblemáticos, como a onça-pintada, o boto-cor-de-rosa, o tamanduá-bandeira e o mico-leão-dourado.";
                 topico1.style.scale = '1.2';
                 topico2.style.scale = '1';
                 topico3.style.scale = '1';
@@ -151,7 +147,7 @@
                 topico3.style.color = '#fff';
             }
             else if (indice == 1) {
-                card.innerHTML = "Sendo a maior floresta equatorial do mundo, a floresta Amazônica se encontra na américa do sul, com o 60% do território sendo no Brasil. Os outros 40% ficam na Bolívia, Peru, Equador, Colômbia, Venezuela, Guiana, Suriname e Guiana Francesa.";
+                card.innerHTML = "A floresta Amazônica abrange uma área extensa e diversificada, espelhando-se por nove países da América do Sul:  Brasil ,Bolívia, Peru, Equador, Colômbia, Venezuela, Guiana, Suriname e Guiana Francesa.É considerada a maior floresta tropical do mundo, abrangendo aproximadamente 7 milhões de quilômetros quadrados. <br><br> O Brasil detém a maior parte da Floresta Amazônica, com cerca de 60% de seu território localizado dentro país. A região amazônica brasileira abrange nove estados: Amazonas, Pará, Rondônia, Acre, Amapá, Roraima, Maranhão, Tocantins e Mato Grosso.";
                 topico1.style.scale = '1';
                 topico2.style.scale = '1.2';
                 topico3.style.scale = '1';
@@ -160,7 +156,7 @@
                 topico3.style.color = '#fff';
             }
             else if (indice == 2) {
-                card.innerHTML = "Com 7 milhões de metros quadrados, a bacia hidrográfica da Amazônia é a maior do mundo, com uma das mais importantes capacidades hidrográficas do planeta. Desse território, cerca de 4 milhões de quilômetros quadrados se encontram no Brasil, sendo correspondente a 42% do território nacional";
+                card.innerHTML = "O principal rio da região é o Rio Amazonas, que é o maior rio em volume de água e o segundo mais longo do mundo, atrás apenas do Rio Nilo. Ele nasce nos Andes peruanos e flui em direção ao Atlântico, percorrendo cerca de 6.400 quilômetros. O rio Amazonas é alimentado por inúmeros afluentes, muitos dos quais também são rios extensos por si só. Alguns exemplos desses afluentes são: Rio Negro, Rio Madeira, Rio Purus e Rio Japurá. <br><br> Essa complexa rede de rios forma um sistema fluvial interconectado que desempenha um papel funfamental no transporte de sedimentos, nutrientes e água pela região. Durante a estação chuvosa, esses rios podem inundar vastas áreas, formando planíces de inundação conhecidas como várzeas. Essas áreas alagada são extremamentes férteis e sustentam uma grande diversidade de vida, incluindo árvores, plantas aquáticas, peixes, mamíferos e aves.";
                 topico1.style.scale = '1';
                 topico2.style.scale = '1';
                 topico3.style.scale = '1.2';

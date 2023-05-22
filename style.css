@@ -8,6 +8,8 @@
     --small-text: 1.6vw;
     --medium-text: 2vw;
     --large-text: 6.7vw;
+
+    --preenchimento: 26px;
 }
 
 * {
@@ -28,7 +30,7 @@ a {
     color: black;
 }
 
-/* Header Start */
+/* Header Começo */
 header {
     position: absolute;
     top: 0;
@@ -40,6 +42,7 @@ header {
     align-items: center;
     z-index: 1000;
 }
+
 header .logo  {
     color: var(--light-text);;
     font-weight: 700;
@@ -49,6 +52,7 @@ header .logo  {
     letter-spacing: 2px;
     opacity: 1;
 }
+
 header ul  {
     display: flex;
     justify-content: center;
@@ -58,6 +62,7 @@ header ul li  {
     list-style: none;
     margin-left: 20px;
 }
+
 header ul li a  {
     text-decoration: none;
     padding: 6px 15px;
@@ -70,6 +75,7 @@ header ul li a.active  {
 background: var(--light-text);;
 color: var(--dark-blue);;
 }
+
 .menu {
     float: right;
     line-height: 50px;
@@ -77,9 +83,9 @@ color: var(--dark-blue);;
     cursor: pointer;
     display: none;
 }
-/* Header End */
+/* Header Fim */
 
-/* Section Start */
+/* Section Começo */
 section {
     position: relative;
     width: 100%;
@@ -90,8 +96,8 @@ section {
     align-items: center;
     overflow: hidden;
     z-index: 2;
-    
 }
+
 section::before  {
     content: '';
     position: absolute;
@@ -101,6 +107,7 @@ section::before  {
     background: linear-gradient(to top, var(--dark-blue), transparent);
     z-index: 1000;
 }
+
 section img {
     position: absolute;
     top: 0;
@@ -109,16 +116,18 @@ section img {
     height: 100%;
     object-fit: cover;
     pointer-events: none;
-    
 }
+
 section img#frente_direita {
     z-index: 10;
 }
+
 section img#frente_esquerda {
     z-index: 10;
     margin-left: -3px;
 }
-#texto {
+
+#samauma {
     position: absolute;
     color: var(--light-text);;
     white-space: nowrap;
@@ -126,6 +135,7 @@ section img#frente_esquerda {
     z-index: 8;
     cursor:default;
 }
+
 #btn {
     text-decoration: none;
     display: inline-block;
@@ -159,26 +169,26 @@ section img#frente_esquerda {
     width: 100%;
     height: auto;
     background: linear-gradient(135deg, #0e3e6c, #030D18);
-    padding: 18px;
+    padding: var(--preenchimento);
 }
 
-#video {
+#imagens-jogo {
     width: 100%;
     background: #0e3e6c;
 }
 
-.text-background {
+.background-texto {
     background: -webkit-linear-gradient(135deg, #0e3e6c, #118ae6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    
+    font-size: 8vw;
 }
 
-#text {
+#texto {
     width: 100%;
     height: auto;
     background: linear-gradient(135deg, #0e3e6c, #030D18);
-    padding: 18px;
+    padding: var(--preenchimento);
 }
 
 #dados {
@@ -193,7 +203,7 @@ section img#frente_esquerda {
 .topicos {
     width: 100%;
     height: auto;
-    padding: 12px;
+    padding: var(--preenchimento);
     display: flex;
     justify-content: space-evenly;
     flex-wrap: nowrap;
@@ -212,8 +222,8 @@ section img#frente_esquerda {
     height: auto;
     font-size: var(--small-text);
     border-radius: 16px;
-    padding: 12px;
-    text-align: center;
+    padding: var(--preenchimento);
+    text-align: justify;
     color: #fff;
     transition: 0.3;
 }
@@ -256,7 +266,7 @@ section img#frente_esquerda {
 
 #integrantes {
     width: 100%;
-    padding: 18px;
+    padding: var(--preenchimento);
     display: flex;
     justify-content: space-evenly;
     background: linear-gradient(135deg, #0e3e6c, #030D18);
@@ -270,7 +280,6 @@ section img#frente_esquerda {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    
 }
 
 .perfil {
@@ -295,12 +304,11 @@ section img#frente_esquerda {
     height: 25vw;
     min-width: 330px;
     border-radius: 16px;
-    padding: 16px;
+    padding: var(--preenchimento);
     font-size: var(--medium-text);
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    
 }
 
 .nome-container {
@@ -326,7 +334,7 @@ section img#frente_esquerda {
 .funcoes {
     width: 100%;
     height: 80%;
-    padding: 12px;
+    padding: var(--preenchimento);
     color: #fff;
     text-transform: uppercase;
     font-size: var(--small-text);
@@ -349,8 +357,7 @@ section img#frente_esquerda {
     flex-wrap: wrap;
     align-items: flex-start;
     background: linear-gradient(135deg, #0e3e6c, #030D18);
-    padding: 18px;
-
+    padding: var(--preenchimento);
 }
 
 .contate {
@@ -412,7 +419,7 @@ section img#frente_esquerda {
 }
 
 .sec h2 {
-    font-size: 4.5vw;
+    
     margin-bottom: 10px;
     color: var(--light-text);;
     text-align: center;
