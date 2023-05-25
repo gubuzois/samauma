@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <script type=”text/javascript” src="script.js"></script>
     <script src="https://kit.fontawesome.com/ccda18f14f.js" crossorigin="anonymous"></script>
+    
     <title>Home</title>
 </head>
 <body>
@@ -40,8 +41,14 @@
                     Samaúma é um jogo de aventura e plataforma 2D desenvolvido na Unity, onde o jogador controla a pequena ThMattinhos e embarca em uma jornada pela Amazônia para proteger a vida selvagem e lutar contra ameaças ambientais. O jogo foi criado como parte da apresentação do nosso TCC e tem como objetivo abordar a importânciada da preservação da Floresta Amazônica de uma forma divertida.
                 </p>
             </div>
+            <div class="container" id="imagens-jogo">
+                <div class="ponto-container">
+                    <p class="seta" id="setaEsquerdaJogo">&#10094</p>
+                    <p class="seta" id="setaDireitaJogo">&#10095</p>
+                </div>
+            </div>
         </div>
-        <div class="container" id="imagens-jogo">Fotos do jogo</div>
+        
     </div>
     <div class="sec">
         <div class="container" id="titulo">
@@ -146,22 +153,27 @@
 
             });
         
-        var topico1 = document.getElementById("topico1");
-        var topico2 = document.getElementById("topico2");
-        var topico3 = document.getElementById("topico3");
-        var p1 = document.getElementById("texto-amazonia1");
-        var p2 = document.getElementById("texto-amazonia2");
-        var setaEsquerda = document.getElementById("esquerda");
-        var setaDireita = document.getElementById("direita");
-        var imagemAmazonia = document.getElementById("imagem-amazonia");
-        var indice = 0;
+        let topico1 = document.getElementById("topico1");
+        let topico2 = document.getElementById("topico2");
+        let topico3 = document.getElementById("topico3");
+        let p1 = document.getElementById("texto-amazonia1");
+        let p2 = document.getElementById("texto-amazonia2");
 
         p1.innerHTML = 'A biodiversidade na Amazônia é incrivelmente rica, com uma variedade impressionante de espécies vegetais e animais. Estima-se que a região seja o lar de cerca de 40 mil espécies de plantas, sendo muitas delas exclusivas desse ecossistema. Algumas das plantas mais icônicas incluem a samaúma, vitória-régia, orquídeas e várias espécies de palmeiras.';
         p2.innerHTML = "Além disso, a Floresta Amazônica abriga uma vasta diversidade de animais. Estima-se que existam mais de 2,5 milhões de espécies de insetos na região, incluindo borboletas, besouros, formigas e abelhas. A Amazônia também é o lar de mamíferos emblemáticos, como a onça-pintada, o boto-cor-de-rosa, o tamanduá-bandeira e o mico-leão-dourado.";
         topico1.style.scale = '1.2';
         topico1.style.color = '#118ae6';
-        var indiceImagem = 0;
 
+        let setaEsquerda = document.getElementById("esquerda");
+        let setaDireita = document.getElementById("direita");
+        let setaEsquerdaJogo = document.getElementById("setaEsquerdaJogo");
+        let setaDireitaJogo = document.getElementById("setaDireitaJogo");
+        let imagemAmazonia = document.getElementById("imagem-amazonia");
+        let containerImagens = document.getElementById("imagens-container");
+        var indice = 0;
+        var indiceImagem = 0;
+        var tipoAssunto = "biodiversidade";
+    
         function mudarTexto(indice) {
             if (indice == 0) {
                 p1.innerHTML = "A biodiversidade na Amazônia é incrivelmente rica, com uma variedade impressionante de espécies vegetais e animais. Estima-se que a região seja o lar de cerca de 40 mil espécies de plantas, sendo muitas delas exclusivas desse ecossistema. Algumas das plantas mais icônicas incluem a samaúma, vitória-régia, orquídeas e várias espécies de palmeiras.";
@@ -172,11 +184,13 @@
                 topico1.style.color = '#118ae6';
                 topico2.style.color = '#fff';
                 topico3.style.color = '#fff';
-                
-                imagemAmazonia.style.backgroundImage = 'url(imagens/biodiversidade(' + 3 + ').jpg';
+                tipoAssunto = "biodiversidade";
+                containerImagens.style.display = "flex";
+                imagemAmazonia.style.display = "flex";
+                imagemAmazonia.style.backgroundImage = "url('imagens/" + tipoAssunto + "(" + indiceImagem + ").jpg')";
             }
             else if (indice == 1) {
-                p1.innerHTML = "A floresta Amazônica abrange uma área extensa e diversificada, espelhando-se por nove países da América do Sul:  Brasil ,Bolívia, Peru, Equador, Colômbia, Venezuela, Guiana, Suriname e Guiana Francesa.É considerada a maior floresta tropical do mundo, abrangendo aproximadamente 7 milhões de quilômetros quadrados.";
+                p1.innerHTML = "A floresta Amazônica abrange uma área extensa e diversificada, espalhando-se por nove países da América do Sul: Brasil, Bolívia, Peru, Equador, Colômbia, Venezuela, Guiana, Suriname e Guiana Francesa. É considerada a maior floresta tropical do mundo, abrangendo aproximadamente 7 milhões de quilômetros quadrados.";
                 p2.innerHTML = "O Brasil detém a maior parte da Floresta Amazônica, com cerca de 60% de seu território localizado dentro país. A região amazônica brasileira abrange nove estados: Amazonas, Pará, Rondônia, Acre, Amapá, Roraima, Maranhão, Tocantins e Mato Grosso.";
                 topico1.style.scale = '1';
                 topico2.style.scale = '1.2';
@@ -184,21 +198,29 @@
                 topico1.style.color = '#fff';
                 topico2.style.color = '#118ae6';
                 topico3.style.color = '#fff';
+                containerImagens.style.display = "none";
+                imagemAmazonia.style.display = "none";
+                imagemAmazonia.style.backgroundImage = "url('imagens/" + tipoAssunto + "(" + indiceImagem + ").jpg')";
             }
             else if (indice == 2) {
-                p1.innerHTML = "O principal rio da região é o Rio Amazonas, que é o maior rio em volume de água e o segundo mais longo do mundo, atrás apenas do Rio Nilo. Ele nasce nos Andes peruanos e flui em direção ao Atlântico, percorrendo cerca de 6.400 quilômetros. O rio Amazonas é alimentado por inúmeros afluentes, muitos dos quais também são rios extensos por si só. Alguns exemplos desses afluentes são: Rio Negro, Rio Madeira, Rio Purus e Rio Japurá.";
-                p2.innerHTML = "Essa complexa rede de rios forma um sistema fluvial interconectado que desempenha um papel funfamental no transporte de sedimentos, nutrientes e água pela região. Durante a estação chuvosa, esses rios podem inundar vastas áreas, formando planíces de inundação conhecidas como várzeas. Essas áreas alagada são extremamentes férteis e sustentam uma grande diversidade de vida, incluindo árvores, plantas aquáticas, peixes, mamíferos e aves.";
+                p1.innerHTML = "O principal rio da região é o Rio Amazonas, que é o maior rio em volume de água e o segundo mais longo do mundo, atrás apenas do Rio Nilo. Ele nasce nos Andes peruanos e flui em direção ao Atlântico, percorrendo cerca de 6.400 quilômetros. O Rio Amazonas é alimentado por inúmeros afluentes, muitos dos quais também são rios extensos por si só. Alguns exemplos desses afluentes são: Rio Negro, Rio Madeira, Rio Purus e Rio Japurá.";
+                p2.innerHTML = "Essa complexa rede de rios forma um sistema fluvial interconectado que desempenha um papel fundamental no transporte de sedimentos, nutrientes e água pela região. Durante a estação chuvosa, esses rios podem inundar vastas áreas, formando planíces de inundação conhecidas como várzeas. Essas áreas alagada são extremamentes férteis e sustentam uma grande diversidade de vida, incluindo árvores, plantas aquáticas, peixes, mamíferos e aves.";
                 topico1.style.scale = '1';
                 topico2.style.scale = '1';
                 topico3.style.scale = '1.2';
                 topico1.style.color = '#fff';
                 topico2.style.color = '#fff';
                 topico3.style.color = '#118ae6';
+                tipoAssunto = "hidrografia";
+                containerImagens.style.display = "flex";
+                imagemAmazonia.style.display = "flex";
+                imagemAmazonia.style.backgroundImage = "url('imagens/" + tipoAssunto + "(" + indiceImagem + ").jpg')";
             }
         }
-
-        imagemAmazonia.style.backgroundImage = 'url(imagens/biodiversidade(' + 3 + ').jpg';
-
+        function mudarImagemAmazonia(indiceImagem) {
+            imagemAmazonia.style.backgroundImage = "url('imagens/" + tipoAssunto + "(" + indiceImagem + ").jpg')";
+        }
+        
         topico1.addEventListener('click', function() {
             mudarTexto(0);
         });
@@ -208,15 +230,21 @@
         topico3.addEventListener('click', function() {
             mudarTexto(2);
         });
-
+        var indiceMaximo = 5;
         setaEsquerda.addEventListener('click', function() {
             indiceImagem--;
+            if (indiceImagem < 0) {
+                indiceImagem = indiceMaximo;
+            }
+            mudarImagemAmazonia(indiceImagem);
         });
         setaDireita.addEventListener('click', function() {
             indiceImagem++;
+            if (indiceImagem > indiceMaximo) {
+                indiceImagem = 0;
+            }
+            mudarImagemAmazonia(indiceImagem);
         });
-            
-
     </script>
 </body>
 </html>
