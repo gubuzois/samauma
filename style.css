@@ -316,31 +316,44 @@ section img#frente_esquerda {
 #equipe {
     width: 100%;
     height: 500px;
-    contain: content;
     background-image: url(imagens/onça_pintada.jpg);
     background-size: cover;
-    display: flex;
+    display: grid;
     justify-content: center;
-    align-items: center;
-    font-size: var(--large-text);
+    padding: var(--preenchimento);
+    font-size: var(--medium-text);
+    color: #fff;
 }
 
 .equipe-descricao {
     backdrop-filter: blur(3px);
-    width: 70%;
+    width: 40vw;
     height: 70%;
     border-radius: 12px;
     color: #fff;
     text-align: center;
     font-size: var(--medium-text);
+    align-self: center;
+    justify-self: center;
+}
+
+.revelar-texto {
+    position: absolute;
+}
+
+#olho {
+    cursor: pointer;
 }
 
 #integrantes {
     width: 100%;
+    height: 550px;
     padding: var(--preenchimento);
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     background: linear-gradient(135deg, #0e3e6c, #030D18);
+    contain: content;
 }
 
 .animais-side {
@@ -351,12 +364,13 @@ section img#frente_esquerda {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    color: #fff;
+    color: #030D18;
 }
 
 .perfil {
-    width: 30vw;
+    width: 25vw;
     height: 25vw;
+    min-width: 300px;
     border-radius: 16px;
     display: flex;
     flex-wrap: wrap;
@@ -372,7 +386,7 @@ section img#frente_esquerda {
 }
 
 .info {
-    width: 30vw;
+    width: 35vw;
     height: 25vw;
     min-width: 330px;
     border-radius: 16px;
@@ -391,7 +405,6 @@ section img#frente_esquerda {
 }
 
 .nome {
-    background: #0ada61;
     width: auto;
     height: 40px;
     padding: 12px;
@@ -411,16 +424,45 @@ section img#frente_esquerda {
     color: #fff;
     text-transform: uppercase;
     font-size: var(--small-text);
+    text-align: left;
 }
 
-#func {
-    margin-top: 10px;
-}
+
 
 #danilo, #guilherme, #gustavo, #marcela, #murillo, #thais { 
     font-size: var(--small-text);
     cursor: pointer;
     transition: 0.4s;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    color: #030D18;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat; 
+    background-size: 24px; 
+    background-position-x: center;
+    background-position: center;
+}
+
+#redes-sociais {
+    display: flex;
+    letter-spacing: 12px;
+}
+
+#icon-instagram {
+    width: auto;
+    height: auto;
+    color: #fff;
+    font-size: 35px;
+    transition: 0.3s;
+}
+
+#icon-instagram:hover {
+    scale: 1.2;
+    color: #5eb4f5;
 }
 
 #contato {
@@ -461,7 +503,7 @@ section img#frente_esquerda {
     align-items: center;
     font-size: var(--medium-text);
     color: #030D18;
-    transition: 0.6;
+    transition: 0.3s;
 }
 
 #email:hover, #instagram:hover{
