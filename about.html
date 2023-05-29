@@ -10,13 +10,16 @@
 </head>
 <body>
     <header>
-        <a href="index.html" class="logo">greenthumb</a>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html" class="active">Sobre nós</a></li>
-            <li><a href="work.html">Download</a></li>
-        </ul>
-        <div class="menu"><i class="fa-solid fa-bars" style="color: #ffffff;"></i></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">Sobre nós</a></li>
+                <li><a href="work.html">Download</a></li>
+            </ul>
+        </nav>
+        <div class="menu" id="menu">
+            <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
+        </div>
     </header>
     <div class="sec">
         <div class="container" id="titulo">
@@ -239,8 +242,25 @@
 
         olho.addEventListener("click", function() {
             estaMonstrando = !estaMonstrando;
-            nome.innerHTML = estaMonstrando;
             ocultarDiv(estaMonstrando);
+        })
+
+        let menu = document.getElementById("menu");
+        let nav = document.querySelector('nav');
+        let menuOn = false;
+
+        function mudarMenu(menuOn) {
+            if (menuOn == false) {
+                nav.style.left = "-100%";
+            } else {
+                nav.style.left = "0";
+            }
+            
+        }
+
+        menu.addEventListener('click', function() {
+            menuOn = !menuOn;
+            mudarMenu(menuOn);
         })
         
     </script>

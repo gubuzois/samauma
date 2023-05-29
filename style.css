@@ -49,9 +49,10 @@ header {
     top: 0;
     left: 0;
     width: 100%;
+    height: 50px;
     padding: 30px 100px;
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
     align-items: center;
     z-index: 1000;
 }
@@ -171,21 +172,23 @@ section img#frente_esquerda {
     display: flex;
     justify-content: center;
     text-align: justify;
+    background: linear-gradient(135deg, #0e3e6c, #030D18);
 }
 
 #titulo {
     width: 100%;
     height: auto;
+    background: none;
 }
 
 #descricao {
     width: 100%;
     height: auto;
-    background: linear-gradient(135deg, #0e3e6c, #030D18);
     padding: var(--preenchimento);
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 #imagens-jogo {
@@ -193,6 +196,7 @@ section img#frente_esquerda {
     background-size: cover;
     align-items: center;
     padding: var(--preenchimento);
+    background: none;
 }
 
 .background-texto {
@@ -214,7 +218,6 @@ section img#frente_esquerda {
     width: 100%;
     height: auto;
     max-height: 550px;
-    background: linear-gradient(135deg, #0e3e6c, #030D18);
     padding: var(--preenchimento);
     display: flex;
     flex-wrap: wrap;
@@ -320,15 +323,15 @@ section img#frente_esquerda {
     background-size: cover;
     display: grid;
     justify-content: center;
-    padding: var(--preenchimento);
     font-size: var(--medium-text);
     color: #fff;
+    z-index: 1;
 }
 
 .equipe-descricao {
     backdrop-filter: blur(3px);
-    width: 40vw;
-    height: 70%;
+    width: 70vw;
+    height: 100%;
     border-radius: 12px;
     color: #fff;
     text-align: center;
@@ -339,6 +342,8 @@ section img#frente_esquerda {
 
 .revelar-texto {
     position: absolute;
+    z-index: 2;
+    transform: translate(12px, 12px);
 }
 
 #olho {
@@ -352,7 +357,6 @@ section img#frente_esquerda {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background: linear-gradient(135deg, #0e3e6c, #030D18);
     contain: content;
 }
 
@@ -471,7 +475,6 @@ section img#frente_esquerda {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    background: linear-gradient(135deg, #0e3e6c, #030D18);
     padding: var(--preenchimento);
 }
 
@@ -554,7 +557,7 @@ section img#frente_esquerda {
     position: absolute;
 }
 
-@media screen and (max-width: 600px)
+@media screen and (width <= 767px)
 {
     *{
         box-sizing: border-box;
@@ -569,7 +572,8 @@ section img#frente_esquerda {
 
     header {
         padding: 0 20px;
-        background: var(--dark-blue);;
+        background: #030D18;
+        position: fixed;
     }
 
     .menu {
@@ -577,34 +581,30 @@ section img#frente_esquerda {
         font-size: var(--large-text);
     }
 
-    header ul {
-        display: none;
+    header nav {
         position: absolute;
         width: 100%;
         height: calc(100vh - 50px);
-        background: var(--dark-blue);;
-        top: 50px;
-        left: 0;
-        transition: 0.5s;
-        text-align: center;
-        
+        background: #030D18;
+        top:50px;
+        left: -100%;
+        transition: 0.3s;
     }
 
-    header ul li a{
-        text-decoration: none;
-        padding: 3px 5px;
-        color: #fff;
-        border-radius: 20px;
+    header nav ul {
+        display: block;
+        text-align: center;
     }
-    header ul li a:hover,
-    header ul li a.active 
-    {
-        background: transparent;
-        color: #fff;
+
+    header nav ul li {
+        margin-top: 12px;
     }
-    header .logo {
-        font-size: 20px;
-    }
+
+    header nav ul li a.active  {
+        font-size: 19px;
+        background: none;
+        color: var(--light-text);
+        }
 
     section {
         display: none;
@@ -614,6 +614,7 @@ section img#frente_esquerda {
         transform: translateY(70px);
         width: 80%;
         padding: 0;
+        gap: 0;
     }
 
     .sec h2 {
@@ -624,12 +625,12 @@ section img#frente_esquerda {
         font-size: 4.3vw;
     }
 
-    #gif-container {
-        height: 150px;
+    .container {
+        background: none;
+        padding: 0;
     }
-    #video {
+
     
-    }
 
 
 }
