@@ -7,7 +7,7 @@
 
     --small-text: 1.6vw;
     --medium-text: 2.6vw;
-    --large-text: 6.7vw;
+    --large-text: 6vw;
 
     --preenchimento: 26px;
 }
@@ -30,7 +30,7 @@ body {
 }
 
 * ::-webkit-scrollbar-track {
-    background: linear-gradient( #030D18, #0e3e6c) ;
+    background: linear-gradient(#030D18, #0e3e6c);
 }
 
 * ::-webkit-scrollbar-thumb {
@@ -40,7 +40,7 @@ body {
 
 a {
     text-decoration: none;
-    color: black;
+    color: #fff;
 }
 
 /* Header Começo */
@@ -49,45 +49,47 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 50px;
+    height: 40px;
     padding: 30px 100px;
     display: flex;
-    justify-content: end;
-    align-items: center;
+    justify-content: center;
+    align-items: start;
     z-index: 1000;
 }
 
-header .logo  {
-    color: var(--light-text);;
-    font-weight: 700;
-    text-decoration: none;
-    font-size: var(--medium-text);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    opacity: 1;
-}
-
-header ul  {
+header ul {
+    width: 25vw;
+    height: 8vh;
+    position: relative;
+    transform: translateY(-30px);
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-header ul li  {
-    list-style: none;
-    margin-left: 20px;
+    background: #0e3e6c;
+    gap: 6px;
 }
 
-header ul li a  {
+header ul li {
+    list-style: none;
+    
+}
+
+header ul li a {
     text-decoration: none;
     padding: 6px 15px;
-    color: var(--light-text);;
+    color: var(--light-text);
     border-radius: 20px;
+    transition: 0.2s;
 }
 
 header ul li a:hover,
-header ul li a.active  {
-background: var(--light-text);;
-color: var(--dark-blue);;
+header ul li a.active {
+    background: var(--light-text);
+    ;
+    color: var(--dark-blue);
+    ;
 }
 
 .menu {
@@ -97,6 +99,7 @@ color: var(--dark-blue);;
     cursor: pointer;
     display: none;
 }
+
 /* Header Fim */
 
 /* Section Começo */
@@ -112,7 +115,7 @@ section {
     z-index: 2;
 }
 
-section::before  {
+#section-comeco::before {
     content: '';
     position: absolute;
     bottom: 0;
@@ -143,11 +146,12 @@ section img#frente_esquerda {
 
 #samauma {
     position: absolute;
-    color: var(--light-text);;
+    color: var(--light-text);
+    ;
     white-space: nowrap;
     font-size: var(--large-text);
     z-index: 8;
-    cursor:default;
+    cursor: default;
 }
 
 #btn {
@@ -161,6 +165,7 @@ section img#frente_esquerda {
     z-index: 8;
     transform: translateY(100px);
 }
+
 /* Section End */
 
 /* Container Start */
@@ -168,7 +173,7 @@ section img#frente_esquerda {
     border-radius: 6px;
     width: 400px;
     height: 400px;
-    min-width: 300px; 
+    min-width: 300px;
     display: flex;
     justify-content: center;
     text-align: justify;
@@ -212,6 +217,7 @@ section img#frente_esquerda {
     padding: var(--preenchimento);
     font-size: var(--small-text);
     color: #fff;
+    text-align: justify;
 }
 
 #dados {
@@ -228,10 +234,11 @@ section img#frente_esquerda {
 #dados::-webkit-scrollbar {
     width: 4px;
 }
+
 #dados::-webkit-scrollbar-track {
     background: #0e3e6c;
     border-radius: 12px;
- }
+}
 
 #dados::-webkit-scrollbar-thumb {
     background: #118ae6;
@@ -241,7 +248,7 @@ section img#frente_esquerda {
 
 .topicos {
     width: 100%;
-    height: auto; 
+    height: auto;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: nowrap;
@@ -433,7 +440,12 @@ section img#frente_esquerda {
 
 
 
-#danilo, #guilherme, #gustavo, #marcela, #murillo, #thais { 
+#danilo,
+#guilherme,
+#gustavo,
+#marcela,
+#murillo,
+#thais {
     font-size: var(--small-text);
     cursor: pointer;
     transition: 0.4s;
@@ -445,8 +457,8 @@ section img#frente_esquerda {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-repeat: no-repeat; 
-    background-size: 24px; 
+    background-repeat: no-repeat;
+    background-size: 24px;
     background-position-x: center;
     background-position: center;
 }
@@ -496,7 +508,8 @@ section img#frente_esquerda {
     justify-self: flex-start;
 }
 
-#email, #instagram{
+#email,
+#instagram {
     background: #fff;
     width: 5vw;
     height: 5vw;
@@ -509,14 +522,162 @@ section img#frente_esquerda {
     transition: 0.3s;
 }
 
-#email:hover, #instagram:hover{
+#email:hover,
+#instagram:hover {
     scale: 1.1;
     color: #0e3e6c;
     cursor: pointer;
 }
 
+.section-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: end;
+    contain: content;
+    flex-wrap: wrap;
+}
+
+.banner-wrapper {
+    width: 30%;
+    height: 95%;
+} 
+
+.sinopse-wrapper {
+    width: 50%;
+    height: 95%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: var(--small-text);
+    color: #fff;
+}
+
+.banner {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+
+.sinopse {
+    width: 100%;
+    height: 70%;
+    background: linear-gradient(135deg, #0e3e6c, #030D18);
+    padding: var(--preenchimento);
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+}
+
+.botao-download {
+    width: 90%;
+    height: 10vh;
+    border-radius: 30px;
+    align-content: center;
+    text-align: center;
+    background: #118ae6;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: var(--small-text);
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.download-texto {
+    width: auto;
+    height: auto;
+}
+
+.video-jogo {
+    width: 70%;
+    height: 90%;
+    background: #fff;
+    background-size: cover;
+    display: flex;
+}
+
+.imagem-jogo {
+    width: 70%;
+    height: 90%;
+    background: #ccc;
+    background-size: cover;
+    background-size: cover;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+.fotos-preview {
+    width: 90%;
+    height: 30%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 12px;
+    gap: 12px;
+}
+
+.imagem {
+    background-size: cover;
+    filter: grayscale(100%);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.imagem-active {
+    background-size: cover;
+    filter: none;
+    cursor: pointer;
+    scale: 1.05;
+    transition: .3s;
+}
+
+.imagem:hover {
+    scale: 1.05;
+    filter: none;
+}
+
 .footer {
-    height: 60px;
+    height: 50vh;
+    padding: 30px;
+    color: #fff;
+    font-size: var(--small-text);
+    font-weight: 600;
+}
+
+.softwares {
+    width: 90%;
+    height: 100%;
+    border-top: solid white 3px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+
+.logos {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.logo-wrapper {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 80%;
+    height: 80%;
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 /* Container End */
@@ -524,23 +685,32 @@ section img#frente_esquerda {
 /* Sec Start */
 .sec {
     position: relative;
-    padding: 100px 200px 0 200px;
-    background: var(--dark-blue);;
+    width: 100vw;
+    height: 100vh;
+    padding: 60px;
+    background: var(--dark-blue);
     display: flex;
-    align-items: center;
+    
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     gap: 20px;
+    contain: content;
+    transition: .3s;
 }
 
-#sec-about {
-    justify-content: center;
+#secDarkBlue {
+    background: #0e3e6c;
+}
+
+#secLightBlue {
+    background: #056bc4;
 }
 
 .sec h2 {
-    
+    font-size: var(--large-text);
     margin-bottom: 10px;
-    color: var(--light-text);;
+    color: var(--light-text);
+    ;
     text-align: center;
     flex: 1;
 }
@@ -557,11 +727,10 @@ section img#frente_esquerda {
     position: absolute;
 }
 
-@media screen and (width <= 767px)
-{
-    *{
+@media screen and (width <=767px) {
+    * {
         box-sizing: border-box;
-        
+
     }
 
     body {
@@ -586,7 +755,7 @@ section img#frente_esquerda {
         width: 100%;
         height: calc(100vh - 50px);
         background: #030D18;
-        top:50px;
+        top: 50px;
         left: -100%;
         transition: 0.3s;
     }
@@ -600,15 +769,16 @@ section img#frente_esquerda {
         margin-top: 12px;
     }
 
-    header nav ul li a.active  {
+    header nav ul li a.active {
         font-size: 19px;
         background: none;
         color: var(--light-text);
-        }
+    }
 
     section {
         display: none;
     }
+
     .sec {
         justify-content: center;
         transform: translateY(70px);
@@ -630,9 +800,7 @@ section img#frente_esquerda {
         padding: 0;
     }
 
-    
+
 
 
 }
-
-

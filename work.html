@@ -21,21 +21,130 @@
     <body>
 
         <header>
-            
-            <a href="index.html" class="logo">greenthumb</a>
 
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">Sobre nós</a></li>
-                <li><a href="work.html" class="active">Download</a></li>
+                <li><a href="work.html" class="active">Jogo</a></li>
             </ul>
             <div class="menu"><i class="fa-solid fa-bars" style="color: #ffffff;"></i></div>
 
         </header>
 
-        <div class="sec" id="sec">
-
-        </div>
+        <section class="sec">
+            <div class="section-wrapper">
+                <div class="banner-wrapper">
+                    <div class="banner"></div>
+                </div>
+                <div class="sinopse-wrapper">
+                    <div class="sinopse">
+                        <p>
+                            Samaúma é um jogo de aventura e plataforma 2D desenvolvido na Unity, onde o jogador embarca em uma jornada pela Amazônia para proteger a vida selvagem e lutar contra ameaças ambientais. O jogo foi criado como parte da apresentação do nosso TCC e tem como objetivo abordar a importânciada da preservação da Floresta Amazônica de uma forma divertida.
+                        </p>
+                    </div>
+                    <p>Samaúma versão x.x.x</p>
+                    <div class="botao-download">
+                        <div class="download-texto" >
+                            <a href="#">download</a> 
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        <section class="sec" id="secDarkBlue">
+            <div class="section-wrapper">
+                <div class="video-jogo"></div>
+            </div>
+        </section>
+        <section class="sec" id="secLightBlue">
+            <div class="section-wrapper">
+                <div class="imagem-jogo" id="divImagem">
+                    <div class="fotos-preview">
+                        <div class="imagem-active" id="img1" style="background-image: url(imagens/hidrografia\(0\).jpg);"></div>
+                        <div class="imagem" id="img2" style="background-image: url(imagens/hidrografia\(1\).jpg);"></div>
+                        <div class="imagem" id="img3" style="background-image: url(imagens/hidrografia\(2\).jpg);"></div>
+                        <div class="imagem" id="img4" style="background-image: url(imagens/hidrografia\(3\).jpg);"></div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+        <section class="footer">
+            <div class="softwares">
+                <div class="utilizados">
+                    Softwares Utilizados para Criação do Jogo
+                </div>
+                <div class="logos">
+                    <div class="logo-wrapper">
+                        <div class="logo" style="background-image: url(imagens/logo-aseprite.png); background-size: 160px;"></div>
+                    </div>
+                    <div class="logo-wrapper">
+                        <div class="logo" style="background-image: url(imagens/logo-unity.png); background-size: 180px;"></div>
+                    </div>
+                    <div class="logo-wrapper">
+                        <div class="logo" style="background-image: url(imagens/logo-pixelstudio.png); background-size: 130px;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
         
     </body>
+    <script>
+        const img1 = document.getElementById("img1");
+        const img2 = document.getElementById("img2");
+        const img3 = document.getElementById("img3");
+        const img4 = document.getElementById("img4");
+        let divImagem = document.getElementById("divImagem");
+
+        divImagem.style.backgroundImage = "url('imagens/hidrografia(" + 0 + ").jpg')";
+
+
+        function mudarImagem(num) {
+            if (num == 1) {
+                img1.className = "imagem-active";
+                img2.className = "imagem";
+                img3.className = "imagem";
+                img4.className = "imagem";
+                divImagem.style.backgroundImage = "url('imagens/hidrografia(" + 0 + ").jpg')";
+            } 
+            else if (num == 2) {
+                img1.className = "imagem";
+                img2.className = "imagem-active";
+                img3.className = "imagem";
+                img4.className = "imagem";
+                divImagem.style.backgroundImage = "url('imagens/hidrografia(" + 1 + ").jpg')";
+            }
+            else if (num == 3) {
+                img1.className = "imagem";
+                img2.className = "imagem";
+                img3.className = "imagem-active";
+                img4.className = "imagem";
+                divImagem.style.backgroundImage = "url('imagens/hidrografia(" + 2 + ").jpg')";
+            }
+            else {
+                img1.className = "imagem";
+                img2.className = "imagem";
+                img3.className = "imagem";
+                img4.className = "imagem-active";
+                divImagem.style.backgroundImage = "url('imagens/hidrografia(" + 3 + ").jpg')";
+            }
+
+        }
+        img1.addEventListener("click", function() {
+                mudarImagem(1);
+        });
+
+        img2.addEventListener("click", function() {
+            mudarImagem(2);
+        });       
+
+        img3.addEventListener("click", function() {
+             mudarImagem(3);
+        });
+
+        img4.addEventListener("click", function() {                
+            mudarImagem(4);
+        });
+    </script>
 </html>
