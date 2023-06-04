@@ -5,7 +5,7 @@
     --dark-green: #0d6f5c;
     --light-text: #d4f7e8;
 
-    --small-text: 1.6vw;
+    --small-text: 1.4vw;
     --medium-text: 2.6vw;
     --large-text: 6vw;
 
@@ -60,6 +60,7 @@ header {
 header ul {
     width: 25vw;
     height: 8vh;
+    padding: 16px;
     position: relative;
     transform: translateY(-30px);
     border-bottom-left-radius: 50px;
@@ -68,11 +69,12 @@ header ul {
     justify-content: center;
     align-items: center;
     background: #0e3e6c;
-    gap: 6px;
+    
 }
 
 header ul li {
     list-style: none;
+    
     
 }
 
@@ -81,15 +83,13 @@ header ul li a {
     padding: 6px 15px;
     color: var(--light-text);
     border-radius: 20px;
+    font-size: 1.25vw;
     transition: 0.2s;
 }
 
 header ul li a:hover,
 header ul li a.active {
-    background: var(--light-text);
-    ;
-    color: var(--dark-blue);
-    ;
+    color: #72ecb7;
 }
 
 .menu {
@@ -105,9 +105,8 @@ header ul li a.active {
 /* Section Começo */
 section {
     position: relative;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    padding: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -164,6 +163,7 @@ section img#frente_esquerda {
     font-size: var(--medium-text);
     z-index: 8;
     transform: translateY(100px);
+    cursor: pointer;
 }
 
 /* Section End */
@@ -177,18 +177,19 @@ section img#frente_esquerda {
     display: flex;
     justify-content: center;
     text-align: justify;
-    background: linear-gradient(135deg, #0e3e6c, #030D18);
 }
 
 #titulo {
     width: 100%;
     height: auto;
     background: none;
+    border: solid;
+    font-size: 3vw;
 }
 
 #descricao {
     width: 100%;
-    height: auto;
+    height: 100%;
     padding: var(--preenchimento);
     display: flex;
     justify-content: center;
@@ -205,10 +206,10 @@ section img#frente_esquerda {
 }
 
 .background-texto {
-    background: -webkit-linear-gradient(135deg, #0e3e6c, #118ae6);
+    background: -webkit-linear-gradient(135deg, #5eb4f5, #d4f7e8);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 8vw;
+    font-size: 3vw;
 }
 
 #texto {
@@ -222,13 +223,15 @@ section img#frente_esquerda {
 
 #dados {
     width: 100%;
-    height: auto;
+    height: 100%;
     max-height: 550px;
     padding: var(--preenchimento);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     overflow-y: scroll;
+    border: solid;
+
 }
 
 #dados::-webkit-scrollbar {
@@ -325,7 +328,7 @@ section img#frente_esquerda {
 
 #equipe {
     width: 100%;
-    height: 500px;
+    height: 100%;
     background-image: url(imagens/onça_pintada.jpg);
     background-size: cover;
     display: grid;
@@ -336,19 +339,23 @@ section img#frente_esquerda {
 }
 
 .equipe-descricao {
-    backdrop-filter: blur(3px);
-    width: 70vw;
+    position: absolute;
+    backdrop-filter: blur(6px);
+    width: 100%;
     height: 100%;
-    border-radius: 12px;
     color: #fff;
-    text-align: center;
-    font-size: var(--medium-text);
-    align-self: center;
-    justify-self: center;
+    display: flex;
+    text-align: justify;
+    align-items: center;
+    font-size: 1.5vw;
+    padding: 60px;
 }
 
 .revelar-texto {
+    width: 5%;
+    height: 10%;
     position: absolute;
+    text-align: center;
     z-index: 2;
     transform: translate(12px, 12px);
 }
@@ -359,18 +366,19 @@ section img#frente_esquerda {
 
 #integrantes {
     width: 100%;
-    height: 550px;
+    height: 100%;
     padding: var(--preenchimento);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     contain: content;
+    border: solid #030D18;
 }
 
 .animais-side {
-    width: 38px;
-    height: 25vw;
-    border-radius: 16px;
+    width: 8%;
+    height: 100%;
+    border-radius: 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -379,14 +387,15 @@ section img#frente_esquerda {
 }
 
 .perfil {
-    width: 25vw;
-    height: 25vw;
+    width: 20%;
+    height: 100%;
     min-width: 300px;
     border-radius: 16px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+
 }
 
 .foto {
@@ -398,10 +407,8 @@ section img#frente_esquerda {
 
 .info {
     width: 35vw;
-    height: 25vw;
-    min-width: 330px;
+    height: 100%;
     border-radius: 16px;
-    padding: var(--preenchimento);
     font-size: var(--medium-text);
     display: flex;
     justify-content: center;
@@ -410,9 +417,10 @@ section img#frente_esquerda {
 
 .nome-container {
     width: 100%;
-    height: 40px;
+    height: 15%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .nome {
@@ -482,20 +490,21 @@ section img#frente_esquerda {
 }
 
 #contato {
-    width: 100%;
-    height: 200px;
+    width: 90%;
+    height: 100%;
+    border-top: solid white 3px;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    align-items: flex-start;
-    padding: var(--preenchimento);
+    padding-top: 30px;
+    border-radius: 0;
+    background: none;
 }
 
 .contate {
     width: 100%;
     height: 40px;
     text-align: center;
-    color: #fff;
-    font-size: var(--medium-text);
     font-weight: 600;
     text-transform: uppercase;
 }
@@ -506,51 +515,62 @@ section img#frente_esquerda {
     display: flex;
     justify-content: space-around;
     justify-self: flex-start;
+    flex-wrap: wrap;
+}
+
+.icons {
+    height: 20%;
+    text-align: center;
+    font-size: 1.4vw;
+}
+
+.icons a {
+    color: #056bc4;
 }
 
 #email,
 #instagram {
     background: #fff;
-    width: 5vw;
-    height: 5vw;
+    width: 4vw;
+    height: 4vw;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: var(--medium-text);
     color: #030D18;
+    cursor: pointer;
     transition: 0.3s;
 }
 
 #email:hover,
 #instagram:hover {
     scale: 1.1;
-    color: #0e3e6c;
-    cursor: pointer;
 }
 
 .section-wrapper {
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 90%;
     display: flex;
     justify-content: space-evenly;
-    align-items: end;
+    align-items: center;
     contain: content;
     flex-wrap: wrap;
+    border: solid;
 }
 
 .banner-wrapper {
     width: 30%;
-    height: 95%;
+    height: 100%;
 } 
 
 .sinopse-wrapper {
     width: 50%;
-    height: 95%;
+    height: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    font-size: var(--small-text);
+    font-size: 1.4vw;
     color: #fff;
 }
 
@@ -563,7 +583,7 @@ section img#frente_esquerda {
 .sinopse {
     width: 100%;
     height: 70%;
-    background: linear-gradient(135deg, #0e3e6c, #030D18);
+    background: #056bc4;
     padding: var(--preenchimento);
     display: flex;
     justify-content: center;
@@ -611,12 +631,13 @@ section img#frente_esquerda {
 }
 
 .fotos-preview {
-    width: 90%;
-    height: 30%;
+    width: 80%;
+    height: 25%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     padding: 12px;
     gap: 12px;
+    contain: content;
 }
 
 .imagem {
@@ -640,11 +661,13 @@ section img#frente_esquerda {
 }
 
 .footer {
-    height: 50vh;
+    height: 40vh;
     padding: 30px;
     color: #fff;
     font-size: var(--small-text);
     font-weight: 600;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .softwares {
@@ -705,18 +728,6 @@ section img#frente_esquerda {
 #secLightBlue {
     background: #056bc4;
 }
-
-.sec h2 {
-    font-size: var(--large-text);
-    margin-bottom: 10px;
-    color: var(--light-text);
-    ;
-    text-align: center;
-    flex: 1;
-}
-
-
-
 /* Sec End */
 
 .profile {

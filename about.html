@@ -14,51 +14,55 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html" class="active">Sobre nós</a></li>
-                <li><a href="work.html">Download</a></li>
+                <li><a href="work.html">Jogo</a></li>
             </ul>
         </nav>
         <div class="menu" id="menu">
             <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
         </div>
     </header>
-    <div class="sec">
-        <div class="container" id="titulo">
-            <h2 class="background-texto">
-                Sobre nós
-            </h2>
-        </div>
-      
-        <div class="container" id="equipe">
-            <div class="revelar-texto" >
-                <i class="fa-solid fa-eye" id="olho"></i>
-            </div>
-            <div class="equipe-descricao" id="revelarDiv" >
-                info
-            </div>
-        </div>      
-        <div class="container" id="integrantes">
-            <div class="animais-side">
-                <p><i style="background-image: url(icons/icon-danilo.svg); background-size: 30px;" id="danilo"></i></p>
-                <p><i style="background-image: url(icons/icon-guilherme.png); background-size: 40px;" id="guilherme"></i></p>
-                <p><i style="background-image: url(icons/icon-gustavo.png); background-size: 30px;" id="gustavo"></i></p>
-                <p><i style="background-image: url(icons/icon-marcela.svg); background-size: 30px;" id="marcela"></i></p>
-                <p><i style="background-image: url(icons/icon-murillo.png); background-size: 40px;" id="murillo"></i></p>
-                <p><i style="background-image: url(icons/icon-thais.png); background-size: 
-                30px;" id=thais></i></p>                
-            </div>
-            <div class="perfil">
-                <div class="foto" id="foto"></div>
-            </div>
-            <div class="info">
-                <div class="nome-container">
-                    <div class="nome" id="nome"></div>
-                </div> 
-                <div class="funcoes" id="func"></div>
+    <section class="sec">
+        <div class="section-wrapper">
+            <div class="container" id="equipe">
+                <div class="revelar-texto" >
+                    <i class="fa-solid fa-eye" id="olho"></i>
+                </div>
+                <div class="equipe-descricao" id="revelarDiv" >
+                    A Equipe Samaúma é formada por seis integrantes que se conheceram durante o curso técnico de Desenvolvimento de Sistemas e se tornaram amigos. Inicialmente composta por quatro jovens - Gustavo Neves Buzois, Marcela Freitas da Silva, Murillo Nogueira Benetti e Thaís Mattos de Oliveira - a equipe viu a necessidade de expandir com o desenvolvimento do projeto e o prazo se aproximando. Foi nesse momento que Danilo Roberto Bortoto e Guilherme de Almeida Santos se juntaram a nós, agregando ainda mais à nossa equipe.
+                    <br>
+                    Samaúma é um sonho compartilhado por todos nós, que se tornou realidade após meses de dedicação aos estudos, inúmeras reuniões e árduo trabalho de desenvolvimento.
+                </div>
             </div>
         </div>
+    </section>
+    <section class="sec" id="secDarkBlue">
+        <div class="section-wrapper">
+            <div class="container" id="integrantes">
+                <div class="animais-side">
+                    <p><i style="background-image: url(icons/icon-danilo.svg); background-size: 30px;" id="danilo"></i></p>
+                    <p><i style="background-image: url(icons/icon-guilherme.png); background-size: 40px;" id="guilherme"></i></p>
+                    <p><i style="background-image: url(icons/icon-gustavo.png); background-size: 30px;" id="gustavo"></i></p>
+                    <p><i style="background-image: url(icons/icon-marcela.svg); background-size: 30px;" id="marcela"></i></p>
+                    <p><i style="background-image: url(icons/icon-murillo.png); background-size: 40px;" id="murillo"></i></p>
+                    <p><i style="background-image: url(icons/icon-thais.png); background-size: 
+                    30px;" id=thais></i></p>                
+                </div>
+                <div class="perfil">
+                    <div class="foto" id="foto"></div>
+                </div>
+                <div class="info">
+                    <div class="nome-container">
+                        <div class="nome" id="nome"></div>
+                    </div> 
+                    <div class="funcoes" id="func"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
         <div class="container" id="contato">
-            <div class="contate">contato</div>
             <div class="container-contato">
+                <div class="contate">contato</div>
                 <div class="email">
                     <a href="#" id="email">
                         <i class="fa-solid fa-envelope"></i>
@@ -69,201 +73,12 @@
                         <i class="fa-brands fa-square-instagram"></i>
                     </a>
                 </div>
+                <div class="icons">All icons by <a target="_blank" href="https://icons8.com">Icons8</a></div>
             </div>
-        </div>
-    </div>
-    <div class="footer">All icons by <a target="_blank" href="https://icons8.com">Icons8</a></div>
-
-    <script>
-        let foto = document.getElementById("foto");
-        let nome = document.getElementById("nome");
-        let func = document.getElementById("func");
-
-        let danilo = document.getElementById("danilo");
-        let guilherme = document.getElementById("guilherme");
-        let gustavo = document.getElementById("gustavo");
-        let marcela = document.getElementById("marcela");
-        let murillo = document.getElementById("murillo");
-        let thais = document.getElementById("thais");
-
-        let olho = document.getElementById("olho");
-        let revelarDiv = document.getElementById("revelarDiv");
-        var estaMonstrando = true;
-
-        foto.style.background = "blue";
-        nome.innerHTML = "Danilo";
-        danilo.style.backgroundColor = "#54ff64";
-        danilo.style.scale = "1.3";
-        nome.style.background = "linear-gradient(135deg, #00b31c, #54ff64)";
-        func.innerHTML = '<p><b>idade:</b> 17 anos <br> <b>função:</b> Ajudou a desenvolver a parte escrita e fez as pesquisas de dados <br> <b>hobbies:</b> Games, músicas, instrumentos <br> <b>redes sociais:</b> <div id="redes-sociais"><a href="https://www.instagram.com/dani_bortoto/" target="_blank" id="icon-instagram"><i class="fa-brands fa-square-instagram"></i></a></div>';
-
-        function mudarBackground(num) {
-            if (num == 0) {
-                foto.style.background = "blue";
-                nome.innerHTML = "Danilo ";
-                danilo.style.backgroundColor = "#54ff64";
-                guilherme.style.backgroundColor = "#fff";
-                gustavo.style.backgroundColor = "#fff";
-                marcela.style.backgroundColor = "#fff";
-                murillo.style.backgroundColor = "#fff";
-                thais.style.backgroundColor = "#fff";
-                danilo.style.scale = "1.3";
-                guilherme.style.scale = "1";
-                gustavo.style.scale = "1";
-                marcela.style.scale = "1";
-                murillo.style.scale = "1";
-                thais.style.scale = "1";
-                nome.style.background = "linear-gradient(135deg, #00b31c, #54ff64)";
-                func.innerHTML = '<p><b>idade:</b> 17 anos <br> <b>função:</b> Ajudou a desenvolver a parte escrita e fez as pesquisas de dados <br> <b>hobbies:</b> Games, músicas, instrumentos <br> <b>redes sociais:</b> <div id="redes-sociais"><a href="https://www.instagram.com/dani_bortoto/" target="_blank" id="icon-instagram"><i class="fa-brands fa-square-instagram"></i></a></div> ';
-
-            } else if (num == 1) {
-                foto.style.background = "green";
-                nome.innerHTML = "Guilherme";
-                danilo.style.backgroundColor = "#fff";
-                guilherme.style.backgroundColor = "#9a8df8";
-                gustavo.style.backgroundColor = "#fff";
-                marcela.style.backgroundColor = "#fff";
-                murillo.style.backgroundColor = "#fff";
-                thais.style.backgroundColor = "#fff";
-                danilo.style.scale = "1";
-                guilherme.style.scale = "1.3";
-                gustavo.style.scale = "1";
-                marcela.style.scale = "1";
-                murillo.style.scale = "1";
-                thais.style.scale = "1";
-                nome.style.background = "linear-gradient(135deg, #663ee9, #9a8df8)";
-                func.innerHTML = '<p><b>idade:</b> 21 anos <br> <b>função:</b> Fez os sprites dos animais e inimigos <br> <b>hobbies:</b> Design, cerveja, moto, videogame <br> <b>redes sociais:</b> <div id="redes-sociais"><a href="https://www.instagram.com/guilherme17al/" target="_blank" id="icon-instagram"><i class="fa-brands fa-square-instagram"></i></a><a href="https://www.facebook.com/profile.php?id=100004563792043&mibextid=ZbWKwL" target="_blank" id="icon-instagram"><i class="fa-brands fa-facebook"></i></i></a></div>';
-                
-            } else if (num == 2) {
-                foto.style.background = "yellow";
-                nome.innerHTML = "Gustavo";
-                danilo.style.backgroundColor = "#fff";
-                guilherme.style.backgroundColor = "#fff";
-                gustavo.style.backgroundColor = "#fec273";
-                marcela.style.backgroundColor = "#fff";
-                murillo.style.backgroundColor = "#fff";
-                thais.style.backgroundColor = "#fff";
-                danilo.style.scale = "1";
-                guilherme.style.scale = "1";
-                gustavo.style.scale = "1.3";
-                marcela.style.scale = "1";
-                murillo.style.scale = "1";
-                thais.style.scale = "1";
-                nome.style.background = "linear-gradient(135deg, #fb8014, #fec273)";
-                func.innerHTML = '<p><b>idade:</b> 18 anos <br> <b>função:</b> Programou o site e os sistemas de ataque da personagem e dos inimigos <br> <b>hobbies:</b> Jogos, exercício físico, desenvolvimento front-end <br> <b>redes sociais:</b> <div id="redes-sociais"><a href="https://www.instagram.com/gusta.buzois/" target="_blank" id="icon-instagram"><i class="fa-brands fa-square-instagram"></i></a><a href="https://www.linkedin.com/in/gustavobuzois/" target="_blank" id="icon-instagram"><i class="fa-brands fa-linkedin"></i></a><a href="https://github.com/gubuzois" target="_blank" id="icon-instagram"><i class="fa-brands fa-github"></i></a></div> ';
-                
-            } else if (num == 3) {
-                foto.style.background = "red";
-                nome.innerHTML = "Marcela";
-                danilo.style.backgroundColor = "#fff";
-                guilherme.style.backgroundColor = "#fff";
-                gustavo.style.backgroundColor = "#fff";
-                marcela.style.backgroundColor = "#ff61fe";
-                murillo.style.backgroundColor = "#fff";
-                thais.style.backgroundColor = "#fff";
-                danilo.style.scale = "1";
-                guilherme.style.scale = "1";
-                gustavo.style.scale = "1";
-                marcela.style.scale = "1.3";
-                murillo.style.scale = "1";
-                thais.style.scale = "1";
-                nome.style.background = "linear-gradient(135deg, #c400ce, #ff61fe)";
-                func.innerHTML = '<p><b>idade:</b> 17 anos <br> <b>função:</b> Fez a maior parte do design do jogo, incluindo a logo do grupo <br> <b>hobbies:</b> Filmes/séries/desenhos, jardinagem, desenhar <b>redes sociais:</b> <br> <div id="redes-sociais"><a href="https://www.instagram.com/marcela_silv4_/" target="_blank" id="icon-instagram"><i class="fa-brands fa-square-instagram"></i></a></div> ';
-                
-            } else if (num == 4) {
-                foto.style.background = "pink";
-                nome.innerHTML = "Murillo";
-                danilo.style.backgroundColor = "#fff";
-                guilherme.style.backgroundColor = "#fff";
-                gustavo.style.backgroundColor = "#fff";
-                marcela.style.backgroundColor = "#fff";
-                murillo.style.backgroundColor = "#26dbc3";
-                thais.style.backgroundColor = "#fff";
-                danilo.style.scale = "1";
-                guilherme.style.scale = "1";
-                gustavo.style.scale = "1";
-                marcela.style.scale = "1";
-                murillo.style.scale = "1.3";
-                thais.style.scale = "1";
-                nome.style.background = "linear-gradient(135deg, #3586ff, #26dbc3)";
-                func.innerHTML = '<p><b>idade:</b> 17 anos <br> <b>função:</b> Desenvolveu a programação do jogo <br> <b>hobbies:</b> Jogar, crochê, xadrez, música, programar <br> <b>redes sociais:</b> <div id="redes-sociais"><a href="https://www.instagram.com/mubenetti/" target="_blank" id="icon-instagram"><i class="fa-brands fa-square-instagram"></i></a><a href="https://github.com/aromacintosh" target="_blank" id="icon-instagram"><i class="fa-brands fa-github"></i></a></div> ';
-                
-            } else if (num == 5) {
-                foto.style.background = "purple";
-                nome.innerHTML = "Thais";
-                danilo.style.backgroundColor = "#fff";
-                guilherme.style.backgroundColor = "#fff";
-                gustavo.style.backgroundColor = "#fff";
-                marcela.style.backgroundColor = "#fff";
-                murillo.style.backgroundColor = "#fff";
-                thais.style.backgroundColor = "#ff657c";
-                danilo.style.scale = "1";
-                guilherme.style.scale = "1";
-                gustavo.style.scale = "1";
-                marcela.style.scale = "1";
-                murillo.style.scale = "1";
-                thais.style.scale = "1.3";
-                nome.style.background = "linear-gradient(135deg, #ec1636, #ff657c)";
-                func.innerHTML = '<p><b>idade:</b> 19 anos <br> <b>função:</b> Desenvolveu a parte escrita do TCC e do site <br> <b>hobbies:</b> Ler <br> <b>redes sociais:</b> <div id="redes-sociais"><a href="https://www.instagram.com/thaiismatt0s/" target="_blank" id="icon-instagram"><i class="fa-brands fa-square-instagram"></i></a><a href="https://www.linkedin.com/in/tha%C3%ADs-mattos-a288611aa" target="_blank" id="icon-instagram"><i class="fa-brands fa-linkedin"></i><a href="https://twitter.com/thataii_" target="_blank" id="icon-instagram"><i class="fa-brands fa-twitter"></i></a></div> ';
-                
-            } 
-        }
-
-        function ocultarDiv(estaMonstrando) {
-            if (estaMonstrando === true) {
-                revelarDiv.style.display = "block";
-                olho.className = "fa-solid fa-eye";
-            } 
-            else if (estaMonstrando === false) {
-                revelarDiv.style.display = "none";
-                olho.className = "fa-solid fa-eye-slash";
-            }
-
-        }
-
-        danilo.addEventListener("click", function() {
-                mudarBackground(0);
-        });
-        guilherme.addEventListener("click", function() {
-            mudarBackground(1);
-            });
-        gustavo.addEventListener("click", function() {
-            mudarBackground(2);
-            });
-        marcela.addEventListener("click", function() {
-            mudarBackground(3);
-            });
-        murillo.addEventListener("click", function() {
-            mudarBackground(4);
-            });
-        thais.addEventListener("click", function() {
-            mudarBackground(5);
-            });
-
-        olho.addEventListener("click", function() {
-            estaMonstrando = !estaMonstrando;
-            ocultarDiv(estaMonstrando);
-        })
-
-        let menu = document.getElementById("menu");
-        let nav = document.querySelector('nav');
-        let menuOn = false;
-
-        function mudarMenu(menuOn) {
-            if (menuOn == false) {
-                nav.style.left = "-100%";
-            } else {
-                nav.style.left = "0";
-            }
             
-        }
-
-        menu.addEventListener('click', function() {
-            menuOn = !menuOn;
-            mudarMenu(menuOn);
-        })
+        </div>
         
-    </script>
-    
+    </section>
+    <script src="scriptSobreNos.js"></script>
 </body>
 </html>
