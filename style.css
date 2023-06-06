@@ -765,6 +765,7 @@ section img#frente_esquerda {
         border-top-left-radius: 12px;
         border-top-right-radius: 12px;
         gap: 12vw;
+        position: fixed;
     }
 
     header ul li a {
