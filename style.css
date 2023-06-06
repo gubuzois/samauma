@@ -752,10 +752,9 @@ section img#frente_esquerda {
 
     header {
         position: fixed;
-        transform: translateY(94vh);
+        transform: translateY(94%);
         width: 100%;
         border-radius: 0;
-        -webkit-backface-visibility: hidden;
     }
 
     header ul {
