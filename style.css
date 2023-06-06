@@ -752,19 +752,18 @@ section img#frente_esquerda {
 
     header {
         position: fixed;
-        top: 94%;
         width: 100%;
         border-radius: 0;
     }
 
     header ul {
-        width: 100vw;
-        height: 6vh;
+        width: 80vw;
+        height: 4vh;
         background: #0e3e6c;
         border-radius: 0;
-        border-top-left-radius: 12px;
-        border-top-right-radius: 12px;
-        gap: 12vw;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        gap: 6vw;
     }
 
     header ul li a {
