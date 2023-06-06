@@ -755,6 +755,7 @@ section img#frente_esquerda {
         transform: translateY(94vh);
         width: 100%;
         border-radius: 0;
+        -webkit-backface-visibility: hidden;
     }
 
     header ul {
@@ -765,7 +766,6 @@ section img#frente_esquerda {
         border-top-left-radius: 12px;
         border-top-right-radius: 12px;
         gap: 12vw;
-        position: fixed;
     }
 
     header ul li a {
