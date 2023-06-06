@@ -2,6 +2,8 @@
 
 :root {
     --dark-blue: #030D18;
+    --blue1: #094983;
+    --blue2: #056bc4;
     --dark-green: #0d6f5c;
     --light-text: #d4f7e8;
 
@@ -46,15 +48,19 @@ a {
 /* Header Começo */
 header {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 40px;
-    padding: 30px 100px;
+    width: 100vw;
+    height: auto;
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: center;
     z-index: 1000;
+}
+
+header nav {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 header ul {
@@ -62,7 +68,6 @@ header ul {
     height: 8vh;
     padding: 16px;
     position: relative;
-    transform: translateY(-30px);
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
     display: flex;
@@ -80,7 +85,7 @@ header ul li {
 
 header ul li a {
     text-decoration: none;
-    padding: 6px 15px;
+    padding: 6px;
     color: var(--light-text);
     border-radius: 20px;
     font-size: 1.25vw;
@@ -183,7 +188,6 @@ section img#frente_esquerda {
     width: 100%;
     height: auto;
     background: none;
-    border: solid;
     font-size: 3vw;
 }
 
@@ -230,8 +234,6 @@ section img#frente_esquerda {
     flex-wrap: wrap;
     justify-content: center;
     overflow-y: scroll;
-    border: solid;
-
 }
 
 #dados::-webkit-scrollbar {
@@ -379,9 +381,7 @@ section img#frente_esquerda {
     width: 8%;
     height: 100%;
     border-radius: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
     align-items: center;
     color: #030D18;
 }
@@ -401,7 +401,6 @@ section img#frente_esquerda {
 .foto {
     width: 20vw;
     height: 20vw;
-    border: solid 1px;
     border-radius: 50%;
 }
 
@@ -549,14 +548,13 @@ section img#frente_esquerda {
 }
 
 .section-wrapper {
-    width: 80%;
+    width: 100%;
     height: 90%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     contain: content;
     flex-wrap: wrap;
-    border: solid;
 }
 
 .banner-wrapper {
@@ -577,7 +575,8 @@ section img#frente_esquerda {
 .banner {
     width: 100%;
     height: 100%;
-    background: #fff;
+    background-image: url(imagens/onça_pintada.jpg);
+    background-size: cover;
 }
 
 .sinopse {
@@ -587,6 +586,7 @@ section img#frente_esquerda {
     padding: var(--preenchimento);
     display: flex;
     justify-content: center;
+    align-items: center;
     text-align: justify;
 }
 
@@ -722,11 +722,11 @@ section img#frente_esquerda {
 }
 
 #secDarkBlue {
-    background: #0e3e6c;
+    background: var(--blue1);
 }
 
 #secLightBlue {
-    background: #056bc4;
+    background: var(--blue2);
 }
 /* Sec End */
 
@@ -741,7 +741,7 @@ section img#frente_esquerda {
 @media screen and (width <=767px) {
     * {
         box-sizing: border-box;
-
+        cursor: default;
     }
 
     body {
@@ -751,66 +751,101 @@ section img#frente_esquerda {
     }
 
     header {
-        padding: 0 20px;
-        background: #030D18;
         position: fixed;
-    }
-
-    .menu {
-        display: block;
-        font-size: var(--large-text);
-    }
-
-    header nav {
-        position: absolute;
+        transform: translateY(94vh);
         width: 100%;
-        height: calc(100vh - 50px);
-        background: #030D18;
-        top: 50px;
-        left: -100%;
-        transition: 0.3s;
+        border-radius: 0;
     }
 
-    header nav ul {
-        display: block;
-        text-align: center;
+    header ul {
+        width: 100vw;
+        height: 6vh;
+        background: #0e3e6c;
+        border-radius: 0;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        gap: 12vw;
     }
 
-    header nav ul li {
-        margin-top: 12px;
-    }
-
-    header nav ul li a.active {
-        font-size: 19px;
-        background: none;
-        color: var(--light-text);
-    }
-
-    section {
-        display: none;
+    header ul li a {
+        font-size: 3.5vw;
     }
 
     .sec {
+        padding: 30px;
+    }
+
+    .section-wrapper {
+        width: 100%;
+        height: 100%;
+        align-items: center;
+    }
+
+    .banner-wrapper {
+        width: 100%;
+        height: 30%;
+    }
+
+    .sinopse-wrapper {
+        width: 100%;
+        height: auto;
+    }
+
+    .sinopse-wrapper p {
+        font-size: 3.9vw;
+    }
+
+    .versao-samauma {
+        display: flex;
+        align-items: center;
         justify-content: center;
-        transform: translateY(70px);
-        width: 80%;
-        padding: 0;
-        gap: 0;
+        height: 7vh;
+        width: 100%;
     }
 
-    .sec h2 {
-        font-size: 9vw;
+    .botao-download {
+        height: 7vh;
+        font-size: 4.5vw;
     }
 
-    .sec p {
-        font-size: 4.3vw;
+    .video-jogo {
+        width: 100%;
+        height: 30%;
     }
 
-    .container {
-        background: none;
-        padding: 0;
+    .imagem-jogo {
+        width: 100%;
+        height: 40%;
     }
 
+    .footer {
+        height: 30vh;
+        font-size: 3.5vw;
+    }
+
+    .softwares {
+        width: 100%;
+    }
+
+    .logos {
+        width: 100%;
+    }
+
+    .logo-wrapper {
+        width: 35%;
+    }
+
+    #logo-aseprite {
+        background-size: 80%;
+    }
+
+    #logo-unity {
+        background-size: 100%;
+    }
+
+    #logo-pixelstudio {
+        background-size: 70%;
+    }
 
 
 
