@@ -127,7 +127,7 @@ function mudarBackground(num) {
         murillo.style.scale = "1";
         thais.style.scale = "1.3";
         nome.style.background = "linear-gradient(135deg, #ec1636, #ff657c)";
-        func.innerHTML = '<p><b>idade:</b> 19 anos <br> <b>função:</b> Desenvolveu o site e a parte escrita do TCC <br> <b>hobbies:</b> Ler <br> <b>redes sociais:</b> <div id="redes-sociais"><a href="https://www.instagram.com/thaiismatt0s/" target="_blank" id="icon-instagram"><i class="fa-brands fa-square-instagram"></i></a><a href="https://www.linkedin.com/in/tha%C3%ADs-mattos-a288611aa" target="_blank" id="icon-instagram"><i class="fa-brands fa-linkedin"></i><a href="https://twitter.com/thataii_" target="_blank" id="icon-instagram"><i class="fa-brands fa-twitter"></i></a></div> ';
+        func.innerHTML = '<p><b>idade:</b> 19 anos <br> <b>função:</b> Desenvolveu o site e a parte escrita do TCC <br> <b>hobbies:</b> Ler, escrever, ouvir música, passear ao ar livre <br> <b>redes sociais:</b> <div id="redes-sociais"><a href="https://www.instagram.com/thaiismatt0s/" target="_blank" id="icon-instagram"><i class="fa-brands fa-square-instagram"></i></a><a href="https://www.linkedin.com/in/tha%C3%ADs-mattos-a288611aa" target="_blank" id="icon-instagram"><i class="fa-brands fa-linkedin"></i><a href="https://twitter.com/thataii_" target="_blank" id="icon-instagram"><i class="fa-brands fa-twitter"></i></a></div> ';
         
     } 
 }
