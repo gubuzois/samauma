@@ -2,10 +2,16 @@
 
 :root {
     --dark-blue: #030D18;
-    --blue1: #094983;
-    --blue2: #056bc4;
+    --verde-escuro: #090e01;
+    --verde2: #172107;
+    --verde3: #30460b;
+    --verde4: #507507;
+    --verde-claro: #79ae0f;
+    --blue1: #010e0b;
+    --blue2: #007c54;
     --dark-green: #0d6f5c;
-    --light-text: #d4f7e8;
+    --light-text: #d6f97b;
+    --texto-ativo: #d2f9e5;
 
     --small-text: 1.4vw;
     --medium-text: 2.6vw;
@@ -47,7 +53,7 @@ a {
 
 /* Header Começo */
 header {
-    position: absolute;
+    position: fixed;
     width: 100vw;
     height: auto;
     display: flex;
@@ -73,14 +79,11 @@ header ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #0e3e6c;
-    
+    background: var(--verde-claro);
 }
 
 header ul li {
     list-style: none;
-    
-    
 }
 
 header ul li a {
@@ -89,12 +92,13 @@ header ul li a {
     color: var(--light-text);
     border-radius: 20px;
     font-size: 1.25vw;
+    font-weight: 700;
     transition: 0.2s;
 }
 
 header ul li a:hover,
 header ul li a.active {
-    color: #72ecb7;
+    color: var(--texto-ativo);
 }
 
 .menu {
@@ -125,7 +129,7 @@ section {
     bottom: 0;
     width: 100%;
     height: 30%;
-    background: linear-gradient(to top, var(--dark-blue), transparent);
+    background: linear-gradient(to top, var(--verde-escuro), transparent);
     z-index: 1000;
 }
 
@@ -164,7 +168,7 @@ section img#frente_esquerda {
     padding: 8px 30px;
     border-radius: 40px;
     background: var(--light-text);
-    color: var(--dark-blue);
+    color: var(--verde-escuro);
     font-size: var(--medium-text);
     z-index: 8;
     transform: translateY(100px);
@@ -188,7 +192,8 @@ section img#frente_esquerda {
     width: 100%;
     height: auto;
     background: none;
-    font-size: 3vw;
+    font-size: 2vw;
+    color: var(--verde-claro);
 }
 
 #descricao {
@@ -197,7 +202,7 @@ section img#frente_esquerda {
     padding: var(--preenchimento);
     display: flex;
     justify-content: center;
-    align-items: center;
+    gap: 60px;
     flex-wrap: wrap;
 }
 
@@ -209,18 +214,54 @@ section img#frente_esquerda {
     background: none;
 }
 
-.background-texto {
-    background: -webkit-linear-gradient(135deg, #5eb4f5, #d4f7e8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 3vw;
+.background-samauma {
+    background-color: var(--light-text);
+    background-image: url(imagens/background-samauma.svg);
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    contain: content;
+}
+
+.logo-samauma {
+    width: 50vw;
+    height: 50%;
+    background-image: url(imagens/logogrande.png);
+    background-size: 50vw;
+    background-repeat: no-repeat;
+    display: grid;
+}
+
+.logo-pequena {
+    width: 40vw;
+    height: 90%;
+    border-radius: 30px;
+    background-color: var(--light-text);
+    background-image: url(imagens/logopequena.svg);
+    background-size: 25vw;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.introducao {
+    width: 60vw;
+    height: 40%;
+    font-size: 2vw;
+    font-weight: 600;
+    color: #2C400E;
+    display: flex;
+    text-align: center;
+    align-items: center;
 }
 
 #texto {
-    width: 100%;
+    width: 50%;
     height: auto;
-    padding: var(--preenchimento);
-    font-size: var(--small-text);
+    font-size: 1.3vw;
     color: #fff;
     text-align: justify;
 }
@@ -252,8 +293,8 @@ section img#frente_esquerda {
 
 
 .topicos {
-    width: 100%;
-    height: auto;
+    width: 80%;
+    height: 60px;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: nowrap;
@@ -261,56 +302,95 @@ section img#frente_esquerda {
 
 .topico {
     text-align: center;
-    font-size: var(--medium-text);
+    font-size: 2vw;
     color: #fff;
     cursor: pointer;
     transition: 0.2s;
 }
 
 .card-info {
-    width: 80%;
-    height: auto;
+    width: 50%;
+    height: 100%;
     font-size: var(--small-text);
     border-radius: 20px;
-    padding: var(--preenchimento);
     text-align: justify;
     color: #fff;
-    transition: 0.3;
+    transition: 0.3s;
 }
 
-#imagens-container {
+.conteudo-principais {
     width: 100%;
-    height: 350px;
+    height: 100%;
     display: flex;
-    justify-content: center;
-    align-items: end;
-}
-
-#imagem-amazonia {
-    width: 80%;
-    height: 90%;
-    border-radius: 20px;
-    background-image: url(imagens/biodiversidade\(0\).jpg);
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: var(--preenchimento);
-}
-
-.ponto-container {
-    width: 100%;
-    height: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 60px;
     color: #fff;
-    font-size: var(--medium-text);
-    font-weight: 600;
+    text-align: justify;
+    justify-content: space-between;
 }
 
-.seta {
+.divisor {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+}
+
+.titulo-principais {
+    width: 100%;
+    height: auto;
+    font-size: 4vw;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#animal-nome {
+    width: 100%;
+    height: auto;
+    font-size: 3vw;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#seta-esquerda, #seta-direita {
+    border: none;
+    color: #fff;
     cursor: pointer;
+    transition: .2s;
+}
+
+#seta-esquerda:hover, #seta-direita:hover {
+    scale: 1.2;
+}
+
+#texto-principais {
+    width: 100%;
+    height: auto;
+    font-size: 1.5vw;
+}
+
+#foto-menor {
+    background: #fff;
+    width: 40%;
+    height: 70%;
+    border-radius: 30px;
+    background-image: url(imagens/animais_principais/onca_pintada_vertical.jpg);
+    background-size: cover;
+}
+
+.setas {
+    width: 50vw;
+    height: auto;
+    font-size: 3vw;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .subtitulo {
@@ -326,6 +406,11 @@ section img#frente_esquerda {
     display: none;
     height: auto;
     font-size: var(--small-text);
+}
+
+.imagem-preservacao {
+    width: 40%;
+    background-size: cover;
 }
 
 #equipe {
@@ -446,8 +531,6 @@ section img#frente_esquerda {
     font-size: var(--small-text);
     text-align: left;
 }
-
-
 
 #danilo,
 #guilherme,
@@ -584,7 +667,7 @@ section img#frente_esquerda {
 .sinopse {
     width: 100%;
     height: 70%;
-    background: #056bc4;
+    background: var(--verde-claro);
     padding: var(--preenchimento);
     display: flex;
     justify-content: center;
@@ -598,7 +681,7 @@ section img#frente_esquerda {
     border-radius: 30px;
     align-content: center;
     text-align: center;
-    background: #118ae6;
+    background: var(--verde-claro);
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -670,6 +753,7 @@ section img#frente_esquerda {
     font-weight: 600;
     display: flex;
     flex-wrap: wrap;
+    background: var(--verde-escuro);
 }
 
 .softwares {
@@ -712,23 +796,25 @@ section img#frente_esquerda {
     position: relative;
     width: 100vw;
     height: 100vh;
-    padding: 60px;
-    background: var(--dark-blue);
+    padding: 60px 0;
+    background: var(--verde-escuro);
     display: flex;
-    
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
     contain: content;
-    transition: .3s;
 }
 
 #secDarkBlue {
-    background: var(--blue1);
+    background: var(--verde2);
 }
 
 #secLightBlue {
-    background: var(--blue2);
+    background: var(--verde3);
+}
+
+#secPrincipais {
+    background-image: url(imagens/animais_principais/onca_pintada.jpg);
+    background-size: cover;
 }
 /* Sec End */
 
@@ -761,7 +847,6 @@ section img#frente_esquerda {
     header ul {
         width: 80vw;
         height: 4vh;
-        background: #0e3e6c;
         border-radius: 0;
         border-bottom-left-radius: 30px;
         border-bottom-right-radius: 30px;
