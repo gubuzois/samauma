@@ -240,7 +240,7 @@ section img#frente_esquerda {
     width: 40vw;
     height: 90%;
     border-radius: 30px;
-    background-color: var(--light-text);
+    background-color: #fff;
     background-image: url(imagens/logopequena.svg);
     background-size: 25vw;
     background-position: center;
@@ -346,14 +346,13 @@ section img#frente_esquerda {
 }
 
 #animal-nome {
-    width: 100%;
+    width: 80%;
     height: auto;
     font-size: 3vw;
     font-weight: 700;
     text-transform: uppercase;
     display: flex;
-    align-items: center;
-    gap: 20px;
+    justify-content: space-between;
 }
 
 #seta-esquerda, #seta-direita {
@@ -370,7 +369,8 @@ section img#frente_esquerda {
 #texto-principais {
     width: 100%;
     height: auto;
-    font-size: 1.5vw;
+    font-size: 1.6vw;
+    font-weight: 600;
 }
 
 #foto-menor {

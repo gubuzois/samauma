@@ -1,16 +1,44 @@
 //Script para movimentar as árvores
-var frente_direita = document.getElementById("frente_direita");
-let frente_esquerda = document.getElementById('frente_esquerda');
-let texto = document.getElementById('samauma');
-let btn = document.getElementById('btn');
-let primeiraSec = document.getElementById("primeiraSec");
+gsap.to("#fundo", {
+    scrollTrigger : {
+        scrub : 1
+    },
+    scale : 2,
+});
 
-window.addEventListener('scroll', function(){
-    let value = window.scrollY;
-    frente_direita.style.left = value * 0.5 + 'px';
-    frente_esquerda.style.left = value * -0.5 + 'px';
-    texto.style.marginTop = value * 1.5 + 'px';
-    btn.style.marginTop = value * 1.5 + 'px';
+gsap.to("#meio", {
+    scrollTrigger : {
+        scrub : 1
+    },
+    scale : 1.5,
+});
+
+gsap.to("#samauma", {
+    scrollTrigger : {
+        scrub : 1
+    },
+    y : 1000,
+});
+
+gsap.to("#btn", {
+    scrollTrigger : {
+        scrub : 1
+    },
+    y :1000,
+});
+
+gsap.to("#frente_direita", {
+    scrollTrigger : {
+        scrub : 1
+    },
+    x :1000,
+});
+
+gsap.to("#frente_esquerda", {
+    scrollTrigger : {
+        scrub : 1
+    },
+    x : -1000,
 });
 
 function comecar() {
@@ -80,40 +108,70 @@ topico3.addEventListener('click', function() {
 });
 
 const secPrincipais = document.getElementById("secPrincipais");
-const animalNome = document.getElementById("animal-nome");
+const animalNome = document.getElementById("nome");
 const textoPrincipais = document.getElementById("texto-principais");
-const fotoMenor = document.getElementById("foto-menor");
 const setaEsquerda = document.getElementById("seta-esquerda");
 const setaDireita = document.getElementById("seta-direita");
 let indicePrincipais = 0;
+let indiceMin = 0;
+let indiceMax = 7;
 
 function animaisPrincipais(indicePrincipais) {
     if(indicePrincipais == 0) {
         secPrincipais.style.backgroundImage = "url(imagens/animais_principais/onca_pintada.jpg)";
-        fotoMenor.style.backgroundImage = "url(imagens/animais_principais/onca_pintada_vertical.jpg)"
         animalNome.innerHTML = "onça-pintada";
         textoPrincipais.innerHTML = "Famosa pelas suas manchas pretas em sua pelagem amarela, a onça pintada é a maior espécie de felino da América do Sul, possuindo também a mordida mais forte dentre eles. É um felino carnívoro de grande porte, com seu peso variando de 35 kg a 130 kg e altura de 1,70 a 2,40 metros.";
     }
     else if (indicePrincipais == 1) {
         secPrincipais.style.backgroundImage = "url(imagens/animais_principais/lobo-guara.jpg)";
-        fotoMenor.style.backgroundImage = "url(imagens/animais_principais/lobo_guara_vertical.jpg)"
         animalNome.innerHTML = "lobo-guará";
         textoPrincipais.innerHTML = "Sendo um mamífero onívoro e de habitat noturno, o lobo guará apresenta uma pelagem de cor avermelhada, patas finas e grandes. O animal é considerado o maior canídeo da América do Sul, com um tamanho variando de 95 a 120 cm de comprimento e ficando entre 20 a 35 kg.";
     }
+    else if (indicePrincipais == 2) {
+        secPrincipais.style.backgroundImage = "url(imagens/animais_principais/capivara.jpg)";
+        animalNome.innerHTML = "capivara";
+        textoPrincipais.innerHTML = "Conhecidas por serem o maior roedor do mundo, as capivaras são mamíferos semi-aquáticos, sendo ótimas nadadoras. Seu porte é de aproximadamente 1,2 a 1,5 metros com um peso de 20 a 80 kg, variando da idade do animal que possui uma expectativa de vida de 15 anos.";
+    }
+    else if (indicePrincipais == 3) {
+        secPrincipais.style.backgroundImage = "url(imagens/animais_principais/arara_azul.jpg)";
+        animalNome.innerHTML = "arara-azul";
+        textoPrincipais.innerHTML = "Com um bico extremamente forte e uma pelagem azulada, a arara azul é a maior espécie conhecida da família Psittacidae. O animal monogâmico pode atingir até cerca de 1 metro de comprimento do bico até a cauda e seu peso variando de 1,2 a 1,7 kg. Atualmente, a arara azul se encontra vulnerável a extinção, devido a captura e comércio ilegal dessa espécie.";
+    }
+    else if (indicePrincipais == 4) {
+        secPrincipais.style.backgroundImage = "url(imagens/animais_principais/anta.jpg)";
+        animalNome.innerHTML = "anta";
+        textoPrincipais.innerHTML = "Sendo o maior mamífero terrestre da América do Sul, a anta é um animal herbívoro que é conhecida pela sua inteligência, com uma grande concentração de neurônios. Esse mamífero pode chegar até 2 metros de comprimento e pesar de 150 a 320 kg.";
+    }
+    else if (indicePrincipais == 5) {
+        secPrincipais.style.backgroundImage = "url(imagens/animais_principais/boto.jpg)";
+        animalNome.innerHTML = "boto-cor-de-rosa";
+        textoPrincipais.innerHTML = "Sendo um dos animais marinhos com o corpo mais flexível, o boto é conhecido também por sua ótima visão e sua alimentação carnívora. O animal pode ter 2,2 a 2,5 metros de comprimento e pesar de 39 a 130 kg de acordo com sua idade.";
+    }
+    else if (indicePrincipais == 6) {
+        secPrincipais.style.backgroundImage = "url(imagens/animais_principais/macaco_prego.jpg)";
+        animalNome.innerHTML = "macaco-prego";
+        textoPrincipais.innerHTML = "Conhecido pela sua pelagem castanha escura e pelos por quase todo o corpo, se alimentam de frutos e insetos, também possuem uma expectativa de vida de aproximadamente 35 a 40 anos. Essa espécie mede em média 45 cm de comprimento, pesando entre 1,3 a 5,0 kg.";
+    }
+    else if (indicePrincipais == 7) {
+        secPrincipais.style.backgroundImage = "url(imagens/animais_principais/tucano.jpg)";
+        animalNome.innerHTML = "tucano";
+        textoPrincipais.innerHTML = "Sendo uma das aves mais famosas da Amazônia, o tucano possui a marcante característica da sua pelagem negra e seu grande bico laranja com uma mancha preta na ponta. Se alimenta de frutas, ovos e insetos e vive aproximadamente de 15 a 20 anos. A ave possui cerca de 50 a 60 cm de comprimento e pesa aproximadamente 540 gramas.";
+    }
+
 }
 
 setaEsquerda.addEventListener("click", function() {
     indicePrincipais--;
-    if(indicePrincipais < 0) {
-        indicePrincipais = 1;
+    if(indicePrincipais < indiceMin) {
+        indicePrincipais = indiceMax;
     }
     animaisPrincipais(indicePrincipais);
 });
 
 setaDireita.addEventListener("click", function() {
     indicePrincipais++;
-    if(indicePrincipais > 1) {
-        indicePrincipais = 0;
+    if(indicePrincipais > indiceMax) {
+        indicePrincipais = indiceMin;
     }
     animaisPrincipais(indicePrincipais);
 });

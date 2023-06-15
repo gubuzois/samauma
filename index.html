@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" type="image/x-icon" href="imagens/logopequena.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="imagens/samaumaIconWebsite.png">
     <script src="https://kit.fontawesome.com/ccda18f14f.js" crossorigin="anonymous"></script>
     
     <title>Home</title>
@@ -20,8 +20,8 @@
         </nav>
     </header>
     <section id="section-comeco">
-        <img src="imagens/arvore_fundo2.svg">
-        <img src="imagens/meio2.svg">
+        <img src="imagens/arvore_fundo2.svg" id="fundo">
+        <img src="imagens/meio2.svg" id="meio">
         <h2 id="samauma">Samaúma</h2>
         <a id="btn">Começar</a>
         <img src="imagens/arvore_frente_direita2.svg" id="frente_direita">
@@ -79,22 +79,13 @@
                             principais animais
                         </div>
                         <div id="animal-nome">
-                           onça-pintada
+                            <div id="seta-esquerda">&#10094</div>
+                            <div id="nome">onça-pintada</div>
+                            <div id="seta-direita">&#10095</div>
                         </div>
                         <div id="texto-principais">
                             Famosa pelas suas manchas pretas em sua pelagem amarela, a onça pintada é a maior espécie de felino da América do Sul, possuindo também a mordida mais forte dentre eles. É um felino carnívoro de grande porte, com seu peso variando de 35 kg a 130 kg e altura de 1,70 a 2,40 metros.
                         </div>
-                    </div>
-                    <div class="divisor" style="justify-content: center;
-                    align-items: center; width: 40%;">
-                        <div id="foto-menor">
-
-                        </div>
-                        <div class="setas">
-                            <div id="seta-esquerda">&#10094</div>
-                            <div id="seta-direita">&#10095</div>
-                        </div>
-                    </div>
                     </div>
                 </div>
             </div>
@@ -144,6 +135,8 @@
     <section class="footer">
         &copy; 2023, Projeto Samaúma
     </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
