@@ -1,4 +1,4 @@
-//Script para movimentar as árvores
+//Animação GSAP
 gsap.to("#fundo", {
     scrollTrigger : {
         scrub : 1
@@ -6,40 +6,204 @@ gsap.to("#fundo", {
     scale : 2,
 });
 
+gsap.registerPlugin(ScrollTrigger);
+
+ScrollTrigger.defaults({
+  toggleActions: "play pause restart reset",
+  scroller: ".painel"
+});
+
+gsap.to("#fundo", {
+    scrollTrigger: {
+        trigger: "#section-comeco",
+    },
+    duration: 2, 
+    scale: 1.2,
+    });
+
 gsap.to("#meio", {
-    scrollTrigger : {
-        scrub : 1
+    scrollTrigger: {
+        trigger: "#section-comeco",
     },
-    scale : 1.5,
-});
-
-gsap.to("#samauma", {
-    scrollTrigger : {
-        scrub : 1
-    },
-    y : 1000,
-});
-
-gsap.to("#btn", {
-    scrollTrigger : {
-        scrub : 1
-    },
-    y :1000,
-});
-
-gsap.to("#frente_direita", {
-    scrollTrigger : {
-        scrub : 1
-    },
-    x :1000,
-});
+    duration: 2, 
+    scale: 1.1,
+    });
 
 gsap.to("#frente_esquerda", {
-    scrollTrigger : {
-        scrub : 1
+    scrollTrigger: {
+        trigger: "#section-comeco",
     },
-    x : -1000,
+    duration: 2, 
+    x: -100,
+    });
+
+gsap.to("#frente_direita", {
+    scrollTrigger: {
+        trigger: "#section-comeco",
+    },
+    duration: 2, 
+    x: 100,
+    });
+
+gsap.to("#samauma", {
+    scrollTrigger: {
+        trigger: "#section-comeco",
+    },
+    duration: 2, 
+    scale: 1.1
+    });
+
+gsap.to(".logo-samauma", {
+    scrollTrigger: {
+        trigger: "#primeiraSec",
+    },
+    duration: 2, 
+    scale: 1.1,
+    y: 100,
+    opacity: 1
+    });
+
+gsap.to(".introducao", {
+    scrollTrigger: {
+        trigger: "#primeiraSec",
+    },
+    duration: 2, 
+    scale: 1.05,
+    opacity: 1,
+    y: -100
+    });
+
+gsap.to(".a", {
+    scrollTrigger: {
+        trigger: "#primeiraSec",
+    },
+    duration: 2, 
+    x: 50,
+    y: 50,
+    opacity: 1
+    });
+
+gsap.to(".b", {
+    scrollTrigger: {
+        trigger: "#primeiraSec",
+    },
+    duration: 2, 
+    x: -50,
+    y: -80,
+    opacity: 1
+    });
+
+gsap.to(".c", {
+    scrollTrigger: {
+        trigger: "#primeiraSec",
+    },
+    duration: 2, 
+    x: 50,
+    y: 80,
+    opacity: 1
+    });
+
+gsap.to(".d", {
+scrollTrigger: {
+    trigger: "#primeiraSec",
+},
+duration: 2, 
+x: -40,
+y: 20,
+opacity: 1
 });
+
+gsap.to(".e", {
+scrollTrigger: {
+    trigger: "#primeiraSec",
+},
+duration: 2, 
+x: 70,
+y: -20,
+opacity: 1
+});
+
+gsap.to(".f", {
+    scrollTrigger: {
+        trigger: "#primeiraSec",
+    },
+    duration: 2, 
+    x: 60,
+    y: 20,
+    opacity: 1
+    });
+
+gsap.to(".missao", {
+    scrollTrigger: {
+        trigger: "#segundaSec",
+    },
+    duration: 2, 
+    scale: 1.2,
+    opacity: 1,
+    });
+
+gsap.to(".texto-missao", {
+    scrollTrigger: {
+        trigger: "#segundaSec",
+    },
+    duration: 2, 
+    scale: 1,
+    opacity: 1,
+    });
+
+gsap.to(".logo-pequena", {
+    scrollTrigger: {
+        trigger: "#segundaSec",
+    },
+    duration: 2, 
+    scale: 1,
+    opacity: 1,
+    });
+
+gsap.to(".topicos", {
+    scrollTrigger: {
+        trigger: "#terceiraSec",
+    },
+    duration: 2, 
+    scale: 1,
+    opacity: 1,
+    });
+
+gsap.to(".card-info", {
+    scrollTrigger: {
+        trigger: "#terceiraSec",
+    },
+    duration: 1.4, 
+    scale: 1.05,
+    opacity: 1,
+    });
+
+gsap.to(".titulo-principais", {
+    scrollTrigger: {
+        trigger: "#secPrincipais",
+    },
+    duration: 1, 
+    left: 0,
+    opacity: 1,
+    });
+
+gsap.to("#animal-nome", {
+    scrollTrigger: {
+        trigger: "#secPrincipais",
+    },
+    duration: 2, 
+    left: 0,
+    opacity: 1,
+    });
+
+gsap.to("#texto-principais", {
+    scrollTrigger: {
+        trigger: "#secPrincipais",
+    },
+    duration: 3, 
+    left: 0,
+    opacity: 0.8,
+    });
 
 function comecar() {
     primeiraSec.scrollIntoView();
@@ -74,7 +238,7 @@ function mudarTexto(indice) {
         topico3.style.color = '#fff';
     }
     else if (indice == 1) {
-        p1.innerHTML = "A floresta Amazônica abrange uma área extensa e diversificada, espalhando-se por nove países da América do Sul: Brasil, Bolívia, Peru, Equador, Colômbia, Venezuela, Guiana, Suriname e Guiana Francesa. É considerada a maior floresta tropical do mundo, abrangendo aproximadamente 7 milhões de quilômetros quadrados.";
+        p1.innerHTML = "A floresta Amazônica abrange uma área extensa e diversificada, espalhando-se por nove países da América do Sul: Brasil, Bolívia, Peru, Equador, Colômbia, Venezuela, Guiana, Suriname e Guiana Francesa. É considerada a maior floresta tropical do mundo, ocupando aproximadamente 7 milhões de quilômetros quadrados.";
         p2.innerHTML = "O Brasil detém a maior parte da Floresta Amazônica, com cerca de 60% de seu território localizado dentro país. A região amazônica brasileira abrange nove estados: Amazonas, Pará, Rondônia, Acre, Amapá, Roraima, Maranhão, Tocantins e Mato Grosso.";
         topico1.style.scale = '1';
         topico2.style.scale = '1.2';
