@@ -1,3 +1,57 @@
+gsap.registerPlugin(ScrollTrigger);
+
+ScrollTrigger.defaults({
+  toggleActions: "play pause restart reset",
+  ease: "none",
+  scroller: ".painel"
+});
+
+gsap.to("#equipe", {
+    scrollTrigger: {
+        trigger: "#primeiraSec",
+    },
+    duration: 2, 
+    scale: 1,
+    opacity: 1
+});
+
+gsap.to(".animais-side", {
+    scrollTrigger: {
+        trigger: "#segundaSec",
+    },
+    duration: 2, 
+    scale: 1,
+    opacity: 1
+});
+
+gsap.to(".foto", {
+    scrollTrigger: {
+        trigger: "#segundaSec",
+    },
+    duration: 2, 
+    scale: 1,
+    opacity: 1
+});
+
+gsap.to(".nome-container", {
+    scrollTrigger: {
+        trigger: "#segundaSec",
+    },
+    duration: 2, 
+    y: 40,
+    opacity: 1
+});
+
+gsap.to(".funcoes", {
+    scrollTrigger: {
+        trigger: "#segundaSec",
+    },
+    duration: 2, 
+    scale: 1,
+    opacity: 1
+});
+
+
 let foto = document.getElementById("foto");
 let nome = document.getElementById("nome");
 let func = document.getElementById("func");
@@ -13,7 +67,8 @@ let olho = document.getElementById("olho");
 let revelarDiv = document.getElementById("revelarDiv");
 var estaMonstrando = true;
 
-foto.style.background = "blue";
+foto.style.backgroundImage =  "url(imagens/integrantes/danilo.jpeg)";
+foto.style.backgroundSize = "cover";
 nome.innerHTML = "Danilo";
 danilo.style.backgroundColor = "#54ff64";
 danilo.style.scale = "1.3";
@@ -22,7 +77,8 @@ func.innerHTML = '<p><b>idade:</b> 17 anos <br> <b>função:</b> Desenvolveu a p
 
 function mudarBackground(num) {
     if (num == 0) {
-        foto.style.background = "blue";
+        foto.style.backgroundImage =  "url(imagens/integrantes/danilo.jpeg)";
+        foto.style.backgroundSize = "cover";
         nome.innerHTML = "Danilo ";
         danilo.style.backgroundColor = "#54ff64";
         guilherme.style.backgroundColor = "#fff";
@@ -40,7 +96,8 @@ function mudarBackground(num) {
         func.innerHTML = '<p><b>idade:</b> 17 anos <br> <b>função:</b> Desenvolveu a parte escrita e fez as pesquisas de dados <br> <b>hobbies:</b> Games, músicas, instrumentos <br> <b>redes sociais:</b> <div id="redes-sociais"><a href="https://www.instagram.com/dani_bortoto/" target="_blank" id="icon-instagram"><i class="fa-brands fa-square-instagram"></i></a></div> ';
 
     } else if (num == 1) {
-        foto.style.background = "green";
+        foto.style.backgroundImage =  "url(imagens/integrantes/guilherme.jpeg)";
+        foto.style.backgroundSize = "cover";
         nome.innerHTML = "Guilherme";
         danilo.style.backgroundColor = "#fff";
         guilherme.style.backgroundColor = "#9a8df8";
@@ -58,7 +115,8 @@ function mudarBackground(num) {
         func.innerHTML = '<p><b>idade:</b> 21 anos <br> <b>função:</b> Fez os sprites dos animais e inimigos <br> <b>hobbies:</b> Design, cerveja, moto, videogame <br> <b>redes sociais:</b> <div id="redes-sociais"><a href="https://www.instagram.com/guilherme17al/" target="_blank" id="icon-instagram"><i class="fa-brands fa-square-instagram"></i></a><a href="https://www.facebook.com/profile.php?id=100004563792043&mibextid=ZbWKwL" target="_blank" id="icon-instagram"><i class="fa-brands fa-facebook"></i></i></a></div>';
         
     } else if (num == 2) {
-        foto.style.background = "yellow";
+        foto.style.backgroundImage =  "url(imagens/integrantes/gustavo.jpeg)";
+        foto.style.backgroundSize = "cover";
         nome.innerHTML = "Gustavo";
         danilo.style.backgroundColor = "#fff";
         guilherme.style.backgroundColor = "#fff";
@@ -76,7 +134,8 @@ function mudarBackground(num) {
         func.innerHTML = '<p><b>idade:</b> 18 anos <br> <b>função:</b> Programou o site e os sistemas de ataque do jogo <br> <b>hobbies:</b> Jogos, exercício físico, desenvolvimento front-end <br> <b>redes sociais:</b> <div id="redes-sociais"><a href="https://www.instagram.com/gusta.buzois/" target="_blank" id="icon-instagram"><i class="fa-brands fa-square-instagram"></i></a><a href="https://www.linkedin.com/in/gustavobuzois/" target="_blank" id="icon-instagram"><i class="fa-brands fa-linkedin"></i></a><a href="https://github.com/gubuzois" target="_blank" id="icon-instagram"><i class="fa-brands fa-github"></i></a></div> ';
         
     } else if (num == 3) {
-        foto.style.background = "red";
+        foto.style.backgroundImage =  "url(imagens/integrantes/marcela.jpeg)";
+        foto.style.backgroundSize = "cover";
         nome.innerHTML = "Marcela";
         danilo.style.backgroundColor = "#fff";
         guilherme.style.backgroundColor = "#fff";
@@ -91,10 +150,10 @@ function mudarBackground(num) {
         murillo.style.scale = "1";
         thais.style.scale = "1";
         nome.style.background = "linear-gradient(135deg, #c400ce, #ff61fe)";
-        func.innerHTML = '<p><b>idade:</b> 17 anos <br> <b>função:</b> Fez a maior parte do design do jogo, incluindo a logo do grupo <br> <b>hobbies:</b> Filmes/séries/desenhos, jardinagem, desenhar <br> <b> redes sociais:</b> <br> <div id="redes-sociais"><a href="https://www.instagram.com/marcela_silv4_/" target="_blank" id="icon-instagram"><i class="fa-brands fa-square-instagram"></i></a></div> ';
+        func.innerHTML = '<p><b>idade:</b> 17 anos <br> <b>função:</b> Fez a maior parte do design do jogo, incluindo a logo do grupo <br> <b>hobbies:</b> Filmes/séries/desenhos, jardinagem, desenhar <br> <b> redes sociais:</b> <br> <div id="redes-sociais"><a href="https://www.instagram.com/marcela_silv4_/" target="_blank" id="icon-instagram"><i class="fa-brands fa-square-instagram"></i></a><a href="https://www.linkedin.com/in/marcela-freitas-a29718208/" target="_blank" id="icon-instagram"><i class="fa-brands fa-linkedin"></i></a><a href="https://github.com/MarcelaSilvaa" target="_blank" id="icon-instagram"><i class="fa-brands fa-github"></i></a></div> ';
         
     } else if (num == 4) {
-        foto.style.background = "pink";
+        foto.style.background = "white";
         nome.innerHTML = "Murillo";
         danilo.style.backgroundColor = "#fff";
         guilherme.style.backgroundColor = "#fff";
@@ -112,7 +171,8 @@ function mudarBackground(num) {
         func.innerHTML = '<p><b>idade:</b> 17 anos <br> <b>função:</b> Programou o jogo <br> <b>hobbies:</b> Jogar, crochê, xadrez, música, programar <br> <b>redes sociais:</b> <div id="redes-sociais"><a href="https://www.instagram.com/mubenetti/" target="_blank" id="icon-instagram"><i class="fa-brands fa-square-instagram"></i></a><a href="https://github.com/aromacintosh" target="_blank" id="icon-instagram"><i class="fa-brands fa-github"></i></a></div> ';
         
     } else if (num == 5) {
-        foto.style.background = "purple";
+        foto.style.backgroundImage =  "url(imagens/integrantes/thais.jpeg)";
+        foto.style.backgroundSize = "cover";
         nome.innerHTML = "Thais";
         danilo.style.backgroundColor = "#fff";
         guilherme.style.backgroundColor = "#fff";

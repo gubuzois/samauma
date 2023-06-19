@@ -53,6 +53,16 @@ gsap.to("#samauma", {
     scale: 1.1
     });
 
+gsap.to("#primeiraSec", {
+    scrollTrigger: {
+        trigger: "#primeiraSec",
+    },
+    duration: 2, 
+    backgroundColor: "#d6f97b"
+});
+    
+
+
 gsap.to(".logo-samauma", {
     scrollTrigger: {
         trigger: "#primeiraSec",
@@ -271,8 +281,15 @@ topico3.addEventListener('click', function() {
     mudarTexto(2);
 });
 
-const secPrincipais = document.getElementById("secPrincipais");
 const animalNome = document.getElementById("nome");
+const oncaPintada = document.getElementById("onca-pintada");
+const loboGuara = document.getElementById("lobo-guara");
+const capivara = document.getElementById("capivara");
+const araraAzul = document.getElementById("arara-azul");
+const anta = document.getElementById("anta");
+const boto = document.getElementById("boto");
+const macaco = document.getElementById("macaco");
+const tucano = document.getElementById("tucano");
 const textoPrincipais = document.getElementById("texto-principais");
 const setaEsquerda = document.getElementById("seta-esquerda");
 const setaDireita = document.getElementById("seta-direita");
@@ -282,42 +299,98 @@ let indiceMax = 7;
 
 function animaisPrincipais(indicePrincipais) {
     if(indicePrincipais == 0) {
-        secPrincipais.style.backgroundImage = "url(imagens/animais_principais/onca_pintada.jpg)";
+        oncaPintada.style.zIndex = 11;
+        loboGuara.style.zIndex = 10;
+        capivara.style.zIndex = 10;
+        araraAzul.style.zIndex = 10;
+        anta.style.zIndex = 10;
+        boto.style.zIndex = 10;
+        macaco.style.zIndex = 10;
+        tucano.style.zIndex = 10;
         animalNome.innerHTML = "onça-pintada";
         textoPrincipais.innerHTML = "Famosa pelas suas manchas pretas em sua pelagem amarela, a onça pintada é a maior espécie de felino da América do Sul, possuindo também a mordida mais forte dentre eles. É um felino carnívoro de grande porte, com seu peso variando de 35 kg a 130 kg e altura de 1,70 a 2,40 metros.";
     }
     else if (indicePrincipais == 1) {
-        secPrincipais.style.backgroundImage = "url(imagens/animais_principais/lobo-guara.jpg)";
+        oncaPintada.style.zIndex = 10;
+        loboGuara.style.zIndex = 11;
+        capivara.style.zIndex = 10;
+        araraAzul.style.zIndex = 10;
+        anta.style.zIndex = 10;
+        boto.style.zIndex = 10;
+        macaco.style.zIndex = 10;
+        tucano.style.zIndex = 10;
         animalNome.innerHTML = "lobo-guará";
-        textoPrincipais.innerHTML = "Sendo um mamífero onívoro e de habitat noturno, o lobo guará apresenta uma pelagem de cor avermelhada, patas finas e grandes. O animal é considerado o maior canídeo da América do Sul, com um tamanho variando de 95 a 120 cm de comprimento e ficando entre 20 a 35 kg.";
+        textoPrincipais.innerHTML = "Sendo um mamífero onívoro e de habitat noturno, o lobo-guará apresenta uma pelagem de cor avermelhada, patas finas e grandes. O animal é considerado o maior canídeo da América do Sul, com um tamanho variando de 95 a 120 cm de comprimento e ficando entre 20 a 35 kg.";
     }
     else if (indicePrincipais == 2) {
-        secPrincipais.style.backgroundImage = "url(imagens/animais_principais/capivara.jpg)";
+        oncaPintada.style.zIndex = 10;
+        loboGuara.style.zIndex = 10;
+        capivara.style.zIndex = 11;
+        araraAzul.style.zIndex = 10;
+        anta.style.zIndex = 10;
+        boto.style.zIndex = 10;
+        macaco.style.zIndex = 10;
+        tucano.style.zIndex = 10;
         animalNome.innerHTML = "capivara";
-        textoPrincipais.innerHTML = "Conhecidas por serem o maior roedor do mundo, as capivaras são mamíferos semi-aquáticos, sendo ótimas nadadoras. Seu porte é de aproximadamente 1,2 a 1,5 metros com um peso de 20 a 80 kg, variando da idade do animal que possui uma expectativa de vida de 15 anos.";
+        textoPrincipais.innerHTML = "Conhecida por ser o maior roedor do mundo, a capivara é um mamíferos semi-aquático, sendo uma ótima nadadora. Seu porte é de aproximadamente 1,2 a 1,5 metros com um peso de 20 a 80 kg, variando da idade do animal que possui uma expectativa de vida de 15 anos.";
     }
     else if (indicePrincipais == 3) {
-        secPrincipais.style.backgroundImage = "url(imagens/animais_principais/arara_azul.jpg)";
+        oncaPintada.style.zIndex = 10;
+        loboGuara.style.zIndex = 10;
+        capivara.style.zIndex = 10;
+        araraAzul.style.zIndex = 11;
+        anta.style.zIndex = 10;
+        boto.style.zIndex = 10;
+        macaco.style.zIndex = 10;
+        tucano.style.zIndex = 10;
         animalNome.innerHTML = "arara-azul";
         textoPrincipais.innerHTML = "Com um bico extremamente forte e uma pelagem azulada, a arara azul é a maior espécie conhecida da família Psittacidae. O animal monogâmico pode atingir até cerca de 1 metro de comprimento do bico até a cauda e seu peso variando de 1,2 a 1,7 kg. Atualmente, a arara azul se encontra vulnerável a extinção, devido a captura e comércio ilegal dessa espécie.";
     }
     else if (indicePrincipais == 4) {
-        secPrincipais.style.backgroundImage = "url(imagens/animais_principais/anta.jpg)";
+        oncaPintada.style.zIndex = 11;
+        loboGuara.style.zIndex = 10;
+        capivara.style.zIndex = 10;
+        araraAzul.style.zIndex = 10;
+        anta.style.zIndex = 11;
+        boto.style.zIndex = 10;
+        macaco.style.zIndex = 10;
+        tucano.style.zIndex = 10;
         animalNome.innerHTML = "anta";
         textoPrincipais.innerHTML = "Sendo o maior mamífero terrestre da América do Sul, a anta é um animal herbívoro que é conhecida pela sua inteligência, com uma grande concentração de neurônios. Esse mamífero pode chegar até 2 metros de comprimento e pesar de 150 a 320 kg.";
     }
     else if (indicePrincipais == 5) {
-        secPrincipais.style.backgroundImage = "url(imagens/animais_principais/boto.jpg)";
+        oncaPintada.style.zIndex = 10;
+        loboGuara.style.zIndex = 10;
+        capivara.style.zIndex = 10;
+        araraAzul.style.zIndex = 10;
+        anta.style.zIndex = 10;
+        boto.style.zIndex = 11;
+        macaco.style.zIndex = 10;
+        tucano.style.zIndex = 10;
         animalNome.innerHTML = "boto-cor-de-rosa";
         textoPrincipais.innerHTML = "Sendo um dos animais marinhos com o corpo mais flexível, o boto é conhecido também por sua ótima visão e sua alimentação carnívora. O animal pode ter 2,2 a 2,5 metros de comprimento e pesar de 39 a 130 kg de acordo com sua idade.";
     }
     else if (indicePrincipais == 6) {
-        secPrincipais.style.backgroundImage = "url(imagens/animais_principais/macaco_prego.jpg)";
+        oncaPintada.style.zIndex = 10;
+        loboGuara.style.zIndex = 10;
+        capivara.style.zIndex = 10;
+        araraAzul.style.zIndex = 10;
+        anta.style.zIndex = 10;
+        boto.style.zIndex = 10;
+        macaco.style.zIndex = 11;
+        tucano.style.zIndex = 10;
         animalNome.innerHTML = "macaco-prego";
         textoPrincipais.innerHTML = "Conhecido pela sua pelagem castanha escura e pelos por quase todo o corpo, se alimentam de frutos e insetos, também possuem uma expectativa de vida de aproximadamente 35 a 40 anos. Essa espécie mede em média 45 cm de comprimento, pesando entre 1,3 a 5,0 kg.";
     }
     else if (indicePrincipais == 7) {
-        secPrincipais.style.backgroundImage = "url(imagens/animais_principais/tucano.jpg)";
+        oncaPintada.style.zIndex = 10;
+        loboGuara.style.zIndex = 10;
+        capivara.style.zIndex = 10;
+        araraAzul.style.zIndex = 10;
+        anta.style.zIndex = 10;
+        boto.style.zIndex = 10;
+        macaco.style.zIndex = 10;
+        tucano.style.zIndex = 11;
         animalNome.innerHTML = "tucano";
         textoPrincipais.innerHTML = "Sendo uma das aves mais famosas da Amazônia, o tucano possui a marcante característica da sua pelagem negra e seu grande bico laranja com uma mancha preta na ponta. Se alimenta de frutas, ovos e insetos e vive aproximadamente de 15 a 20 anos. A ave possui cerca de 50 a 60 cm de comprimento e pesa aproximadamente 540 gramas.";
     }

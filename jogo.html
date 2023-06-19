@@ -7,20 +7,20 @@
         <link rel="shortcut icon" type="image/x-icon" href="imagens/icons/samaumaIconWebsite.png" />
         <link rel="stylesheet" href="style.css">
         <script src="https://kit.fontawesome.com/ccda18f14f.js" crossorigin="anonymous"></script>
-        <title>Download</title>
+        <title>Jogo</title>
     </head>
     <body>
         <div class="painel">
             <header>
                 <nav>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">Sobre nós</a></li>
-                        <li><a href="work.html" class="active">Jogo</a></li>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="contato.html">Sobre nós</a></li>
+                        <li><a href="jogo.html" class="active">Jogo</a></li>
                     </ul>
                 </nav>
             </header>
-            <section class="sec">
+            <section class="sec" id="primeiraSec">
                 <div class="section-wrapper">
                     <div class="banner-wrapper">
                         <div class="banner">
@@ -47,12 +47,12 @@
                     
                 </div>
             </section>
-            <section class="sec" id="secDarkBlue">
+            <section class="sec" id="segundaSec">
                 <div class="section-wrapper">
                     <div class="video-jogo"></div>
                 </div>
             </section>
-            <section class="sec" id="secLightBlue">
+            <section class="sec" id="terceiraSec">
                 <div class="section-wrapper">
                     <div class="imagem-jogo" id="divImagem">
                         <div class="fotos-preview">
@@ -61,7 +61,6 @@
                             <div class="imagem" id="img3" style="background-image: url(imagens/hidrografia\(2\).jpg);"></div>
                             <div class="imagem" id="img4" style="background-image: url(imagens/hidrografia\(3\).jpg);"></div>
                         </div>
-                    </div>
                     </div>
                 </div>
             </section>
@@ -86,5 +85,7 @@
             </section>
         </div>
     </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"></script>
     <script src="scriptJogo.js"></script>
 </html>

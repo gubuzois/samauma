@@ -351,6 +351,47 @@ section img#frente_esquerda {
     justify-content: space-between;
 }
 
+.animais-principais {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    z-index: 10;
+}
+
+#onca-pintada {
+    background-image: url(imagens/animais_principais/onca_pintada.jpg);
+    z-index: 11;
+}
+
+#lobo-guara {
+    background-image: url(imagens/animais_principais/lobo-guara.jpg);
+}
+
+#capivara {
+    background-image: url(imagens/animais_principais/capivara.jpg);
+}
+
+#arara-azul {
+    background-image: url(imagens/animais_principais/arara_azul.jpg);
+}
+
+#anta {
+    background-image: url(imagens/animais_principais/anta.jpg);
+}
+
+#boto {
+    background-image: url(imagens/animais_principais/boto.jpg);
+}
+
+#macaco {
+    background-image: url(imagens/animais_principais/macaco_prego.jpg);
+}
+
+#tucano {
+    background-image: url(imagens/animais_principais/tucano.jpg);
+}
+
 .divisor {
     width: 50%;
     height: 100%;
@@ -459,6 +500,8 @@ section img#frente_esquerda {
     font-size: var(--medium-text);
     color: #fff;
     z-index: 1;
+    scale: 0.8;
+    opacity: 0;
 }
 
 .equipe-descricao {
@@ -507,12 +550,13 @@ section img#frente_esquerda {
     align-items: center;
     justify-content: center;
     color: #030D18;
+    scale: 0.8;
+    opacity: 0;
 }
 
 .perfil {
-    width: 20%;
-    height: 100%;
-    min-width: 300px;
+    width: auto;
+    height: auto;
     border-radius: 16px;
     display: flex;
     flex-wrap: wrap;
@@ -525,6 +569,9 @@ section img#frente_esquerda {
     width: 20vw;
     height: 20vw;
     border-radius: 50%;
+    scale: .8;
+    opacity: 0;
+    background-size: cover;
 }
 
 .info {
@@ -538,11 +585,14 @@ section img#frente_esquerda {
 }
 
 .nome-container {
+    position: relative;
     width: 100%;
     height: 15%;
     display: flex;
     justify-content: center;
     align-items: center;
+    top: -40px;
+    opacity: 0;
 }
 
 .nome {
@@ -566,6 +616,8 @@ section img#frente_esquerda {
     text-transform: uppercase;
     font-size: var(--small-text);
     text-align: left;
+    scale: 0.8;
+    opacity: 0;
 }
 
 #danilo,
@@ -574,6 +626,7 @@ section img#frente_esquerda {
 #marcela,
 #murillo,
 #thais {
+    position: relative;
     font-size: var(--small-text);
     cursor: pointer;
     transition: 0.4s;
@@ -674,7 +727,6 @@ section img#frente_esquerda {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    contain: content;
     flex-wrap: wrap;
 }
 
@@ -691,13 +743,19 @@ section img#frente_esquerda {
     flex-wrap: wrap;
     font-size: 1.4vw;
     color: #fff;
+    scale: 0.8;
+    opacity: 0;
 }
 
 .banner {
     width: 100%;
     height: 100%;
-    background-image: url(imagens/onça_pintada.jpg);
-    background-size: cover;
+    background-image: url(imagens/banner/bannerVertical.png);
+    background-size: 25vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    scale: 0.8;
+    opacity: 0;
 }
 
 .sinopse {
@@ -738,6 +796,8 @@ section img#frente_esquerda {
     background: #fff;
     background-size: cover;
     display: flex;
+    scale: 0.8;
+    opacity: 0;
 }
 
 .imagem-jogo {
@@ -749,6 +809,8 @@ section img#frente_esquerda {
     display: flex;
     align-items: end;
     justify-content: center;
+    scale: 0.8;
+    opacity: 0;
 }
 
 .fotos-preview {
@@ -833,7 +895,6 @@ section img#frente_esquerda {
     width: 100vw;
     height: 100vh;
     padding: 60px 0;
-    background: var(--verde-escuro);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -841,7 +902,15 @@ section img#frente_esquerda {
 }
 
 #primeiraSec {
-    background-color: var(--light-text);
+    background-color: var(--verde-escuro);
+}
+
+#segundaSec {
+    background-color: var(--verde2);
+}
+
+#terceiraSec {
+    background-color: var(--verde3);
 }
 
 .circulo {
@@ -901,11 +970,6 @@ section img#frente_esquerda {
 #secLightBlue {
     background: var(--verde3);
 }
-
-#secPrincipais {
-    background-image: url(imagens/animais_principais/onca_pintada.jpg);
-    background-size: cover;
-}
 /* Sec End */
 
 .profile {
@@ -955,11 +1019,152 @@ section img#frente_esquerda {
         width: 100%;
         height: 100%;
         align-items: center;
+        contain: layout;
+    }
+
+    #samauma {
+        font-size: 12vw;
+    }
+
+    #btn {
+        font-size: 6vw;
+    }
+
+    .background-samauma {
+        align-items: center;
+    }
+
+    .logo-samauma {
+        top: 0;
+        width: 100vw;
+        height: 120px;
+        background-size: cover;
+    }
+
+    .introducao {
+        font-size: 5vw;
+        text-align: justify;
+    }
+
+    .c, .d {
+        display: none;
+    }
+
+    #texto {
+        width: 70vw;
+        height: 60%;
+        font-size: 3vw;
+    }
+
+    #titulo {
+        display: none;
+    }
+
+    .logo-pequena {
+        width: 70vw;
+        height: 30vh;
+        background-size: contain;
+    }
+
+    .topicos, .topico{
+        height: auto;
+        justify-content: space-between;
+        font-size: 3.3vw;
+    }
+
+    #descricao {
+        position: relative;
+        width: 100vw;
+        height: auto;
+
+    }
+
+    .card-info {
+        width: 100%;
+        font-size: 3vw;
+    }
+
+    .animais-principais {
+        height: 30vh;
+    }
+
+    .conteudo-principais {
+        padding: 0;
+        align-items: center;
+    }
+
+    .divisor {
+        height: 30vw;
+    }
+
+    #secPrincipais {
+        background-color: #507507;
+    }
+
+    #equipe {
+        width: 100vw;
+        height: 30vh;
+        font-size: 6vw;
+    }
+
+    .equipe-descricao {
+        height: 30vh;
+        padding: 30px;
+        font-size: 2.2vw;
+    }
+
+    #integrantes {
+        width: 100vw;
+        height: 60vh;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 0;
+        border: none;
+        contain: layout;
+        position: relative;
+        top: -40px;
+    }
+
+    .animais-side {
+        width: 100%;
+        height: 10%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .perfil {
+        width: auto;
+        height: auto;
+        position: relative;
+    }
+
+    .foto {
+        width: 50vw;
+        height: 50vw;
+    }
+
+    .nome {
+        font-size: 7vw;
+    }
+
+    .funcoes {
+        position: relative;
+        height: auto;
+        font-size: 4vw;
+        top: -50px;
+    }
+
+    .info {
+        width: 100%;
     }
 
     .banner-wrapper {
         width: 100%;
         height: 30%;
+    }
+
+    .banner {
+        background-size: 35vw;
     }
 
     .sinopse-wrapper {
@@ -997,6 +1202,21 @@ section img#frente_esquerda {
     .footer {
         height: 30vh;
         font-size: 3.5vw;
+    }
+
+    .container-contato {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    #email, #instagram {
+        width: 10vw;
+        height: 10vw;
+        font-size: 7vw;
+    }
+
+    .icons {
+        font-size: 4vw;
     }
 
     .softwares {

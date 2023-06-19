@@ -1,3 +1,48 @@
+gsap.registerPlugin(ScrollTrigger);
+
+ScrollTrigger.defaults({
+  toggleActions: "play pause restart reset",
+  ease: "none",
+  scroller: ".painel"
+});
+
+gsap.to(".banner", {
+    scrollTrigger: {
+        trigger: "#primeiraSec",
+    },
+    duration: 2, 
+    scale: 1,
+    opacity: 1
+});
+
+gsap.to(".sinopse-wrapper", {
+    scrollTrigger: {
+        trigger: "#primeiraSec",
+    },
+    duration: 2, 
+    scale: 1,
+    opacity: 1
+});
+
+gsap.to(".video-jogo", {
+    scrollTrigger: {
+        trigger: "#segundaSec",
+    },
+    duration: 2, 
+    scale: 1,
+    opacity: 1
+});
+
+gsap.to(".imagem-jogo", {
+    scrollTrigger: {
+        trigger: "#terceiraSec",
+    },
+    duration: 2, 
+    scale: 1,
+    opacity: 1
+});
+
+
 const img1 = document.getElementById("img1");
 const img2 = document.getElementById("img2");
 const img3 = document.getElementById("img3");

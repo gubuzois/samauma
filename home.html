@@ -14,9 +14,9 @@
         <header>
             <nav>
                 <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="about.html">Sobre nós</a></li>
-                    <li><a href="work.html">Jogo</a></li>
+                    <li><a href="home.html" class="active">Home</a></li>
+                    <li><a href="contato.html">Sobre nós</a></li>
+                    <li><a href="jogo.html">Jogo</a></li>
                 </ul>
             </nav>
         </header>
@@ -28,7 +28,7 @@
             <img src="imagens/arvore_frente_direita2.svg" id="frente_direita">
             <img src="imagens/arvore_frente_esquerda2.svg" id="frente_esquerda">
         </section>
-        <section class="sec" id="primeiraSec">
+        <section class="sec" id="primeiraSec" style="background-color: #b6ed2e;">
             <div class="circulo a"></div>
             <div class="circulo b"></div>
             <div class="circulo c"></div>
@@ -79,8 +79,16 @@
             </div>
         </section>
         <section class="sec" id="secPrincipais">
-                <div class="section-wrapper">
-                    <div class="conteudo-principais">
+            <section class="animais-principais" id="onca-pintada"></section>
+            <section class="animais-principais" id="lobo-guara"></section>
+            <section class="animais-principais" id="capivara"></section>
+            <section class="animais-principais" id="arara-azul"></section>
+            <section class="animais-principais" id="anta"></section>
+            <section class="animais-principais" id="boto"></section>
+            <section class="animais-principais" id="macaco"></section>
+            <section class="animais-principais" id="tucano"></section>
+                <div class="section-wrapper" style="z-index: 12;">
+                    <div class="conteudo-principais principal">
                         <div class="divisor">
                             <div class="titulo-principais">
                                 principais animais
@@ -97,9 +105,10 @@
                     </div>
                 </div>
         </section>
+        
         <section class="footer" style="height: 30vh;">
         &copy; 2023, Projeto Samaúma
-    </section>
+        </section>
     </div>    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"></script>
