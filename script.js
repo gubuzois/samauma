@@ -60,8 +60,6 @@ gsap.to("#primeiraSec", {
     duration: 2, 
     backgroundColor: "#d6f97b"
 });
-    
-
 
 gsap.to(".logo-samauma", {
     scrollTrigger: {
@@ -142,79 +140,7 @@ gsap.to(".f", {
     y: 20,
     opacity: 1
     });
-
-gsap.to(".missao", {
-    scrollTrigger: {
-        trigger: "#segundaSec",
-    },
-    duration: 2, 
-    scale: 1.2,
-    opacity: 1,
-    });
-
-gsap.to(".texto-missao", {
-    scrollTrigger: {
-        trigger: "#segundaSec",
-    },
-    duration: 2, 
-    scale: 1,
-    opacity: 1,
-    });
-
-gsap.to(".logo-pequena", {
-    scrollTrigger: {
-        trigger: "#segundaSec",
-    },
-    duration: 2, 
-    scale: 1,
-    opacity: 1,
-    });
-
-gsap.to(".topicos", {
-    scrollTrigger: {
-        trigger: "#terceiraSec",
-    },
-    duration: 2, 
-    scale: 1,
-    opacity: 1,
-    });
-
-gsap.to(".card-info", {
-    scrollTrigger: {
-        trigger: "#terceiraSec",
-    },
-    duration: 1.4, 
-    scale: 1.05,
-    opacity: 1,
-    });
-
-gsap.to(".titulo-principais", {
-    scrollTrigger: {
-        trigger: "#secPrincipais",
-    },
-    duration: 1, 
-    left: 0,
-    opacity: 1,
-    });
-
-gsap.to("#animal-nome", {
-    scrollTrigger: {
-        trigger: "#secPrincipais",
-    },
-    duration: 2, 
-    left: 0,
-    opacity: 1,
-    });
-
-gsap.to("#texto-principais", {
-    scrollTrigger: {
-        trigger: "#secPrincipais",
-    },
-    duration: 3, 
-    left: 0,
-    opacity: 0.8,
-    });
-
+    
 function comecar() {
     primeiraSec.scrollIntoView();
 }

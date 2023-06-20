@@ -15,43 +15,6 @@ gsap.to("#equipe", {
     opacity: 1
 });
 
-gsap.to(".animais-side", {
-    scrollTrigger: {
-        trigger: "#segundaSec",
-    },
-    duration: 2, 
-    scale: 1,
-    opacity: 1
-});
-
-gsap.to(".foto", {
-    scrollTrigger: {
-        trigger: "#segundaSec",
-    },
-    duration: 2, 
-    scale: 1,
-    opacity: 1
-});
-
-gsap.to(".nome-container", {
-    scrollTrigger: {
-        trigger: "#segundaSec",
-    },
-    duration: 2, 
-    y: 40,
-    opacity: 1
-});
-
-gsap.to(".funcoes", {
-    scrollTrigger: {
-        trigger: "#segundaSec",
-    },
-    duration: 2, 
-    scale: 1,
-    opacity: 1
-});
-
-
 let foto = document.getElementById("foto");
 let nome = document.getElementById("nome");
 let func = document.getElementById("func");
