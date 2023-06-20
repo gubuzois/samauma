@@ -475,8 +475,9 @@ section img#frente_esquerda {
 #equipe {
     width: 70%;
     height: 90%;
-    background-image: url(imagens/onça_pintada.jpg);
-    background-size: cover;
+    background-image: url(imagens/integrantes/equipe.png);
+    background-size: 110%;
+    background-repeat: no-repeat;
     display: grid;
     justify-content: center;
     font-size: var(--medium-text);
