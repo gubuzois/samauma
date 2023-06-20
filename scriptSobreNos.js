@@ -116,7 +116,8 @@ function mudarBackground(num) {
         func.innerHTML = '<p><b>idade:</b> 17 anos <br> <b>função:</b> Fez a maior parte do design do jogo, incluindo a logo do grupo <br> <b>hobbies:</b> Filmes/séries/desenhos, jardinagem, desenhar <br> <b> redes sociais:</b> <br> <div id="redes-sociais"><a href="https://www.instagram.com/marcela_silv4_/" target="_blank" id="icon-instagram"><i class="fa-brands fa-square-instagram"></i></a><a href="https://www.linkedin.com/in/marcela-freitas-a29718208/" target="_blank" id="icon-instagram"><i class="fa-brands fa-linkedin"></i></a><a href="https://github.com/MarcelaSilvaa" target="_blank" id="icon-instagram"><i class="fa-brands fa-github"></i></a></div> ';
         
     } else if (num == 4) {
-        foto.style.background = "white";
+        foto.style.backgroundImage = "url(imagens/integrantes/murillo.jpg)";
+        foto.style.backgroundSize = "cover";
         nome.innerHTML = "Murillo";
         danilo.style.backgroundColor = "#fff";
         guilherme.style.backgroundColor = "#fff";
