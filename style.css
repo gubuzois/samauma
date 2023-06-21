@@ -430,6 +430,7 @@ section img#frente_esquerda {
     border-radius: 20px;
     font-size: 1.6vw;
     font-weight: 600;
+    opacity: 0.8;
 }
 
 #foto-menor {
