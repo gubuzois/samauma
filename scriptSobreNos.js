@@ -117,7 +117,7 @@ function mudarBackground(num) {
         
     } else if (num == 4) {
         foto.style.backgroundImage = "url(imagens/integrantes/murillo.jpg)";
-        foto.style.backgroundSize = "cover";
+        foto.style.backgroundSize = "90%";
         nome.innerHTML = "Murillo";
         danilo.style.backgroundColor = "#fff";
         guilherme.style.backgroundColor = "#fff";
